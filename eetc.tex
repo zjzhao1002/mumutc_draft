@@ -400,19 +400,26 @@ As we have seen in Fig.~\ref{ecm}, the process $\mu^+\mu^-\to t\bar{c}$ can only
 In such high energy, we can expect that two energetic jets are observed at the detector for either signal and background events. 
 For the signal events, one jet with invariant mass around top mass and another one with invariant mass around charm mass~\footnote{In our Monte Carlo simulation, the charm mass is set to zero}. 
 While for other background events, such as $W^+ W^-$ and $t \bar{t}$, the invariant mass of boosted W and top quark can generate large jet mass when the cone parameter is large enough to include all their decay products.
-For background events, such as $j j$, we expect jet mass should be small if the jet cone parameter is set to be appropriate.
+For background events, such as $q\bar{q}$, we expect jet mass should be small if the jet cone parameter is set to be appropriate.
 
 To further investigate the kinematic features of signal, 
 we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
 and FastJet~\cite{Cacciari:2011ma} to reconstruct jets.  
-In the FastJet, we use the generalised $k_t$ algorithm~\cite{Catani:1991hj} for $e^+e^-$ collisions. 
+In the FastJet, we use the generalised $k_t$ algorithm for $e^+e^-$ collisions, 
+which is extended from a simple $k_t$ algorithm~\cite{Catani:1991hj}.
 This algorithm defines two distances:
 \begin{eqnarray}
-  d_{ij} &=& \min(E^{2p}_i,E^{2p}_j)\frac{1-\cos\theta_{ij}}{1-\cos{R}} \nonumber \\
-  d_{iB} &=& E^{2p}_i \nonumber 
+  d_{ij} &=& \min(E^{2p}_i,E^{2p}_j)\frac{1-\cos\theta_{ij}}{1-\cos{R}} \\
+  d_{iB} &=& E^{2p}_i 
 \end{eqnarray}
-where $p$ and $R$ are input by user. If a $d_{ij}$ is smallest then particle $i$ and $j$ are recombined, while $d_{iB}$ is smallest then $i$ is called an ``inclusive jet''.
+where $p$ and $R$ are input by user. 
+If a $d_{ij}$ is smallest then particle $i$ and $j$ are recombined, while $d_{iB}$ is smallest then $i$ is called an ``inclusive jet''.
 In this context, we choose $p=1$.
+
+The original $k_t$ algorithm~\cite{Catani:1991hj} only has a single distance:
+\begin{eqnarray}
+  d_{ij} &=& \min(E^{2}_i,E^{2}_j)\left(1-\cos\theta_{ij}\right) 
+\end{eqnarray}
 
 To optimized the value of $R$, we plot the invariant masses of the heaviest jet and the second heaviest jet with different $R$ parameters in Fig.~\ref{sig:mj1} and Fig.~\ref{sig:mj2}, respectively.
 The collision energy of these figures are fixed to $10$ TeV, and we require these jets have energy $E>500$ GeV. 
