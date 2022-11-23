@@ -13,6 +13,7 @@ PDFFILE=$(BASE).pdf
 all: $(PDFFILE)
 
 $(PDFFILE): $(TEXFILE) $(BBLFILE)
+	$(TEX) $(TEXFILE) -draftmode
 	$(TEX) $(TEXFILE)
 
 $(BBLFILE): $(AUXFILE) $(BIBFILE)

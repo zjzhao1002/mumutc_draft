@@ -402,49 +402,45 @@ For the signal events, one jet with invariant mass around top mass and another o
 While for other background events, such as $W^+ W^-$ and $t \bar{t}$, the invariant mass of boosted W and top quark can generate large jet mass when the cone parameter is large enough to include all their decay products.
 For background events, such as $q\bar{q}$, we expect jet mass should be small if the jet cone parameter is set to be appropriate.
 
-To further investigate the kinematic features of signal, 
-we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
+To further investigate the kinematic features of signal and background, we generate events with $E_{cm}=10$ TeV.
+We consider Model I with $c_9=-c_{10}=-0.39$ as input, 
+since it has a large cross section and the effects from $C_{qe}$ can be ignored.
+All events are hadronic decayed by \mgamc. 
+And then we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
 and FastJet~\cite{Cacciari:2011ma} to reconstruct jets.  
 In the FastJet, we use the generalised $k_t$ algorithm for $e^+e^-$ collisions, 
 which is extended from a simple $k_t$ algorithm~\cite{Catani:1991hj}.
 This algorithm defines two distances:
 \begin{eqnarray}
-  d_{ij} &=& \min(E^{2p}_i,E^{2p}_j)\frac{1-\cos\theta_{ij}}{1-\cos{R}} \\
-  d_{iB} &=& E^{2p}_i 
+  d_{ij} &=& \min(E^{2p}_i,E^{2p}_j)\frac{1-\cos\theta_{ij}}{1-\cos{R}}, \label{eq:genkt1}\\
+  d_{iB} &=& E^{2p}_i, \label{eq:genkt2}
 \end{eqnarray}
 where $p$ and $R$ are input by user. 
 If a $d_{ij}$ is smallest then particle $i$ and $j$ are recombined, while $d_{iB}$ is smallest then $i$ is called an ``inclusive jet''.
-In this context, we choose $p=1$.
 
 The original $k_t$ algorithm~\cite{Catani:1991hj} only has a single distance:
 \begin{eqnarray}
-  d_{ij} &=& \min(E^{2}_i,E^{2}_j)\left(1-\cos\theta_{ij}\right) 
+  d_{ij} &=& \min(E^{2}_i,E^{2}_j)\left(1-\cos\theta_{ij}\right), \label{eq:eekt}
 \end{eqnarray}
+which is identical to Eq.~\ref{eq:genkt1} by choosing $\pi<R<3\pi$ and $p=1$.
+In this case, one can extract ``exclusive jet'' only. 
+For the high energy muon collider, muon beams may radiate energetic particles and have large angles to the beam.
+It is hard to include such kind of particles to beam jets. 
+So this algorithm is not sufficient in our context.
 
-To optimized the value of $R$, we plot the invariant masses of the heaviest jet and the second heaviest jet with different $R$ parameters in Fig.~\ref{sig:mj1} and Fig.~\ref{sig:mj2}, respectively.
-The collision energy of these figures are fixed to $10$ TeV, and we require these jets have energy $E>500$ GeV. 
-The signal events are generated with $c_{9}=-0.73$ and $c_{10}=0$.
-Obviously, we can see that the invariant mass of the heaviest jet has a peak around top mass when $R\geq 0.07$.  
-A small peak around $W$ mass is also appeared when $R\leq 0.09$
-For the second heaviest jet, we can also see a small peak when $R\geq 0.10$. 
-This means that the QCD radiations at the $10$ TeV muon collider can be very energetic. 
-Such kind of high energy radiations are collected to be a heavy jet with invariant mass larger than top quark. 
-So we can conclude that the best $R$ for signal should be $0.09$ or $0.10$.
-
-\begin{figure}[htbp]
-%  \setcounter{subfigure}{0}
-  \centering
-  % Requires \usepackage{graphicx}
-  \subfigure{
-  \thesubfigure
-  \label{sig:mj1:R005to009}
-  \includegraphics[width=0.4\textwidth]{mj1_clq1only_R005to009.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{sig:mj1:R010to014}
-  \includegraphics[width=0.4\textwidth]{mj1_clq1only_R010to014.pdf}}
-  \caption{The invariant mass of the heaviest jet in the process $\mu^+\mu^-\to t\bar{c}$. In (a), the $R$ is set from $0.05$ to $0.09$, while (b) is set from $0.10$ to $0.14$.}\label{sig:mj1}
-\end{figure}
+The optimization of parameter $p$ and $R$ is a complicate task.
+As a first attempt, we choose $p=1$ so it works similar to a $k_t$ algorithm for hadron collider~\cite{Catani:1993hr,Ellis:1993tq}. 
+For the $t\bar{c}(\bar{t}c)$ final state, we hope to find a $R$ parameter to reconstruct a heavy jet around top mass and a light jet.
+We scan the $R$ parameter from $0.05$ to $0.15$ and find that $R=0.10$ can satisfy this requirement. 
+In Fig.~\ref{subfig:ej_tc}, we display the energy distribution of jets in $t\bar{c}(\bar{t}c)$ final with $R=0.10$ and $p=1$. 
+These jets are sorted by energy. 
+Obviously, the first two jets have energy around $E_{cm}/2$, 
+which means that they are probably originated from the hard process.
+We can also observed that the energy of the 3th jet can reach several hundred GeV or TeV level.
+In such high energy collider, parton shower can radiate some high enery particles and can be detected as a hard jet. 
+To reduce these radiations, we implement a cut $E(j)>500$ GeV to events. 
+After this cut, we plot the number of jets in Fig.~\ref{subfig:njets}. 
+As we can see, the peak is $N_{jets}=2$ for two final state process and the peak for $W^{\pm}jj$ background is 3. 
 
 \begin{figure}[htbp]
 %  \setcounter{subfigure}{0}
@@ -452,22 +448,21 @@ So we can conclude that the best $R$ for signal should be $0.09$ or $0.10$.
   % Requires \usepackage{graphicx}
   \subfigure{
   \thesubfigure
-  \label{sig:mj2:R005to009}
-  \includegraphics[width=0.4\textwidth]{mj2_clq1only_R005to009.pdf}}
+  \label{subfig:ej_tc}
+  \includegraphics[width=0.4\textwidth]{ej_tc.pdf}}
   \subfigure{
   \thesubfigure
-  \label{sig:mj2:R010to014}
-  \includegraphics[width=0.4\textwidth]{mj2_clq1only_R010to014.pdf}}
-  \caption{The invariant mass of the heaviest jet in the process $\mu^+\mu^-\to t\bar{c}$. In (a), the $R$ is set from $0.05$ to $0.09$, while (b) is set from $0.10$ to $0.14$.}\label{sig:mj2}
+  \label{subfig:njets}
+  \includegraphics[width=0.4\textwidth]{njets.pdf}}
+  \caption{(a) The jet energy distributions of process $\mu^+\mu^-\to t\bar{c}$ are displayed, where jets are sorted by energy. (b) The number of jets after implementing cut $E(j)>500$ GeV.}\label{fig:base}
 \end{figure}
 
-The background $\mu^+\mu^-\to t\bar{t}$ should have similar features in these distributions. 
-Fig.~\ref{mj1mj2} shows the invariant masses of the two heaviest jets of $t\bar{t}$ background. 
-As we expect, when the jet cone parameter is set to be $R=0.1$, there are large fraction of events which can have two peaks around top mass. In contrast, for the signal events, only one jet can have a jet mass around top mass.
-
-A simple cut to separate signal and background events was demonstrated in Figure 6, where we use the sum of jet mass of two leading massive jets as an observable to separate signal and background events.
-
-The significance for case 1 and case 2.
+Fig.~\ref{fig:mj1mj2} shows the invariant masses of the two most energetic jets of signal and backgrounds. 
+Here, we label the heavy jet as HJ in Fig.~\ref{fig:mj1} and the light one as LJ in Fig.~\ref{fig:mj2}.
+As we expect, HJ has a peak around top mass and the distribution of LJ is flat for the signal.
+For the backgrounds with heavy particles ($t$, $W$, and $Z$), we also observe peaks around their masses. 
+It is because these particles are highly boosted in such high energy machine. 
+We can include all their decayed products by choosing a small jet cone like $R=0.10$.
 
 \begin{figure}[htbp]
   \setcounter{subfigure}{0}
@@ -475,86 +470,125 @@ The significance for case 1 and case 2.
   % Requires \usepackage{graphicx}
   \subfigure{
   \thesubfigure
-  \label{mj1}
+  \label{fig:mj1}
   \includegraphics[width=0.4\textwidth]{mj1.pdf}}
   \subfigure{
   \thesubfigure
-  \label{mj2}
+  \label{fig:mj2}
   \includegraphics[width=0.4\textwidth]{mj2.pdf}}
-  \caption{The invariant mass of (a) the heaviest jet and (b) the sub-heaviest jet in signal and $t\bar{t}$ background are displayed. Here, $R=0.10$.}\label{mj1mj2}
+  \caption{The invariant mass of (a) the heavy jet and (b) the light jet in signal and backgrounds are displayed.}\label{fig:mj1mj2}
 \end{figure}
 
-\begin{figure}
+Since we only consider hadronic decay, top quark should decay to $b$ quark and $W$ boson, 
+and $W$ further decays to light quarks. 
+So the HJ should be tagged as a $b$-jet in future detector. 
+In this paper, the detector simulation is not performed. 
+To consider the $b$-tagging effects, we track all decayed products of $b$-hadrons after the hadronization. 
+If constituents of a jet inlcude these products, we say that this jet is a true $b$-jet. 
+Same procedures are applied to label $c$-jet. 
+Fig.~\ref{fig:bcjet} shows the number of true $b$-jets and $c$-jets.
+Obviously, a $b$-jet and a $c$-jet are found in the $t\bar{c}(\bar{t}c)$ signal. 
+For backgrounds with two b quarks ($t\bar{t}$ and $b\bar{b}$), two $b$-jets can be found in most events.
+For the $c\bar{c}$ backgrounds, most events include two $c$-jets.
+$ZZ$, $W^+W^-$ or $W^{\pm}jj$ can decay to $b$ or $c$ quark, 
+so we also observe some $b$- or $c$-jets are found in these events.
+Most of the $q\bar{q}$ events have not both $b$- and $c$-jet, 
+but a small fraction includes $b$- or $c$-jet. 
+In the parton shower, quark has probability to radiate a gluon, 
+and this gluon may split to $b\bar{b}(c\bar{c})$. 
+Such kind of process is easier to occur at high energy muon collider, 
+which may increase the mistagging rate of light quarks. 
+With this true flavour information, we can implement a $b$-tagging cut. 
+In our analysis, the $b$-tagging rate is $\epsilon_{b}=0.7$, 
+while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-jets and light jets, respectively.
+
+\begin{figure}[htbp]
+  \setcounter{subfigure}{0}
   \centering
-  \includegraphics[width=.6\linewidth]{mjsum.pdf}
-  \caption{The scale sum of the heaviest and the sub-heaviest jet in signal and backgrounds are displayed. Here, $R=0.10$. \label{mjsum}}
+  % Requires \usepackage{graphicx}
+  \subfigure{
+  \thesubfigure
+  \label{fig:nbjets}
+  \includegraphics[width=0.4\textwidth]{nbjets.pdf}}
+  \subfigure{
+  \thesubfigure
+  \label{fig:ncjets}
+  \includegraphics[width=0.4\textwidth]{ncjets.pdf}}
+  \caption{The number of (a) true $b$-jet and (b) true $c$-jet in signal and backgrounds are displayed.}\label{fig:bcjet}
 \end{figure}
 
-\begin{center}
-\begin{table}
-  \begin{center}
-  \begin{tabular}{c|c|c}
-  \hline
-  &  No Cuts   &    $m_t<M(j1)+M(j2)<m_t+m_W$       \\
-  \hline
-  $\mu^+\mu^-\to tc$     &   4209     &     2085      \\
-  $\mu^+\mu^-\to t\bar{t}$     &   $5.343\times{10^4}$      &     $1.100\times{10^4}$     \\
-  $\mu^+\mu^-\to jj$     &   $1.607\times{10^5}$      &    $2.890\times{10^4}$        \\
-  $\mu^+\mu^-\to W^+W^-$  & $1.723\times{10^6}$   & $4.359\times{10^4}$  \\
-  $\mu^+\mu^-\to Wjj$  & $1.628\times{10^6}$   &  $2.177\times{10^5}$ \\
-  $\mu^+\mu^-\to ZZ$  & $9.837\times{10^4}$  &  $8.787\times{10^4}$ \\
-  \hline
-  $S/B$      &  \multicolumn{2}{c}{0.005}  \\
-  $S/\sqrt{S+B}$      &  \multicolumn{2}{c}{3.333}  \\
-  \hline
-  \end{tabular}
-  \end{center}
-  \caption{The number of events before and after cut are listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. \label{table:cut}}
-\end{table}
-\end{center}
+Now we can introduce some cuts to reduce backgrounds:
+\begin{itemize}
+  \item Cut1: $N_{jet}=2$, $N_{lepton}=0$,
+  \item Cut2: $M_{jj}>8$ TeV,
+  \item Cut3: $150$ GeV$<M(HJ)<200$ GeV,
+  \item Cut4: $M(LJ)<75$ GeV,
+  \item Cut5: the heavy jet is b-tagged and the light jet is not tagged.
+\end{itemize}
+The cut flows are listed in Table.~\ref{table:tc:cut}. 
+As we can see, the cuts for jet invariant mass are efficient to reduce backgrounds with heavy particles. 
+The $b$-tagging cut is efficient to reduce backgrounds with $W$ boson. 
+After these cuts, the huge backgrounds are reduced significantly, 
+and the signal can be observed. 
 
 \begin{center}
 \begin{table}
   \begin{center}
-  \begin{tabular}{c|c|c|c|c|c|c}
+  \begin{tabular}{c|c|c|c|c|c|c|c|c}
   \hline
-  &  No Cuts   &    $M(j1)>m_Z$   &  $M(j2)<m_W$  & $n_b=1$ &  $S/B$  &    $S/\sqrt{S+B}$   \\
+  &  No Cuts  &  Cut1  &    Cut2   &  Cut3  & Cut4 & Cut5 &  $S/B$  &    $S/\sqrt{S+B}$   \\
   \hline
-  $\mu^+\mu^-\to tc$     &   4209     &     3193  &     2214  &  1534  &  \multirow{6}{*}{0.164} & \multirow{6}{*}{14.697} \\
-  $\mu^+\mu^-\to t\bar{t}$     &   $5.343\times{10^4}$      &     $4.958\times{10^4}$  &  $9487$ & $3984$  & & \\
-  $\mu^+\mu^-\to jj$     &   $1.607\times{10^5}$      &    $5.581\times{10^4}$    &  $4.392\times{10^4}$ & $870$ &   &  \\
-  $\mu^+\mu^-\to W^+W^-$  & $1.723\times{10^6}$   & $5.445\times{10^4}$ &  $5.238\times{10^4}$ & $1037$ & & \\
-  $\mu^+\mu^-\to Wjj$  & $1.628\times{10^6}$   &  $2.906\times{10^5}$   &  $1.664\times{10^5}$ & $3294$  & & \\
-  $\mu^+\mu^-\to ZZ$  & $9.837\times{10^4}$  &  $9.557\times{10^4}$   &  $8873$ & $176$  &  & \\
+  $\mu^+\mu^-\to tc$   &  2541 & 1222    &     1168  &  740  &  497 & 304  &  \multirow{8}{*}{0.38} & \multirow{8}{*}{9.12} \\
+  $\mu^+\mu^-\to t\bar{t}$     &   $2.15\times{10^4}$  &  $1.03\times{10^4}$    &     $9970$  &  $7602$ & $269$ & $106$  & & \\
+  $\mu^+\mu^-\to q\bar{q}$     &   $1.07\times{10^5}$  &   $4.95\times{10^4}$  & $4.93\times{10^4}$  &    $5084$    &  $3498$ & $224$ &   &  \\
+  $\mu^+\mu^-\to c\bar{c}$     &   $5.19\times{10^4}$  &  $2.40\times{10^4}$ &  $2.30\times{10^4}$  &    $2365$    &  $1677$ & $210$ &   &  \\
+  $\mu^+\mu^-\to b\bar{b}$     &   $2.74\times{10^4}$   &  $1.29\times{10^4}$ & $1.12\times{10^4}$  &    $1158$    &  $829$ & $159$ &   &  \\
+  $\mu^+\mu^-\to W^+W^-$  & $7.56\times{10^5}$   & $7.18\times{10^5}$ & $7.18\times{10^5}$  & $3555$ &  $560$ & $0$ & & \\
+  $\mu^+\mu^-\to Wjj$  & $1.07\times{10^6}$  & $3.49\times{10^4}$ & $3.32\times{10^4}$  &  $2929$   &  $1811$ & $107$  & & \\
+  $\mu^+\mu^-\to ZZ$  & $4.55\times{10^4}$  & $4.54\times{10^4}$ & $4.49\times{10^4}$  &  $0$   &  $0$ & $0$  &  & \\
   \hline
-%  $S/B$      &  \multicolumn{5}{c}{0.008}  \\
-%  $S/\sqrt{S+B}$      &  \multicolumn{5}{c}{4.159}  \\
-%  \hline
   \end{tabular}
   \end{center}
-  \caption{The number of events before and after cut are listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider.  The b-tagging efficiency is assumed to be $0.7$ and the fake rate is $0.01$ for light quarks.\label{table:tc:cut}}
+  \caption{The number of events before and after cut are listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of cuts are described in the text.\label{table:tc:cut}}
 \end{table}
 \end{center}
+
+As a reference, we analyze the $\mu^+\mu^-\to b\bar{s}(\bar{b}s)$ with similar method. 
+The cuts we introduce are
+\begin{itemize}
+  \item Cut1: $N_{jet}=2$, $N_{lepton}=0$,
+  \item Cut2: $M_{jj}>8$ TeV,
+  \item Cut3: $M(HJ)<75$ GeV,
+  \item Cut4: One jet is b-tagged.
+\end{itemize} 
+The cut flows are listed in Table.~\ref{table:bs:cut}.
+As we dicuss above, heavy jets should be normal at a high energy muon collider.
+The invariant mass cut is necessary to reject backgrounds like $t\bar{t}$ and $ZZ$.
+The remained backgrounds with $W$ boson can be further reduced by b-tagging cut.
 
 \begin{center}
 \begin{table}
   \begin{center}
-  \begin{tabular}{c|c|c|c|c|c|c}
+  \begin{tabular}{c|c|c|c|c|c|c|c}
   \hline
-  &  No Cuts  & $N_{jets}<3$  &    $M(j1)<75$ GeV & $n_b=1$ & $S/B$ &  $S/\sqrt{S+B}$  \\
+  &  No Cuts  & Cut1  &    Cut2 & Cut3 & Cut4 & $S/B$ &  $S/\sqrt{S+B}$  \\
   \hline
-  $\mu^+\mu^-\to bs$     &   4599  &  2193   &     971  &  673   &   \multirow{6}{*}{0.631}   &  \multirow{6}{*}{16.134}  \\
-  $\mu^+\mu^-\to t\bar{t}$     &   $5.343\times{10^4}$ &   $2.548\times{10^4}$    &  $16$     & $7$ & & \\
-  $\mu^+\mu^-\to jj$     &   $1.607\times{10^5}$  &   $7.501\times{10^4}$    &    $3.208\times{10^4}$   &  $635$  & &     \\
-  $\mu^+\mu^-\to W^+W^-$  & $1.723\times{10^6}$  &  $1.635\times{10^6}$ &  $3360$ & $67$ & & \\
-  $\mu^+\mu^-\to Wjj$  & $1.628\times{10^6}$  &  $4.420\times{10^4}$   &  $1.775\times{10^4}$   &  $351$  & & \\
-  $\mu^+\mu^-\to ZZ$  & $9.837\times{10^4}$ & $9.837\times{10^4}$   &  $325$ &  $6$ & &  \\
+  $\mu^+\mu^-\to bs$     &   4599  &  2201   &   2080  &  927 & 642   &   \multirow{8}{*}{0.08}   &  \multirow{8}{*}{6.91}  \\
+  $\mu^+\mu^-\to t\bar{t}$     &   $2.15\times{10^4}$  &  $1.03\times{10^4}$  & $9970$   &  $2$  & $2$  & & \\
+  $\mu^+\mu^-\to q\bar{q}$     &   $1.07\times{10^5}$  &   $4.95\times{10^4}$    &   $4.93\times{10^4}$ & $2.14\times{10^4}$    &  $1066$ &   &  \\
+  $\mu^+\mu^-\to c\bar{c}$     &   $5.19\times{10^4}$  &  $2.40\times{10^4}$    &    $2.30\times{10^4}$ & $1.01\times{10^4}$    &  $2207$  &   &  \\
+  $\mu^+\mu^-\to b\bar{b}$     &   $2.74\times{10^4}$   &  $1.29\times{10^4}$   &  $1.12\times{10^4}$ &   $4987$    &  $2019$  &   &  \\
+  $\mu^+\mu^-\to W^+W^-$  & $7.56\times{10^5}$   & $7.18\times{10^5}$  &  $7.18\times{10^5}$ &  $1.25\times{10^5}$ &  $1392$ & & \\
+  $\mu^+\mu^-\to Wjj$  & $1.07\times{10^6}$  & $3.49\times{10^4}$ & $3.32\times{10^4}$  &  $1.19\times{10^4}$   &  $1118$  & & \\
+  $\mu^+\mu^-\to ZZ$  & $4.55\times{10^4}$  & $4.54\times{10^4}$ & $4.49\times{10^4}$ &  $447$   &  $188$  &  & \\
   \hline
   \end{tabular}
   \end{center}
-  \caption{The number of events before and after cut are listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider.  The b-tagging efficiency is assumed to be $0.7$ and the fake rate is $0.01$ for light quarks.\label{table:bs:cut}}
+  \caption{The number of events before and after cut are listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of cuts are described in the text.\label{table:bs:cut}}
 \end{table}
 \end{center}
+
+
 
 \section{Summary and Discussion}\label{Sec:conc}
 For the signal processes $\mu^+ \mu^- \to b s$ \cite{Altmannshofer:2022xri}, it has been revealed that b tagging is crucial to reject background events from $jj$ final states. The dominant background events are $j j$. In order to extract the information on the Wilson coefficients $C_{9}$ and $C_{10}$, it is found that the polarized muon beams and the measurement of forward-backward asymmetry of final state is crucial. 
