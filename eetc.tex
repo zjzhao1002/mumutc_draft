@@ -51,7 +51,7 @@
 
 \def\missE{\slashed E} % missing E
 
-\title{\boldmath Measuring B anomalies by $\mu^+\mu^-\to t\bar{c}$ at future lepton colliders}
+\title{\boldmath Measuring B anomalies by $\mu^+\mu^-\to tc$ at future lepton colliders}
 
 %\author[a]{Wolfgang Kilian}
 \author[a]{Sichun Sun}
@@ -60,7 +60,7 @@
 \author[c,e]{Zhijie Zhao}
 
 %\affiliation[a]{Department of Physics, University of Siegen, 57072 Siegen, Germany}
-\affiliation[a]{Department of Physics, National Taiwan University, Taipei, Taiwan}
+\affiliation[a]{School of Physics, Beijing Institute of Technology, Beijing, 100081, China}
 \affiliation[b]{School of Physics Sciences, University of Chinese Academy of Sciences, Beijing 100039, China}
 \affiliation[c]{Center for Future High Energy Physics, Institute of High Energy Physics, Chinese Academy of Sciences, Beijing 100039, China}
 \affiliation[d]{Dipartimento di Matematica e Fisica, Universit{\`a} di Roma Tre and \\
@@ -74,11 +74,11 @@ INFN, sezione di Roma Tre, I-00146 Rome, Italy}
 \emailAdd{xiaoran.zhao@uniroma3.it}
 \emailAdd{zhijie.zhao@desy.de}
 
-\preprint{SI-HEP-2018-27,CP3-18-55,MCnet-18-21}
+\preprint{}
 
 
 \abstract{
-Being motivated from B anomalies, we study the match procedure of operators in the effective Hamiltonian in mass eigenstates and operators in the weak eigenstates. It is noticed that there are more operators in the SMEFT which can not simply being fixed from the low energy data from the B anomalies. We demonstrate this matching procedure with some new physics models, like $Z^\prime$ model and leptoquark models, and then consider how to probe these operators of SMEFT by using the process $\mu^+\mu^-\to tc$ at future muon colliders, which can provide complementary information on the underlying models which lead to B anomalies. We have performed a simple Monte Carlo simulation to show how to separate the signal events from the SM background events, and have estimated the sensitivity to the Wilson coefficients for different models.
+Motivated by B anomalies, we study the matching procedure of operators $O_9, O_{10}$ in the low energy effective Hamiltonian and operators in the Standard Model effective theory (SMEFT). It is noticed that there are more related operators in the SMEFT whose coefficients can not be determined only from the low energy data from the B anomalies. We demonstrate how to determine these coefficients with some new physics models, like $Z^\prime$ model and leptoquark models, and then consider how to probe these operators of SMEFT at high energy by using the process $\mu^+\mu^-\to tc$ at future muon colliders, which can provide complementary information except for  $\mu^+ \mu^- \to b s$ on the underlying models which lead to B anomalies. We perform a Monte Carlo study (a hadron level analysis) to show how to separate the signal events from the SM background events and estimate the sensitivity to the Wilson coefficients for different models.
 }
 
 \begin{document}
@@ -87,55 +87,55 @@ Being motivated from B anomalies, we study the match procedure of operators in t
 
 
 \section{Introduction}
-Searching for new physics is the prime target of both high energy frontier and high precision frontier.
-In the rare decays of B mesons, there exist long standing discrepances between the Standard Model predictions and experimental measurements, with a hint of non-lepton flavor universality(LFU), especially in the muon related final states. These B-anomalies are observed in a $B \rightarrow K \mu^+ \mu^-$,  $B_s \rightarrow \phi  \mu ^+ \mu^-, B_s \rightarrow  \mu ^+ \mu^-$ and angular distribution of  $B \rightarrow K^* \mu ^+ \mu^-$\cite{LHCb:2021awg,LHCb:2021vsc,LHCb:2017rmj,ATLAS:2018cur,CMS:2019bbr}. For the LFU violation, it has been observed by LHCb\cite{LHCb:2021trn,LHCb:2019hip,LHCb:2017avl,LHCb:2015svh,LHCb:2020lmf,LHCb:2020gog} in the ratio 
+Searching for new physics is the prime target of both the high energy frontier and high precision frontier.
+In the rare decays of B mesons, there exist long-standing discrepancies between the Standard Model predictions and experimental measurements, with a hint of non-lepton flavor universality(LFU), especially in the muon-related final states. These B-anomalies are observed in a $B \rightarrow K \mu^+ \mu^-$,  $B_s \rightarrow \phi  \mu ^+ \mu^-, B_s \rightarrow  \mu ^+ \mu^-$ and angular distribution of  $B \rightarrow K^* \mu ^+ \mu^-$\cite{LHCb:2021awg,LHCb:2021vsc,LHCb:2017rmj,ATLAS:2018cur,CMS:2019bbr}. For the LFU violation, it has been observed by LHCb\cite{LHCb:2021trn,LHCb:2019hip,LHCb:2017avl,LHCb:2015svh,LHCb:2020lmf,LHCb:2020gog} in the ratio 
 
 \begin{eqnarray}
 R_K = \frac{BR(B \rightarrow K \mu^+ \mu^-)}{BR(B \rightarrow K e^+ e^-)}, R_{K^*} = \frac{BR(B \rightarrow K^* \mu^+ \mu^-)}{BR(B \rightarrow K^* e^+ e^-)}
 \end{eqnarray}
 
-Altough large hadronic uncertainties can enter in some of these absolute branching fractions and angular observables for the Standard model predictions, $R_K, R_{K^*}, B_s \rightarrow  \mu ^+ \mu^- $ are considered relatively theoretically clean. The deviation in those measurements might lead to indirect evidence for new physics \cite{Hiller:2014ula, Altmannshofer:2017fio, Altmannshofer:2014rta,Geng:2017svp,Ciuchini:2019usw,Datta:2019zca,Aebischer:2019mlg,Ciuchini:2020gvn,Jager:2017gal}. While those measurement provides derivation from SM prediction,
-the exact mechanics behind those anomaly are still unknown,
-and low-energy measurement couldn't fully reveal the nature behind that.
+Although large hadronic uncertainties can enter in some of these absolute branching fractions and angular observables for the Standard Model predictions, $R_K, R_{K^*}, B_s \rightarrow  \mu ^+ \mu^- $ are considered relatively theoretically clean. The deviation in those measurements might lead to indirect evidence for new physics \cite{Hiller:2014ula, Altmannshofer:2017fio, Altmannshofer:2014rta,Geng:2017svp,Ciuchini:2019usw,Datta:2019zca,Aebischer:2019mlg,Ciuchini:2020gvn,Jager:2017gal}. While that measurement provides derivation from SM prediction,
+the exact mechanics behind those anomalies are still unknown,
+and low-energy measurement cannot fully reveal the nature behind that.
 
-On the other hand, by scattering high energy particles,
+On the other hand, by scattering high-energy particles,
 collider experiments provide unique opportunities to access underlying UV theories.
 Among various current and future colliders\cite{Shiltsev:2019rfl},
 a multi-TeV muon collider\cite{Aime:2022flm,MuonCollider:2022xlm} is ideal for such studies.
-Being fundamental particles, the entire energy of incoming muons are available to produce short-distance scattering rather than being spread among partons of hadrons,
-and thus a 14 TeV muon collider could be as effective as a 100 TeV proton-proton collider\cite{Delahaye:2019omf}.
-Such high energy reach strongly benefits to searching new heavy particles, such as minimal dark matter models\cite{Han:2020uak,Bottaro:2021snn},
+Being fundamental particles, the entire energy of incoming muons is available to produce short-distance scattering rather than being spread among partons of hadrons,
+and thus a 14 TeV muon collider can be as effective as a 100 TeV proton-proton collider\cite{Delahaye:2019omf}.
+Such high energy reach strongly benefits searching new heavy particles, such as minimal dark matter models\cite{Han:2020uak,Bottaro:2021snn},
 as well as indirect measurement at high energies\cite{Buttazzo:2020uzc}.
 Moreover, vector boson fusion processes are found to be important at muon colliders\cite{Costantini:2020stv},
 and enable access to difficult parameters such as the Higgs quartic self-coupling\cite{Chiesa:2020awd}.
-More importantly, muon colliders have a special feature: the initial states are muons, directly related to those low-energy anomalies. The muon $g-2$ anomaly could be probed directly at muon colliders\cite{Buttazzo:2020ibd},
+More importantly, muon colliders have a special feature: the initial states are muons, directly related to those low-energy anomalies. The muon $g-2$ anomaly can be probed directly at muon colliders\cite{Buttazzo:2020ibd}.
 In the context of muon $g-2$ anomaly, studies have been performed on testing it under the SMEFT formalism\cite{Buttazzo:2020ibd}, and model-exhaustive analysis\cite{Buttazzo:2020ibd,Capdevilla:2020qel,Capdevilla:2021rwo,Capdevilla:2021kcf}.
 %The future collider proposals include the linear or circular case $e^+e^-$ colliders\cite{} and circular pp coliders \cite{}, and especially relevant here: high-energy muon colliders \cite{}.  Muon colliders can reach high energies with large mass suppression of synchroton radiation comparing to $e^+e^-$ colliders and higher precision with cleaner final states comparing to pp colliders. Although the short life time of muon causes some technical challenges, there are a series of recent progresses\cite{}.
 
- The multi-TeV reach and better precision advantages of muon colliders, makes a perfect place to probe muon related B anomalies in low energy. There are already proposals studying $\mu^+\mu^-\to b\bar{s}$ or $\bar{b}s$ at multi TeV scale to discuss the impact of low energy B-anomalies impact \cite{Altmannshofer:2022xri,Huang:2021nkl}. At the current stage, B-anomalies can be nicely accommodated by effective four-fermion operators at B-physics scale ($\mu= 4.8$ GeV):
+ The multi-TeV reach and better precision advantages of muon colliders, make it a perfect place to probe muon-related B anomalies in low energy. There are already proposals studying $\mu^+\mu^-\to b\bar{s}$ or $\bar{b}s$ at multi TeV scale to discuss the impact of low energy B-anomalies impact \cite{Altmannshofer:2022xri,Huang:2021nkl}. At the current stage, B-anomalies can be nicely parameterized  by effective four-fermion operators at the B-physics scale ($\mu= 4.8$ GeV):
  \begin{eqnarray}
    O_9 &=& (\bar{s}\gamma_\mu P_L b)(\bar{\ell}\gamma^{\mu}\ell),  \\
    O_{10} &=& (\bar{s}\gamma_\mu P_L b)(\bar{\ell}\gamma^{\mu}\gamma_5\ell),
 \end{eqnarray}
 For the new physics effects described by operators $O_9$ and $O_{10}$, when we go above the weak scale ($\mu=M_Z$ for instance), the Wilson coefficients of such two operators depend on the specific models (e.g. leptoquark, scalars,$Z'$,etc). 
 
-In this work, we adopt the same assumption that the new physics scale is around $\mu=35$ TeV and it is challenging to discover the new physics signature at the LHC. We also assume that these new physics above the weak scale ($\mu=M_Z$) can be described by the framework of the standard model effective field theory (SMEFT). Under appropriate assumptions, it is noteworthy that there are at least one more operator is needed in order to match the SMEFT to low energy operators $O_9$ and $O_{10}$. These three operators in the SMEFT are given in Eqs. (2.12-2.14). Different new physics models can lead to different matching conditions across the weak scale.
+In this work, we adopt the same assumption that the new physics scale is around $\mu=35$ TeV and it is challenging to discover the new physics signature at the LHC. We also assume that these new physics above the weak scale ($\mu=M_Z$) can be described by the framework of the standard model effective field theory (SMEFT). Under appropriate assumptions, it is noteworthy that there is at least one more operator needed in order to match the SMEFT to low energy operators $O_9$ and $O_{10}$. These three operators in the SMEFT are given in Eqs. (2.12-2.14). Different new physics models can lead to different matching conditions across the weak scale.
 
-Different from the proposal presented in \cite{Altmannshofer:2022xri}, where the polarization of muon beams and charge tagging of jets in the final state are assumed, in this work, in order to reveal the nature of new physics which leads to the B anomalies, we propose to measure the process $\mu^+\mu^-\to tc$ (here $tc$ denotes both $t \bar{c}$ and $\bar{t} c$), which can provide complementary information to the processes $\mu^+\mu^-\to b \bar{s}$ ($\bar{b} s$). The four fermion operators for $\mu^+\mu^-\to tc$ naturally arise from the operator matching conditions from low energy effective field theory to the SMEFT, since left-handed top and charm quarks form an electroweak SU(2) doublets as the partners of the left-handed bottom and strange quarks in SMEFT operators. We can also observe that the process $\mu^+\mu^-\to tc$ can help to distinguish different new physics models, which can yield different operator matching conditions. We will consider a $Z^\prime$ model and a few leptoquark models. 
+Different from the proposal presented in \cite{Altmannshofer:2022xri}, where the polarization of muon beams and charge tagging of jets in the final state is assumed, in this work, in order to reveal the nature of new physics which leads to the B anomalies, we propose to measure the process $\mu^+\mu^-\to tc$ (here $tc$ denotes both $t \bar{c}$ and $\bar{t} c$). This study can provide complementary information to the processes $\mu^+\mu^-\to b \bar{s}$ ($\bar{b} s$). The four fermion operators for $\mu^+\mu^-\to tc$ naturally arise from the operator matching conditions from the low energy effective field theory to the SMEFT, since left-handed top and charm quarks form electroweak SU(2) doublets respectively as the partners of the left-handed bottom and strange quarks in SMEFT operators. The process $\mu^+\mu^-\to tc$ can also help to distinguish different new physics models, which yield different operator matching conditions. We will consider one $Z^\prime$ model and three leptoquark models. 
 
-The leptoquark particles are predicted in the grand unification models and they could either be scalar or vector bosons. Usually, these particles should be superheavy (say $10^13$ GeV), as required by the experimental data of proton decays. Very light leptoquarks (say 1 TeV or a few 10 TeV) can be consistent with experimental data if their couplings to the first generation of matter fields are weak. Light leptoquarks are also predicted in the Pati-Salam model, where lepton numbers are treated as the forth color quantum number. These light leptoquarks could be even accessible at the LHC and future collider projects. Recently, leptoquarks have attracted much attentions in order to interpret the B anomalies. A comprehensive on the phenomenology of leptoquark can be found in \cite{Dorsner:2016wpm}.
+The leptoquark particles are predicted in the grand unification models and they can either be scalar or vector bosons. Usually, these particles are superheavy (e.g. $10^{13}$ GeV), as required by the experimental data of proton decays. Very light leptoquarks (e.g. 1 TeV or a few 10 TeV) are consistent with experimental data if their couplings to the first generation of matter fields are weak. Light leptoquarks are also predicted in the Pati-Salam model, where lepton numbers are treated as the fourth color quantum number. These light leptoquarks can be accessible even at the LHC and future collider projects. Recently, leptoquarks have attracted much attention in order to interpret the B anomalies. A comprehensive on the phenomenology of leptoquarks can be found in \cite{Dorsner:2016wpm}.
 
-\textcolor{blue}{Our main findings} Our new findings include: 1)  The dominant background events of the SM for the process $\mu^+\mu^-\to tc$ are different from those of the process $\mu^+\mu^-\to bs$. Due to the highly boosted top quark in the final states, jet substructure analysis can be crucial to distinguish signal and background events. 2) In the case that there is no new resonance which will be found the TeV muon colliders, measurement of the process $\mu^+\mu^-\to tc$, can provide crucial information on the potential nature of the new physics which leads to the low energy B anomalies. 3) The weak final state radiation might become important for such a measurement.
+Our new findings in this work include 1)  The dominant SM background events for the process $\mu^+\mu^-\to tc$ are different from the background of the process $\mu^+\mu^-\to bs$. Due to the highly boosted top quark in the final states, jet substructure analysis is crucial to distinguish signal and background events. 2) In the case that there is no new resonance found in the TeV muon colliders, measurement of the process $\mu^+\mu^-\to tc$, can provide crucial information on the potential nature of the new physics which leads to the low energy B anomalies. 3) It is noticed that the final state $W^\pm jj $ can have a very large cross section (e,g. 100fb with collision energy $\sqrt{s}=10$ TeV), and such a final state is mainly from the weak final state radiation processes. Suppressing the weak final state radiation might be important for signal findings.
 
-This paper is organized as given below. In section II, we demonstrate the relations between the Wilsonian coefficients of the effective Hamiltonian and those of the SMEFT. In section III, we present the values of Wilsonian coefficients of the SMEFT derived from different new physics models. These new physics models can accommodate the data of B anomalies. In section IV, we perform a Monte Carlo simulation to explore the sensitivity of future muon colliders to these new physics scenarios. We end this work with a few discussion and conclusion. In Appendix, we present the renormalization group equations of Wilsonian coefficients in the SMEFT and effective Hamiltonian, respectively. 
+This paper is organized as given below. In section II, we demonstrate the relations between the Wilsonian coefficients of the low-energy effective Hamiltonian and those of the SMEFT. In section III, we present the values of Wilsonian coefficients of the SMEFT derived from different new physics models. These new physics models can accommodate the explanation of B anomalies. In section IV, we perform a Monte Carlo simulation to explore the sensitivity of future muon colliders to these new physics scenarios. We end this work with a few discussions and conclusions. In Appendix, we present the renormalization group equations of Wilsonian coefficients in the SMEFT and effective Hamiltonian, respectively. 
 
 
 %\section{Motivations for studying B-anomalies in $\mu^+\mu^-\to tc$}
-\section{Matching and RGE of different operator bases}
+\section{Matching and running of different operator bases}
 \label{Sec:EFT}
 
- Interestingly, these anomalies can be simultaneously explained in form of a model-independent way with the effective four-fermion operators. 
-In many researches of B-physics,  new physics effects strongly prefer an effective Hamiltonian with $O_9 $ and $O_{10}$ with Wilson coefficients of dimension 6 interactions at the renormalization scale $\mu =4.8$ GeV ,
+ Interestingly, these anomalies can be simultaneously explained in a model-independent way with the effective four-fermion operators. 
+In many B-physics studies,  new physics effects strongly prefer an effective Hamiltonian with $O_9 $ and $O_{10}$ with Wilson coefficients of dimension 6 interactions at the renormalization scale $\mu =4.8$ GeV ,
 \begin{eqnarray}
   \mathcal{H}_{eff} &=& \mathcal{H}^{SM}_{eff}-\mathcal{N}\sum_{\ell=e,\mu}\sum_{i=9,10}\left(c_iO^{bs\ell\ell}_i+c^\prime_i O^{\prime bs\ell\ell}_i\right) + h.c., 
 \end{eqnarray} 
@@ -152,7 +152,7 @@ where $P_L=(1-\gamma_5)/2$ is the left-handed projection operator.
 For $O^\prime_i$, $P_L$ is replaced by right-handed projection operator $P_R=(1+\gamma_5)/2$.
 
 For the purpose of this paper, to study B-anomalies related operator $O_9$ and $O_{10}$ defined in the low energy B physics scale in higher colliding energy scale, we need to treat the running and matching of the operators carefully. 
-Especially the subtleties arise when the energy running across the weak scale. Our study finds that in the energy scale above the weak scale, the impact of $O_9$ and $O_{10}$ operators needs to be reparametrized by three different operators, rather than two, in so-called Warsaw basis, known as the Standard model effective theory (SMEFT). Here we introduce different basises and coefficient matching as below. 
+Especially the subtleties that arise when the energy runs across the weak scale. Our study finds that in the energy scale above the weak scale, the impact of $O_9$ and $O_{10}$ operators needs to be reparametrized by three different operators, rather than two, in the so-called Warsaw basis, known as the Standard model effective theory (SMEFT). Here we introduce different bases and coefficient matching as below. 
 
  At the scale below the weak scale, potential new physics effects are described by a low energy effective field theory (LEFT).  
 The LEFT Lagrangian with dimension 6 operators can be written as 
@@ -192,54 +192,55 @@ the SMEFT Lagrangian with dimension 6 operators ($\mathcal{O}_i$) is defined as
 \end{eqnarray}
 where $C_i$ are called Wilson Coefficients.
 
-A complete set of non-redundant dimension 6 operators has been derive in Ref.~\cite{Grzadkowski:2010es}, so-called Warsaw basis. 
+A complete set of non-redundant dimension 6 operators has been derived in Ref.~\cite{Grzadkowski:2010es}, so-called Warsaw basis. 
 The most relevant operators in this paper are
 \begin{eqnarray}
-   \mathcal{O}^{(1)}_{lq}(p,r,s,t) &=& (\bar{l}_p\gamma^\mu l_r)(\bar{q}_s\gamma_\mu q_{t}),  \label{O1lq} \\
-   \mathcal{O}^{(3)}_{lq}(p,r,s,t) &=& (\bar{l}_p\gamma^\mu\tau^I l_r)(\bar{q}_s\gamma_\mu\tau^I q_{t}),  \label{O3lq} \\
+   \mathcal{O}^{(1)}_{lq}(p,r,s,t) &=& (\bar{l}_p\gamma^\mu l_r)(\bar{q}_s\gamma_\mu q_{t}),  \label{O1lq} \\ 
+   \mathcal{O}^{(3)}_{lq}(p,r,s,t) &=& (\bar{l}_p\gamma^\mu\tau^I l_r)(\bar{q}_s\gamma_\mu\tau^I q_{t}),  \label{O3lq} \\ 
    \mathcal{O}_{qe}(p,r,s,t) &=& (\bar{q}_p\gamma^\mu q_r)(\bar{e}_s\gamma_\mu e_t), \label{Oqe}
 \end{eqnarray}
 where $q$, $l$, $e$ are the left-handed quark doublet, left-handed lepton doublet, and right-handed lepton singlet, respectively. 
 $p,r,s,t$ are generation indices of quark or lepton.
 
 When the electroweak symmetry breaking occurs, the SM heavy particles (top, Higgs,  $W^\pm$,  $Z$) are integrated out, and the SMEFT should be matched to LEFT. 
-The full matching conditions at tree level have been derived by Ref.~\cite{Jenkins:2017jig}.
-In this paper, we only consider the operators with flavour indices $(p,r,s,t)=(2,2,2,3)$ or $(p,r,s,t)=(2,3,2,2)$, so the matching conditions are simplified to 
+The full matching conditions at the tree level have been derived by Ref.~\cite{Jenkins:2017jig}.
+In this paper, we only consider the operators with flavor indices $(p,r,s,t)=(2,2,2,3)$ or $(p,r,s,t)=(2,3,2,2)$, so the matching conditions are simplified to 
 \begin{eqnarray}
     L^{V,LL}_{ed}(2,2,2,3) &=& \frac{v^2}{\Lambda^2}\left[C^{(1)}_{lq}(2,2,2,3)+C^{(3)}_{lq}(2,2,2,3)\right],  \label{match:VLLed}\\
     L^{V,LR}_{de}(2,3,2,2)&=& \frac{v^2}{\Lambda^2}C_{qe}(2,3,2,2). \label{match:VLRde}
 \end{eqnarray}
 % \bigskip
-The related renormalization group equations for the SMEFT and LEFT can be found in the Appendix \ref{smeftrge} and Appendix \ref{leftrge}, respectively.
+The related renormalization group equations for the SMEFT and LEFT can be found in Appendix \ref{smeftrge} and Appendix \ref{leftrge}, respectively.
 
 \begin{center}
 \begin{table}
   \begin{center}
-  \begin{tabular}{c|cccc}
+  \begin{tabular}{|c|c|c|c|c|}
   \hline
-  &      $c_9=-0.73, c_{10}=0$    &     $c_9=0, c_{10}=0.54$      &       $c_9=c_{10}=0.05$     &       $c_9=-c_{10}=-0.39$       \\
-  \hline
-                   $L^{V,LL}_{ed}(m_B)$ &   $-1.727\times 10^{-5}$   &   $-1.278\times 10^{-5}$   &  $0$    &    $-1.845\times 10^{-5}$    \\
-                   $L^{V,LL}_{ed}(m_Z)$  &   $-1.748\times 10^{-5}$  &   $-1.287\times 10^{-5}$   &  $5.651\times 10^{-9}$  &  $-1.863\times 10^{-5}$  \\
-                   $(C^{(1)}_{lq}+C^{(3)}_{lq})(m_Z)$  &   $-0.029$  &    $-0.021$   &   $9.337\times 10^{-6}$  &  $-0.031$  \\
-                   $(C^{(1)}_{lq}+C^{(3)}_{lq})(\Lambda)$  &  $-0.030$   &  $-0.023$  &  $2.053\times 10^{-5}$  &  $-0.032$ \\ 
-  \hline
-  $L^{V,LR}_{de}(m_B)$ &  $-1.727\times 10^{-5}$  & $1.278\times 10^{-5}$ & $2.366\times 10^{-6}$ & $0$ \\ 
-  $L^{V,LR}_{de}(m_Z)$ & $-1.723\times 10^{-5}$  & $1.268\times 10^{-5}$ &  $2.355\times 10^{-6}$ & $-4.408\times 10^{-8}$   \\
-  $C_{qe}(m_Z)$  &   $-0.028$   &  $2.096\times 10^{-2}$  & $3.891\times 10^{-3}$ &  $-7.283\times 10^{-5}$ \\
-  $C_{qe}(\Lambda)$  &  $-0.029$   &  $2.142\times 10^{-3}$  &   $3.993\times 10^{-3}$   &  $-2.019\times 10^{-4}$  \\
+  &      $c_9=-0.73$    &     $c_9=0.00$      &       $C_9=0.05$     &       $c_9=-0.39$       \\
+  &      $ c_{10}=0.00$    &     $c_{10}=0.54$      &       $c_9=c_{10}$     &       $c_9=-c_{10}$       \\
+  \hline  
+                   $L^{V,LL}_{ed}(m_B)$ &   $-1.73\times 10^{-5}$   &   $-1.28\times 10^{-5}$   &  $0.00$    &    $-1.85\times 10^{-5}$    \\
+                   $L^{V,LL}_{ed}(m_Z)$  &   $-1.75\times 10^{-5}$  &   $-1.29\times 10^{-5}$   &  $5.65\times 10^{-9}$  &  $-1.86\times 10^{-5}$  \\
+                   $(C^{(1)}_{lq}+C^{(3)}_{lq})(m_Z)$  &   $-2.90\times 10^{-2}$  &    $-2.10\times 10^{-2}$   &   $9.34\times 10^{-6}$  &  $-3.10 \times 10^{-2}$  \\
+                   $(C^{(1)}_{lq}+C^{(3)}_{lq})(\Lambda)$  &  $-3.00 \times 10^{-2}$   &  $-2.30\times 10^{-2}$  &  $2.05\times 10^{-5}$  &  $-3.20\times 10^{-2}$ \\                    
+  \hline  
+  $L^{V,LR}_{de}(m_B)$ &  $-1.73\times 10^{-5}$  & $1.28\times 10^{-5}$ & $2.36\times 10^{-6}$ & $0.00$ \\ 
+  $L^{V,LR}_{de}(m_Z)$ & $-1.72\times 10^{-5}$  & $1.27\times 10^{-5}$ &  $2.36\times 10^{-6}$ & $-4.41\times 10^{-8}$   \\
+  $C_{qe}(m_Z)$  &   $-2.80 \times 10^{-2}$   &  $2.10\times 10^{-2}$  & $3.89\times 10^{-3}$ &  $-7.28\times 10^{-5}$ \\
+  $C_{qe}(\Lambda)$  &  $-2.90\times 10^{-2}$   &  $2.14\times 10^{-3}$  &   $3.99\times 10^{-3}$   &  $-2.02\times 10^{-4}$  \\
   \hline
   \end{tabular}
   \end{center}
-  \caption{The coefficients $L^{V,LL}_{ed}$, $L^{V,LR}_{de}$, $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C_{qe}$ at scale $m_B=5$ GeV, $m_Z=91.1876$ GeV and $\Lambda=10$ TeV are listed, with difference input of $c_9$ and $c_{10}$. Here, we assume $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$. \label{table:LVLLed}}
+  \caption{The coefficients $L^{V,LL}_{ed}$, $L^{V,LR}_{de}$, $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C_{qe}$ at scale $m_B=5$ GeV, $m_Z=91.19$ GeV and $\Lambda=10$ TeV are listed, with difference input of $c_9$ and $c_{10}$. Here, we assume $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$. \label{table:LVLLed}}
 \end{table}
 \end{center}
 
 \section{The Matching Conditions of New Physics}
 
 
-At muon colliders, the operators we input are actually Eq. (\ref{Oqe}).
- In massless limit,\footnote{For simplicity, in this section we work under massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence are included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
+At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\ref{Oqe}).
+ In massless limit,\footnote{For simplicity, in this section we work under the massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence is included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
  \begin{align}
      \frac{\ud\sigma(\mu^+\mu^-\to X)}{\ud\cos\theta}=\frac{3s}{256\pi}|C_{LL}^{X}|^2(1+\cos\theta)^2
  \end{align}
@@ -254,35 +255,35 @@ Integrating over $\cos\theta$, we can obtain the inclusive cross section as:
 \end{align}
 
 In a general new physical model,
-both $C_{lq}^{(1)}$ and $C_{lq}^{(3)}$ can be non-zero,
+both $C_{lq}^{(1)}$ and $C_{lq}^{(3)}$ can be both non-zero,
 and thus both processes $\mu^+\mu^-\to tc$ and $\mu^+\mu^-\to bs$ receives new physical contribution,
-and can be measured in future muon colliders.
+to be measured in future muon colliders.
 We note that for $\mu^+\mu^-\to bs$, the corresponding Wilson coefficients $C_{LL}^{bs}$ is directly in charge of $b\to s\mu^+\mu^-$ transition in $B$-physics,
 and hence constrained by those measurements.
 On the other hand, $C_{LL}^{tc}$ is unconstrained.
-As a general argument, the underlying new physical which induce $C_{LL}^{bs}$ or equivalently $C_{lq}^{(1)},C_{lq}^{(3)}$,
+As a general argument, the underlying new physical which induces $C_{LL}^{bs}$ or equivalently $C_{lq}^{(1)},C_{lq}^{(3)}$,
 would induce also $C_{LL}^{tc}$ with size at similar order.
 
-Therefore, we expect that the cross section of $\mu^+\mu^-\to tc$ is comparable to $\mu^+\mu^-\to bs$,
+Therefore, we expect that the cross-section of $\mu^+\mu^-\to tc$ is comparable to $\mu^+\mu^-\to bs$,
 and as we will show in Section \ref{Sec:result}, due to the presence of top quark in the final state of $\mu^+\mu^-\to tc$,
 it is easier to measure than $\mu^+\mu^-\to bs$.
-To be more specific, below we discuss four types of new physics models labelled as Model I-IV, 
+To be more specific, below we discuss four types of new physics models labeled as Model I-IV, 
 where the relations between $C_{LL}^{tc}$ and $C_{LL}^{bs}$ are given,
 and later in Section \ref{Sec:result} we will show how to distinguish them by measuring both $\mu^+\mu^-\to tc$ and $\mu^+\mu^-\to bs$.
 
 \begin{enumerate}
-    \item[Model I]   A $Z^{\prime}$ mdoel with flavor symmetry $U(1)_{L_{\mu}-L_{\tau}}$.
+    \item[Model I]   A $Z^{\prime}$ model with flavor symmetry $U(1)_{L_{\mu}-L_{\tau}}$.
         In this model, the $L_{\mu}-L_{\tau}$ is promoted into a $U(1)$ gauge symmetry,
-        which is mediated by a massive gauge boson $Z^{\prime}$.
+      with a massive gauge boson $Z^{\prime}$.
     Originally it was proposed for muon $g-2$ anomaly \cite{Baek:2001kca} and neutrino mixing \cite{Ma:2001md}.
-    Later it is realised that its coupling to quarks can be described by high dimensional operators, which can be generated through new heavy quarks \cite{Fox:2011qd}.
+    Later it is realized that the coupling to quarks can be described by high dimensional operators, which can be generated through new heavy quarks \cite{Fox:2011qd}.
     Such interaction can induce flavor violation \cite{Altmannshofer:2014cfa}, to explain B anomaly.
-    Since the effective interaction between $bs\mu\mu$($tc\mu\mu$) is mediated by an $s$-channel $Z^{\prime}$, which is an electroweak singlet,
-    clearly $C_{lq}^{(3)}=0,C_{LL}^{bs}=C_{LL}^{tc}=C_{lq}^{(1)}$.
+    Since the effective interaction between $bs\mu\mu$($tc\mu\mu$) is mediated by an $s$-channel $Z^{\prime}$, an electroweak singlet,
+    clearly we have $C_{lq}^{(3)}=0,C_{LL}^{bs}=C_{LL}^{tc}=C_{lq}^{(1)}$.
     Consequently, we have $\sigma(tc)\sim\sigma(bs)$.
 
     \item[Model II] A scalar triplet leptoquark $S_3$ model.
-        In this model, the new physics are mediated by a heavy scalar leptoquark, which belongs to $SU(2)_L$ triplet.
+        In this model, the new physics is mediated by a heavy scalar leptoquark, which belongs to $SU(2)_L$ triplet.
         The corresponding Lagrangian can be written as \cite{Dorsner:2016wpm}
         \begin{align}
             \mathcal{L}_{NP}=\sum_{i,j}\lambda_{ij}\bar{Q}_i^c(i\tau^2)\tau^{I}L_jS_3^{I}+\textrm{h.c.}
@@ -297,14 +298,14 @@ and later in Section \ref{Sec:result} we will show how to distinguish them by me
         and $\sigma(tc)=\frac{1}{4}\sigma(bs)$
 
     \item[Model III] A scalar singlet leptoquark $S_1$ model.
-        In this model, new physics are mediated by a heavy scalar leptoquark, which belongs to $SU(2)_{L}$ singlet.
+        In this model, new physics is mediated by a heavy scalar leptoquark, which belongs to $SU(2)_{L}$ singlet.
         There are three possible hypercharge assignments,
         and we consider the case $Y=\frac{1}{3}$ here.
         The corresponding Lagrangian is
         \begin{align}
             \mathcal{L}_{NP}=\sum_{i,j}\lambda_{ij}\bar{Q}^c_i(i\tau_2)L_jS_1+\textrm{h.c.}
         \end{align}
-        At tree-level, the relevant Wilson coefficients are
+        At the tree level, the relevant Wilson coefficients are
         \begin{align}
             [C_{lq}^{(1),\textrm{tree}}]_{prst}=\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{4M^2}\\
             [C_{lq}^{(3),\textrm{tree}}]_{prst}=-\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{4M^2}
@@ -326,10 +327,10 @@ and later in Section \ref{Sec:result} we will show how to distinguish them by me
         \begin{align}
             M\lesssim 1.9\si{TeV}
         \end{align}
-        Consequently, we expect that at the energy range of future muon colliders, it can be produced on-shell, and be observed directly.
+        Consequently, we expect that at the energy range of future muon colliders, a pair of the singlet scalars $S_1$  can be produced and be observed directly.
 \item[Model IV] A $U_1$ vector leptoquark model. Originally proposed in \cite{Barbieri:2015yvd},
 see also \cite{Buttazzo:2017ixm}.
-        The Lagrangian is given by
+        The Lagrangian is given by 
         \begin{align}
         \mathcal{L}_{NP}=-\frac{1}{2}U_{1,\mu\nu}^{\dag}U^{1,\mu\nu}+M_U^2U_{1,\mu}^{\dag}U_1^{\mu}+g_UU_{1,\mu}\lambda_{ij}\bar{Q}_{i}\gamma^{\mu}L_{j}+\textrm{h.c.}
         \end{align}
@@ -344,24 +345,18 @@ see also \cite{Buttazzo:2017ixm}.
 \section{Signatute of $\mu^+\mu^-\to t\bar{c}$ at future muon colliders }
 \label{Sec:result}
 
+\subsection{Cross sections of signal and main background processes}
 To study the $\mu^+\mu^-\to t\bar{c}$ process at future muon collider, 
 we generate a UFO model with relevant operators by Feynrules~\cite{Alloul:2013bka}, 
 and import it to \mgamc \cite{Alwall:2014hca}. 
 We calculate the cross sections of signals and backgrounds from $E_{cm}=1$ TeV to $30$ TeV.  
-The energy dependencies of the cross sections are shown in the Fig.~\ref{ecm}. 
-The main background processes include $b\bar{b}$, $c\bar{c}, $$q\bar{q}$ ($q=u,d,s$), 
-$t\bar{t}$, $W^+W^-$, $ZZ$ and $W^{\pm}jj$ ($j=u,d,s,c$). 
-The process $W^{\pm}jj$ is also included because it describes the weak final state radiation. 
-On one hand, backgrounds with two final states are from S-channel and decrease with the increase of the collision energy.
-On the other hand, the dominant contribution of $W^{\pm}jj$ is T-channel process, 
-and its cross sections are almost the same with different $E_{cm}$.
+The energy dependencies of the cross sections are shown in Fig.~\ref{ecm}. 
+The main background processes include $j j$, $W^+ W^-$, $ZZ$, $t \bar{t}$, and $Zh$\xznote{TODO}. These processes are from S-channel and decrease with the increase of the collision energy. It is noteworthy that the cross sections of diboson processes $WW$ can be much larger than those of $jj$ final states. The process $W^\pm jj$ is also included, which describes the weak final state radiation. It is remarkable that the cross section of $W^\pm jj$ is much larger than those of other processes and is almost $10^2$ fb and is constant even when the collision energy increases. Therefore, suppressing the background events of $\mu^+ \mu^- \to W^\pm jj$ will be crucial and necessary.
 
-The cross section of main signal process $\mu^+ \mu^- \to t \bar{c} (\bar{t} c)$ derived from the 4-fermion interactions are proportional to collision $s^2$, and it increases with the increase of the collision energy, as shown in Fig.~\ref{ecm}. 
-The largest signal is the case that only $c_{9}$ is switched on, and it can reach $\mathcal{O}(1)$ fb at the $30$ TeV. 
+The cross section of the main signal process $\mu^+ \mu^- \to t \bar{c} (\bar{t} c)$ derived from the 4-fermion interactions are proportional to collision $s^2$, and it increases with the increase of the collision energy, as shown in Figure 1. The largest signal is the case that only $c_{9}$ is switched on, and it can reach $\mathcal{O}(1)$ fb at the $30$ TeV. 
 
-Near the threshold, cross section of all background processes are huge when compared with the signal process. 
-With the increase of collision energy, the signal cross section can even be larger than those of background processes if the collision energy is large enough (say $\sqrt{s}=30$ TeV) for some new physics models. 
-Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover the signal events since the cross section of background processes are several orders larger than that of the signals processes.
+Near the threshold, the cross section of all background processes is huge compared to the signal process. With the increase of collision energy, the signal cross section can even be larger than those of background processes if the collision energy is large enough (say $\sqrt{s}=30$ TeV) for some new physics models. 
+Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover the signal events since the cross section of background processes is several orders larger than that of the signals processes.
 
 \begin{figure}
   \centering
@@ -371,19 +366,8 @@ Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover t
   \subfigure{
   \thesubfigure
   \includegraphics[width=.4\linewidth]{e_sigma_clq1_eq_3clq3_log.pdf}}
-  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. For the signal, $X=t\bar{c}$, while $X$ is the final state of the background. The best fits $c_{9}=-c_{10}=-0.39$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered here. Their values are evaluated to the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two relations between $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ have been considered: (a) $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$, and (b) $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
+  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. For the signal, $X=t\bar{c}$, while $X$ is the final state of the background. The best fits $c_{9}=-c_{10}=-0.39$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered here. Their values are evaluated to the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, i.e. $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, i.e. $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
 \end{figure}
-
-In Fig.~\ref{ecm}, the best fits of $c_{9}$ and $c_{10}$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered. 
-Their values are evaluated to the EW scale by our RGEs Eq.~\ref{beta:VLLed} and Eq.~\ref{beta:VLRde}. 
-And then they are matched to SMEFT by Eq.~\ref{match:VLLed} and Eq.~\ref{match:VLRde}. 
-From Eq.~\ref{match:VLLed}, we also know that the constraint from B physics can be only applied to the sum of $C^{(1)}_{lq}+C^{(3)}_{lq}$~\footnote{The generation indices are always $(p,r,s,t)=(2,2,2,3)$ for $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ and $(p,r,s,t)=(2,3,2,2)$ for $C_{qe}$ in this paper}.  
-So any new physics scenarios with $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ as free parameters cannot be constrained by the data from B physics experiments. 
-In Fig.~\ref{rge:EWtoUV}, we show the running of $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C^{(1)}_{lq}-C^{(3)}_{lq}$ from EW scale to new physics scale at $\Lambda=10$ TeV, 
-in the case of $c_{9}=-0.73$ and $c_{10}=0$.
-We have considered two naive scenarios: 1) $C^{(1)}_{lq}=L^{V,LL}_{ed}\Lambda^2/v^2$, $C^{(3)}_{lq}=0$, and 2) $C^{(1)}_{lq}=3C^{(3)}_{lq}=3L^{V,LL}_{ed}\Lambda^2/4v^2$.
-Obviously, it is hard to distinguish these two cases if we only know the value of $C^{(1)}_{lq}+C^{(3)}_{lq}$ by measuring $\mu^+\mu^-\to b\bar{s}(\bar{b}s)$. 
-The measurement of $\mu^+\mu^-\to t\bar{c}(\bar{t}c)$ is also necessary to constrain the value of $C^{(1)}_{lq}-C^{(3)}_{lq}$. 
 
 \begin{figure}
   \centering
@@ -397,50 +381,63 @@ The measurement of $\mu^+\mu^-\to t\bar{c}(\bar{t}c)$ is also necessary to const
 \end{figure}
 
 As we have seen in Fig.~\ref{ecm}, the process $\mu^+\mu^-\to t\bar{c}$ can only be observable when $E_{cm}>10$ TeV.  
-In such high energy, we can expect that two energetic jets are observed at the detector for either signal and background events. 
-For the signal events, one jet with invariant mass around top mass and another one with invariant mass around charm mass~\footnote{In our Monte Carlo simulation, the charm mass is set to zero}. 
-While for other background events, such as $W^+ W^-$ and $t \bar{t}$, the invariant mass of boosted W and top quark can generate large jet mass when the cone parameter is large enough to include all their decay products.
-For background events, such as $q\bar{q}$, we expect jet mass should be small if the jet cone parameter is set to be appropriate.
+In a such high energy, we can expect two energetic jets to be observed at the detector for either signal or background events. 
 
-To further investigate the kinematic features of signal and background, we generate events with $E_{cm}=10$ TeV.
-We consider Model I with $c_9=-c_{10}=-0.39$ as input, 
-since it has a large cross section and the effects from $C_{qe}$ can be ignored.
-All events are hadronic decayed by \mgamc. 
-And then we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
+In Fig.~\ref{ecm}, the best fits of $c_{9}$ and $c_{10}$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered. 
+Their values are evaluated to the EW scale by our RGEs Eq.~\ref{beta:VLLed} and Eq.~\ref{beta:VLRde}. 
+And then they are matched to SMEFT by Eq.~\ref{match:VLLed} and Eq.~\ref{match:VLRde}. 
+From Eq.~\ref{match:VLLed}, we also know that the constraint from B physics can be only applied to the sum of $C^{(1)}_{lq}+C^{(3)}_{lq}$~\footnote{The generation indices are always $(p,r,s,t)=(2,2,2,3)$ for $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ and $(p,r,s,t)=(2,3,2,2)$ for $C_{qe}$ in this paper.}.  
+So any new physics scenarios with $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ as free parameters cannot be constrained by the data from B physics experiments. 
+In Fig.~\ref{rge:EWtoUV}, we show the running of $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C_{qe}$ from EW scale to new physics scale at $\Lambda=10$ TeV, 
+in the case of $c_{9}=-0.73$ and $c_{10}=0$.
+We have considered two simple scenarios: 1) $C^{(1)}_{lq}=L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$ and $C^{(3)}_{lq} = 0$; 2) $C^{(1)}_{lq}=3 C^{(3)}_{lq}=\frac{3}{4} L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$\xznote{At which scale?}.
+Considering the experimental uncertainties, it is challenging to distinguish these two cases from RGE running. 
+
+\subsection{Jet Level Analysis}
+
+\textcolor{black}{It should be mentioned that for a muon collider, the collision environment is relatively clean and there is no serious pileup and underlying event which occurred at a hadron collider, but there exist beam-induced backgrounds which arise from the muon decay.  By using the jet grooming techniques, it is possible to suppress such beam-induced backgrounds \cite{Collamati:2021sbv}. Therefore, we will neglect the beam induced backgrounds in our study. }
+
+\textcolor{black}{Meanwhile, since it is more and more realistic to use the particle flow method to measure the jet energy, which can reduce the uncertainty of jet energy down to $5\%-20\%$ \cite{Nachman:2022emq}. Actually, one benefit of the particle flow method can also help us to distinguish a light jet, a W/Z boson jet, and a top jet: a W/Z/top jet can have more charged tracks in a detector when compared with a light jet.}
+
+To further investigate the kinematic features of jets from signal processes, 
+we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
 and FastJet~\cite{Cacciari:2011ma} to reconstruct jets.  
-In the FastJet, we use the generalised $k_t$ algorithm for $e^+e^-$ collisions, 
-which is extended from a simple $k_t$ algorithm~\cite{Catani:1991hj}.
+It is expected that jet algorithms developed for electron-positron colliders can also be applied well to muon colliders. Therefore, we use the generalised $k_t$ algorithm~\cite{Catani:1991hj}\xznote{Correct citation?} for $e^+e^-$ collisions. 
 This algorithm defines two distances:
 \begin{eqnarray}
   d_{ij} &=& \min(E^{2p}_i,E^{2p}_j)\frac{1-\cos\theta_{ij}}{1-\cos{R}}, \label{eq:genkt1}\\
   d_{iB} &=& E^{2p}_i, \label{eq:genkt2}
 \end{eqnarray}
-where $p$ and $R$ are input by user. 
-If a $d_{ij}$ is smallest then particle $i$ and $j$ are recombined, while $d_{iB}$ is smallest then $i$ is called an ``inclusive jet''.
+where $p$ and $R$ are input by user. If a $d_{ij}$ is smallest then particle $i$ and $j$ are recombined, while $d_{iB}$ is smallest then $i$ is called an "inclusive jet''.
+In this context, we choose $p=1$.
 
-The original $k_t$ algorithm~\cite{Catani:1991hj} only has a single distance:
+It should be pointed out that the original $k_t$ algorithm~\cite{Catani:1991hj} only has a single distance:
 \begin{eqnarray}
   d_{ij} &=& \min(E^{2}_i,E^{2}_j)\left(1-\cos\theta_{ij}\right), \label{eq:eekt}
 \end{eqnarray}
-which is identical to Eq.~\ref{eq:genkt1} by choosing $\pi<R<3\pi$ and $p=1$.
+which is identical to Eq.~(\ref{eq:genkt1}) by choosing $\pi<R<3\pi$\xznote{Strange!} and $p=1$.
 In this case, one can extract ``exclusive jet'' only. 
-For the high energy muon collider, muon beams may radiate energetic particles and have large angles to the beam.
-It is hard to include such kind of particles to beam jets. 
-So this algorithm is not sufficient in our context.
+For the high energy muon collider, muon beams may radiate energetic particles which can have large angles to the beams. It is hard to include such kind of particles to beam jets. So this algorithm is not sufficient in our context.
 
-The optimization of parameter $p$ and $R$ is a complicate task.
-As a first attempt, we choose $p=1$ so it works similar to a $k_t$ algorithm for hadron collider~\cite{Catani:1993hr,Ellis:1993tq}. 
+Below we will demonstrate a case study with the collision energy $\sqrt{s}=10$ TeV at the jet level analysis. We demand all signal and background events have hadronic decays and neglect those semi-leptonic and pure leptonic final states. 
+
+\textcolor{black}{Since the dominant background processes are $WW (ZZ)$, $tt$, and $jj$ which can have more than two energetic jets in the final state, in order to avoid the combinatoric issues, it is better to have less number of jets in the final state. For example, when $R=0.05$ and $E_j>100$\xznote{Inconsistency!Later $E_j>500$ is adopted}, the number of jets for a signal event can be much more than $10$, which is difficult to analyze. Then appropriate jet parameters, like cone parameter and energy cut, are crucial for the jet numbers and the preselection of signal events.
+ Due to the fact that both $W/Z$ bosons and top quarks are highly boosted in the final state (each of them carries an energy 5 TeV), it is crucial to set the value of jet parameter so as to capture the whole decay products of $W/Z$ bosons and top quarks. Therefore, in this study, we will focus on the boosted events in our analysis.}
+
+ \textcolor{black}{According to the rule of thumb, the typical cone parameter for a top jet with a large $P_t$ can be expressed as $R_t = \frac{2 m_t}{P_t}$.\xznote{Wrong formula! This is for the algorithm which uses $P_t$, while here we are using $E$!} It can be estimated that all products of a $P_t=3.5$ TeV top jet can collimate in a cone with value $R_t= 0.1$ or so. Considering that the future ECAL (HCAL) detector can have a granularity with $\Delta \eta \times \Delta \phi = 0.01 \times 0.009 (0.025 \times 0.025)$ for the FCC-hh detector \cite{FCC:2018vvp},\xznote{Wrong detector!} there is no doubt that a future detector of a muon collider is able to resolve the substructure of such a highly boosted top jet. }
+
+The optimization of parameters $p$ and $R$ is a complicated task.
+As a first attempt, we choose $p=1$ so it works similarly to a $k_t$ algorithm for hadron collider~\cite{Catani:1993hr,Ellis:1993tq}. 
 For the $t\bar{c}(\bar{t}c)$ final state, we hope to find a $R$ parameter to reconstruct a heavy jet around top mass and a light jet.
-We scan the $R$ parameter from $0.05$ to $0.15$ and find that $R=0.10$ can satisfy this requirement. 
-In Fig.~\ref{subfig:ej_tc}, we display the energy distribution of jets in $t\bar{c}(\bar{t}c)$ final with $R=0.10$ and $p=1$. 
-These jets are sorted by energy. 
-Obviously, the first two jets have energy around $E_{cm}/2$, 
-which means that they are probably originated from the hard process.
-We can also observed that the energy of the 3th jet can reach several hundred GeV or TeV level.
-In such high energy collider, parton shower can radiate some high enery particles and can be detected as a hard jet. 
-To reduce these radiations, we implement a cut $E(j)>500$ GeV to events. 
+We have scanned the $R$ parameter from $0.05$ to $0.15$ and have found that $R=0.10$ can satisfy this requirement. 
+
+In Fig.~\ref{subfig:ej_tc}, we display the energy distribution of the leading three jets in $t\bar{c}(\bar{t}c)$ final with $R=0.10$ and $p=1$. 
+These jets are sorted by energy.  Obviously, the first two jets have energy around $E_{cm}/2$, 
+which means that they probably originated from a hard process.
+We can also observe that the energy of the 3rd jet can reach several hundred GeV or TeV levels.
+In such a high energy collider, parton shower can radiate some high energy particles and can be detected as a hard jet. To reduce these radiations, we implement a cut $E(j)>500$ GeV to jets for each event. 
 After this cut, we plot the number of jets in Fig.~\ref{subfig:njets}. 
-As we can see, the peak is $N_{jets}=2$ for two final state process and the peak for $W^{\pm}jj$ background is 3. 
+As we can see, the peak is $N_{jets}=2$ for two final state processes, and the peak for $W^{\pm}jj$ background is 3.  Therefore to demand the number of jets $N_j=2$ for each event can heavily suppress the background events of $\mu^+ \mu^0 \to W^{\pm}jj$.
 
 \begin{figure}[htbp]
 %  \setcounter{subfigure}{0}
@@ -457,12 +454,12 @@ As we can see, the peak is $N_{jets}=2$ for two final state process and the peak
   \caption{(a) The jet energy distributions of process $\mu^+\mu^-\to t\bar{c}$ are displayed, where jets are sorted by energy. (b) The number of jets after implementing cut $E(j)>500$ GeV.}\label{fig:base}
 \end{figure}
 
-Fig.~\ref{fig:mj1mj2} shows the invariant masses of the two most energetic jets of signal and backgrounds. 
-Here, we label the heavy jet as HJ in Fig.~\ref{fig:mj1} and the light one as LJ in Fig.~\ref{fig:mj2}.
-As we expect, HJ has a peak around top mass and the distribution of LJ is flat for the signal.
+Fig.~\ref{fig:mj1mj2} shows the invariant masses of the two most energetic jets of signal and background events. 
+Here, we label the heavier jet as HJ in Fig.~\ref{fig:mj1} and the lighter one as LJ in Fig.~\ref{fig:mj2}.
+As we expect, HJ has a peak around the top mass and the distribution of LJ is flat for the signal.
 For the backgrounds with heavy particles ($t$, $W$, and $Z$), we also observe peaks around their masses. 
-It is because these particles are highly boosted in such high energy machine. 
-We can include all their decayed products by choosing a small jet cone like $R=0.10$.
+It is because these particles are highly boosted in such a high energy machine. 
+%We can include all their decayed products by choosing a small jet cone like $R=0.10$.
 
 \begin{figure}[htbp]
   \setcounter{subfigure}{0}
@@ -476,31 +473,33 @@ We can include all their decayed products by choosing a small jet cone like $R=0
   \thesubfigure
   \label{fig:mj2}
   \includegraphics[width=0.4\textwidth]{mj2.pdf}}
-  \caption{The invariant mass of (a) the heavy jet and (b) the light jet in signal and backgrounds are displayed.}\label{fig:mj1mj2}
+  \caption{The invariant mass of (a) the heavier jet and (b) the lighter jet in signal and backgrounds are displayed.}\label{fig:mj1mj2}
 \end{figure}
 
-Since we only consider hadronic decay, top quark should decay to $b$ quark and $W$ boson, 
+\textcolor{black}{B-tagging and C-tagging techniques can help signal and background separation. As shown in \cite{ATLAS:2019bwq}, the larger the transverse momentum, the better the B tagging efficiency. Therefore we expect a higher B-tagging efficiency for a 10 TeV collision. Although B mesons and D mesons have similar proper times at $10^{-12}$ seconds, their masses are different. If C-tagging techniques \cite{ATLAS:2021cxe} can be applied in our analysis, we expect better results can be obtained. } 
+
+Since we only consider hadronic decay, the top quark should decay to $b$ quark and $W$ boson, 
 and $W$ further decays to light quarks. 
-So the HJ should be tagged as a $b$-jet in future detector. 
-In this paper, the detector simulation is not performed. 
+So the HJ of a signal event should also be tagged as a $b$-jet in a future detector. 
+%In this paper, the detector simulation is not performed. 
 To consider the $b$-tagging effects, we track all decayed products of $b$-hadrons after the hadronization. 
-If constituents of a jet inlcude these products, we say that this jet is a true $b$-jet. 
-Same procedures are applied to label $c$-jet. 
+If the constituents of a jet have a b-hadron, we can label this jet is a true $b$-jet. 
+The same procedure can be applied to label $c$-jet. 
+
 Fig.~\ref{fig:bcjet} shows the number of true $b$-jets and $c$-jets.
 Obviously, a $b$-jet and a $c$-jet are found in the $t\bar{c}(\bar{t}c)$ signal. 
 For backgrounds with two b quarks ($t\bar{t}$ and $b\bar{b}$), two $b$-jets can be found in most events.
 For the $c\bar{c}$ backgrounds, most events include two $c$-jets.
 $ZZ$, $W^+W^-$ or $W^{\pm}jj$ can decay to $b$ or $c$ quark, 
 so we also observe some $b$- or $c$-jets are found in these events.
-Most of the $q\bar{q}$ events have not both $b$- and $c$-jet, 
-but a small fraction includes $b$- or $c$-jet. 
-In the parton shower, quark has probability to radiate a gluon, 
-and this gluon may split to $b\bar{b}(c\bar{c})$. 
-Such kind of process is easier to occur at high energy muon collider, 
-which may increase the mistagging rate of light quarks. 
-With this true flavour information, we can implement a $b$-tagging cut. 
-In our analysis, the $b$-tagging rate is $\epsilon_{b}=0.7$, 
-while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-jets and light jets, respectively.
+Most of the $q\bar{q}$ events do have not both $b$- and $c$-jet, 
+but a small fraction of such events can have $b$- or $c$-jets in the final state.  
+For example, in the parton shower, a quark has a certain probability to radiate a gluon, 
+and subsequently, this gluon may split to heavy quarks like $b\bar{b}$ and $c\bar{c}$. 
+Such a kind of process is easier to occur for an energetic light quark,  
+which may lead to an increase in the mistagging rate of light quarks. 
+
+With this flavor tagging information, we can implement a $b$-tagging cut. In our analysis, the $b$-tagging rate is $\epsilon_{b}=0.7$, while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-jets and light jets, respectively.
 
 \begin{figure}[htbp]
   \setcounter{subfigure}{0}
@@ -514,105 +513,96 @@ while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-
   \thesubfigure
   \label{fig:ncjets}
   \includegraphics[width=0.4\textwidth]{ncjets.pdf}}
-  \caption{The number of (a) true $b$-jet and (b) true $c$-jet in signal and backgrounds are displayed.}\label{fig:bcjet}
+  \caption{The number of (a) true $b$-jets and (b) true $c$-jets in signal and background events are displayed.}\label{fig:bcjet}
 \end{figure}
 
-Now we can introduce some cuts to reduce backgrounds:
+Below we introduce some simple cuts to separate signal and background events:
 \begin{itemize}
-  \item Cut1: $N_{jet}=2$, $N_{lepton}=0$,
-  \item Cut2: $M_{jj}>8$ TeV,
-  \item Cut3: $150$ GeV$<M(HJ)<200$ GeV,
-  \item Cut4: $M(LJ)<75$ GeV,
-  \item Cut5: the heavy jet is b-tagged and the light jet is not tagged.
+  \item Cut1: $N_{jet}=2$, $N_{lepton}=0$ and $M_{jj}>8$ TeV,
+  \item Cut2: $150$ GeV$<M(HJ)<200$ GeV,
+  \item Cut3: $M(LJ)<75$ GeV,
+  \item Cut4: the heavy jet is b-tagged and the light jet is not tagged.
 \end{itemize}
-The cut flows are listed in Table.~\ref{table:tc:cut}. 
-As we can see, the cuts for jet invariant mass are efficient to reduce backgrounds with heavy particles. 
-The $b$-tagging cut is efficient to reduce backgrounds with $W$ boson. 
-After these cuts, the huge backgrounds are reduced significantly, 
-and the signal can be observed. 
+The results of the cut flows are listed in Table.~\ref{table:tc:cut}. 
+As we can see, the cuts for the invariant masses of heavier and lighter jets are efficient to reduce backgrounds with heavy particles. The $b$-tagging cut is efficient to reduce backgrounds with $W$ boson. 
+After these cuts, the huge backgrounds are reduced successfully, 
+and the signal events can be observed with remarkable significance. 
 
 \begin{center}
 \begin{table}
   \begin{center}
-  \begin{tabular}{c|c|c|c|c|c|c|c|c}
+  \begin{tabular}{|c|c|c|c|c|c|c|c|}
   \hline
-  &  No Cuts  &  Cut1  &    Cut2   &  Cut3  & Cut4 & Cut5 &  $S/B$  &    $S/\sqrt{S+B}$   \\
+  &  No Cuts  &     Cut1   &  Cut2  & Cut3 & Cut4 &  $S/B$  &    $\sigma$   \\
   \hline
-  $\mu^+\mu^-\to tc$   &  2541 & 1222    &     1168  &  740  &  497 & 304  &  \multirow{8}{*}{0.38} & \multirow{8}{*}{9.12} \\
-  $\mu^+\mu^-\to t\bar{t}$     &   $2.15\times{10^4}$  &  $1.03\times{10^4}$    &     $9970$  &  $7602$ & $269$ & $106$  & & \\
-  $\mu^+\mu^-\to q\bar{q}$     &   $1.07\times{10^5}$  &   $4.95\times{10^4}$  & $4.93\times{10^4}$  &    $5084$    &  $3498$ & $224$ &   &  \\
-  $\mu^+\mu^-\to c\bar{c}$     &   $5.19\times{10^4}$  &  $2.40\times{10^4}$ &  $2.30\times{10^4}$  &    $2365$    &  $1677$ & $210$ &   &  \\
-  $\mu^+\mu^-\to b\bar{b}$     &   $2.74\times{10^4}$   &  $1.29\times{10^4}$ & $1.12\times{10^4}$  &    $1158$    &  $829$ & $159$ &   &  \\
-  $\mu^+\mu^-\to W^+W^-$  & $7.56\times{10^5}$   & $7.18\times{10^5}$ & $7.18\times{10^5}$  & $3555$ &  $560$ & $0$ & & \\
-  $\mu^+\mu^-\to Wjj$  & $1.07\times{10^6}$  & $3.49\times{10^4}$ & $3.32\times{10^4}$  &  $2929$   &  $1811$ & $107$  & & \\
-  $\mu^+\mu^-\to ZZ$  & $4.55\times{10^4}$  & $4.54\times{10^4}$ & $4.49\times{10^4}$  &  $0$   &  $0$ & $0$  &  & \\
+  $\mu^+\mu^-\to tc$   &  2541   & 1168  &  740  &  497 & 304  &  \multirow{8}{*}{0.38} & \multirow{8}{*}{9.12} \\
+  $\mu^+\mu^-\to t\bar{t}$     &   $2.15\times{10^4}$  &       $9970$  &  $7602$ & $269$ & $106$  & & \\
+  $\mu^+\mu^-\to q\bar{q}$     &   $1.07\times{10^5}$   & $4.93\times{10^4}$  &    $5084$    &  $3498$ & $224$ &   &  \\
+  $\mu^+\mu^-\to c\bar{c}$     &   $5.19\times{10^4}$  &  $2.30\times{10^4}$  &    $2365$    &  $1677$ & $210$ &   &  \\
+  $\mu^+\mu^-\to b\bar{b}$     &   $2.74\times{10^4}$  & $1.12\times{10^4}$  &    $1158$    &  $829$ & $159$ &   &  \\
+  $\mu^+\mu^-\to W^+W^-$  & $7.56\times{10^5}$   & $7.18\times{10^5}$  & $3555$ &  $560$ & $0$ & & \\
+  $\mu^+\mu^-\to Wjj$  & $1.07\times{10^6}$  & $3.32\times{10^4}$  &  $2929$   &  $1811$ & $107$  & & \\
+  $\mu^+\mu^-\to ZZ$  & $4.55\times{10^4}$   & $4.49\times{10^4}$  &  $0$   &  $0$ & $0$  &  & \\
   \hline
   \end{tabular}
   \end{center}
-  \caption{The number of events before and after cut are listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of cuts are described in the text.\label{table:tc:cut}}
+  \caption{The number of events before and after each cut are listed, where $\sigma$ is defined as $\sigma=S/\sqrt{S+B}$. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of the cuts are described in the text.\label{table:tc:cut}}
 \end{table}
 \end{center}
 
-As a reference, we analyze the $\mu^+\mu^-\to b\bar{s}(\bar{b}s)$ with similar method. 
-The cuts we introduce are
+For a purpose of comparison and contrast, we also perform an analysis of the process $\mu^+\mu^-\to b\bar{s}(\bar{b}s)$. We introduce the following cuts to separate signal and background events 
 \begin{itemize}
-  \item Cut1: $N_{jet}=2$, $N_{lepton}=0$,
-  \item Cut2: $M_{jj}>8$ TeV,
-  \item Cut3: $M(HJ)<75$ GeV,
-  \item Cut4: One jet is b-tagged.
+  \item Cut1: $N_{jet}=2$, $N_{lepton}=0$, and $M_{jj}>8$ TeV,
+  \item Cut2: $M(HJ)<75$ GeV,
+  \item Cut3: One jet is b-tagged.
 \end{itemize} 
-The cut flows are listed in Table.~\ref{table:bs:cut}.
-As we dicuss above, heavy jets should be normal at a high energy muon collider.
-The invariant mass cut is necessary to reject backgrounds like $t\bar{t}$ and $ZZ$.
-The remained backgrounds with $W$ boson can be further reduced by b-tagging cut.
+The results of cut flows are listed in Table.~\ref{table:bs:cut}.
+
+As we discussed above, there should be no massive jets in such signal events, so we can veto the heavier jets by demanding the heavier jet should not have too much larger jet mass.
+The jet mass cut of the heavier jets can work to reject backgrounds like $t\bar{t}$, $WW$, and $ZZ$.
+The remained backgrounds with $W$ boson can be further reduced by applying a b-tagging cut. After these cuts, it is observed that heavy flavor final states will be the dominant background which leads to a small $S/B$.
 
 \begin{center}
 \begin{table}
   \begin{center}
-  \begin{tabular}{c|c|c|c|c|c|c|c}
+  \begin{tabular}{|c|c|c|c|c|c|c|}
   \hline
-  &  No Cuts  & Cut1  &    Cut2 & Cut3 & Cut4 & $S/B$ &  $S/\sqrt{S+B}$  \\
+  &  No Cuts  &     Cut1 & Cut2 & Cut3 & $S/B$ &  $\sigma$  \\
   \hline
-  $\mu^+\mu^-\to bs$     &   4599  &  2201   &   2080  &  927 & 642   &   \multirow{8}{*}{0.08}   &  \multirow{8}{*}{6.91}  \\
-  $\mu^+\mu^-\to t\bar{t}$     &   $2.15\times{10^4}$  &  $1.03\times{10^4}$  & $9970$   &  $2$  & $2$  & & \\
-  $\mu^+\mu^-\to q\bar{q}$     &   $1.07\times{10^5}$  &   $4.95\times{10^4}$    &   $4.93\times{10^4}$ & $2.14\times{10^4}$    &  $1066$ &   &  \\
-  $\mu^+\mu^-\to c\bar{c}$     &   $5.19\times{10^4}$  &  $2.40\times{10^4}$    &    $2.30\times{10^4}$ & $1.01\times{10^4}$    &  $2207$  &   &  \\
-  $\mu^+\mu^-\to b\bar{b}$     &   $2.74\times{10^4}$   &  $1.29\times{10^4}$   &  $1.12\times{10^4}$ &   $4987$    &  $2019$  &   &  \\
-  $\mu^+\mu^-\to W^+W^-$  & $7.56\times{10^5}$   & $7.18\times{10^5}$  &  $7.18\times{10^5}$ &  $1.25\times{10^5}$ &  $1392$ & & \\
-  $\mu^+\mu^-\to Wjj$  & $1.07\times{10^6}$  & $3.49\times{10^4}$ & $3.32\times{10^4}$  &  $1.19\times{10^4}$   &  $1118$  & & \\
-  $\mu^+\mu^-\to ZZ$  & $4.55\times{10^4}$  & $4.54\times{10^4}$ & $4.49\times{10^4}$ &  $447$   &  $188$  &  & \\
+  $\mu^+\mu^-\to bs$     &   4599  &     2080  &  927 & 642   &   \multirow{8}{*}{0.08}   &  \multirow{8}{*}{6.91}  \\
+  $\mu^+\mu^-\to t\bar{t}$     &   $2.15\times{10^4}$    & $9970$   &  $2$  & $2$  & & \\
+  $\mu^+\mu^-\to q\bar{q}$     &   $1.07\times{10^5}$    &   $4.93\times{10^4}$ & $2.14\times{10^4}$    &  $1066$ &   &  \\
+  $\mu^+\mu^-\to c\bar{c}$     &   $5.19\times{10^4}$   &    $2.30\times{10^4}$ & $1.01\times{10^4}$    &  $2207$  &   &  \\
+  $\mu^+\mu^-\to b\bar{b}$     &   $2.74\times{10^4}$    &  $1.12\times{10^4}$ &   $4987$    &  $2019$  &   &  \\
+  $\mu^+\mu^-\to W^+W^-$  & $7.56\times{10^5}$     &  $7.18\times{10^5}$ &  $1.25\times{10^5}$ &  $1392$ & & \\
+  $\mu^+\mu^-\to Wjj$  & $1.07\times{10^6}$   & $3.32\times{10^4}$  &  $1.19\times{10^4}$   &  $1118$  & & \\
+  $\mu^+\mu^-\to ZZ$  & $4.55\times{10^4}$  & $4.49\times{10^4}$ &  $447$   &  $188$  &  & \\
   \hline
   \end{tabular}
   \end{center}
-  \caption{The number of events before and after cut are listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of cuts are described in the text.\label{table:bs:cut}}
+  \caption{The number of events before and after each cut is listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of the cuts are described in the text.\label{table:bs:cut}}
 \end{table}
 \end{center}
-
-
 
 \section{Summary and Discussion}\label{Sec:conc}
-For the signal processes $\mu^+ \mu^- \to b s$ \cite{Altmannshofer:2022xri}, it has been revealed that b tagging is crucial to reject background events from $jj$ final states. The dominant background events are $j j$. In order to extract the information on the Wilson coefficients $C_{9}$ and $C_{10}$, it is found that the polarized muon beams and the measurement of forward-backward asymmetry of final state is crucial. 
+For the signal processes $\mu^+ \mu^- \to b s$ \cite{Altmannshofer:2022xri}, it has been revealed that b tagging is crucial to reject background events from $jj$ final states. The dominant background events are $j j$. In order to extract the information on the Wilson coefficients $C_{9}$ and $C_{10}$, it is found that the polarized muon beams and the measurement of forward-backward asymmetry of the final state are needed. 
 
-In this work, instead of assuming polarized muon beams and charge tagging of final state, we propose to measure the signal processes $\mu^+ \mu^- \to t c$. Then it is found that the major task is to reject $t \bar{t}$ and $ W W$ events, which might be even easier to pick out signal events. It is also found that the weak radiation $ j j W$ is large and might be relevant background.
+In this work, instead of assuming polarized muon beams and charge tagging of a final state, we propose to measure the signal processes $\mu^+ \mu^- \to t c$. Then it is found that the major task is to reject $t \bar{t}$ and $ W W$ events, which might be easier to pick out signal events. It is also found that the weak radiation $ j j W$ is large and might be a relevant background.
 
-It is also found that in order to resolve the signal events, detectors with high granuality are needed, since top quarks and W bosons in the hadronic final states are around 5 TeV and are highly boosted objects. In order to capture the substructure of these massive jets, the cone parameter should be set as around  $0.09-0.1$ when the collision energy is assumed to be $\sqrt{s}=10$ TeV, which is much smaller compared with the cone parameter adopted as $R=0.4$ or $0.5$ at the LHC. To extract signal events from large background events, refined analysis of jet substructure at TeV region should be applied in order to achieve a much better performance.
+It is also found that in order to resolve the signal events, detectors with high granularity are needed since top quarks and W bosons in the hadronic final states are around 5 TeV and are highly boosted objects. In order to capture the substructure of these massive jets, the cone parameter should be set as around  $0.09-0.1$ when the collision energy is assumed to be $\sqrt{s}=10$ TeV, which is much smaller compared with the cone parameter adopted as $R=0.4$ or $0.5$ at the LHC. To extract signal events from large background events, a refined analysis of the jet substructure at TeV region should be applied in order to achieve much better performance. \textcolor{black}{It is expected that a modern top tagger technique can improve the top jet identification and reject the W/Z jets.}
 
-To distinguish new physics models, it is found that the measurement of  $\mu^+ \mu^- \to tc$ can pinpoint the Model I and Model II. Model III can be discovered due to the near resonance near a few TeV region. Model IV could be favored if there is no signal of the process $\mu^+ \mu^- \to t c$ can be measured.
+
+To distinguish new physics models, it is found that the measurement of  $\mu^+ \mu^- \to tc$ can pinpoint Model I and Model II. Model III can be discovered due to the resonance near a few TeV regions. Model IV could be favored if there is no signal of the process $\mu^+ \mu^- \to t c$ are measured.
 
 	\begin{acknowledgments}
                 Z.J. Zhao has been partially supported by a
 		Nikolai Uraltsev Fellowship of the Center for Particle Physics,
 		University of Siegen, and partially supported by the Natural Science
 		Foundation of China under the grant No. 11875260. 
-		S.C. Sun is supported by the MOST of Taiwan
-		under grant number of 105-2811-M-002-130 and the CRF Grants of the
-		Government of the Hong Kong SAR under HUKST4/CRF/13G.  Q.S. Yan 
-		is supported by the Natural Science Foundation of China
+		S.C. Sun is supported by the National Natural Science Foundation of China, No.12105013.
+		Q.S. Yan is supported by the Natural Science Foundation of China
 		under the grant No.  11475180 and No. 11875260.
-		X.R. Zhao has received funding from the European Union's Horizon 2020 research 
-		and innovation programme as part of the 
-		Marie Sk{\l}odowska-Curie Innovative Training Network MCnetITN3 (grant agreement no. 722104).
-		We would like to acknowledge the Mainz Institute for Theoretical Physics(MITP) for enabling us to complete this work.
+		X.R. Zhao is supported by the Italian Ministry of Research (MUR) under grand PRIN 20172LNEEZ.
 
 	\end{acknowledgments}
 
@@ -639,12 +629,12 @@ The $\beta$ functions of operators~\ref{O1lq}$\sim$\ref{Oqe} are
 \end{eqnarray}
 where $g$ and $g^\prime$ are the gauge coupling of $SU(2)$ and $U(1)$, respectively. 
 $\Gamma_{u}$ is the $3\times 3$ Yukawa mass matrix of u-type quarks. 
-For simplicity, we only consider top quark is massive, 
+For simplicity, we only consider the top quark is massive, 
 and only the element $\Gamma_u(3,3)=1$ is non-zero.
-Note the Eq.~\ref{beta:lq1}$\sim$\ref{beta:qe} only contain the most important contributions and mixing of the corresponding operators. 
+Note the Eq.~\ref{beta:lq1}$\sim$\ref{beta:qe} only contains the most important contributions and mixing of the corresponding operators. 
 The mixing of the full set of operators is beyond the scope of this work. 
 
-The 1-loop RGE running of SM parameters are given by these $\beta$ functions:
+The 1-loop RGE running of SM parameters is given by these $\beta$ functions:
 \begin{eqnarray}
   \beta_{g} &=& -\frac{19}{6}g^3,  \\
   \beta_{g^\prime} &=& \frac{41}{6}{g^\prime}^3,  \\
@@ -667,7 +657,7 @@ The $\beta$ functions of operator~\ref{QVLLed} and \ref{QVLRde} are
 where $e$ is the coupling constant of QED. 
 $q_e=-1$ and $q_d=-1/3$ are the charges of lepton and d-type quark, respectively. 
 
-At the low energy scale, the 1-loop running of QCD and QED coupling are given by following $\beta$ functions:
+At the low energy scale, the 1-loop running of QCD and QED coupling is given by the following $\beta$ functions:
 \begin{eqnarray}
   \beta_{g_s} &=& -\frac{23}{3}g^3_s,  \\
   \beta_{e} &=& \frac{80}{9}e^3, 
