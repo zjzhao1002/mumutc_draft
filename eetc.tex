@@ -351,11 +351,20 @@ we generate a UFO model with relevant operators by Feynrules~\cite{Alloul:2013bk
 and import it to \mgamc \cite{Alwall:2014hca}. 
 We calculate the cross sections of signals and backgrounds from $E_{cm}=1$ TeV to $30$ TeV.  
 The energy dependencies of the cross sections are shown in Fig.~\ref{ecm}. 
-The main background processes include $j j$, $W^+ W^-$, $ZZ$, $t \bar{t}$, and $Zh$\xznote{TODO}. These processes are from S-channel and decrease with the increase of the collision energy. It is noteworthy that the cross sections of diboson processes $WW$ can be much larger than those of $jj$ final states. The process $W^\pm jj$ is also included, which describes the weak final state radiation. It is remarkable that the cross section of $W^\pm jj$ is much larger than those of other processes and is almost $10^2$ fb and is constant even when the collision energy increases. Therefore, suppressing the background events of $\mu^+ \mu^- \to W^\pm jj$ will be crucial and necessary.
+The main background processes include $b\bar{b}$, $c\bar{c}$, $q\bar{q}$ ($q=u,d,s$), $W^+ W^-$, $ZZ$, $t \bar{t}$, and $Wjj$ ($j=u,d,s,c$). 
+These processes are from S-channel and decrease with the increase of the collision energy. 
+It is noteworthy that the cross sections of diboson processes $W^+W^-$ can be much larger than those of di-quarks final states. 
+The process $W^\pm jj$ is also included, which describes the weak final state radiation. 
+It is remarkable that the cross section of $W^\pm jj$ is much larger than those of other processes and is almost $10^2$ fb and is constant even when the collision energy increases. 
+Therefore, suppressing the background events of $\mu^+ \mu^- \to W^\pm jj$ will be crucial and necessary.
 
-The cross section of the main signal process $\mu^+ \mu^- \to t \bar{c} (\bar{t} c)$ derived from the 4-fermion interactions are proportional to collision $s^2$, and it increases with the increase of the collision energy, as shown in Figure 1. The largest signal is the case that only $c_{9}$ is switched on, and it can reach $\mathcal{O}(1)$ fb at the $30$ TeV. 
+The cross section of the main signal process $\mu^+ \mu^- \to t \bar{c} (\bar{t} c)$ derived from the 4-fermion interactions are proportional to collision $s^2$, 
+and it increases with the increase of the collision energy, as shown in Fig.~\ref{ecm}. 
+The largest signal is the case that only $c_{9}$ is switched on, and it can reach $\mathcal{O}(1)$ fb at the $30$ TeV. 
 
-Near the threshold, the cross section of all background processes is huge compared to the signal process. With the increase of collision energy, the signal cross section can even be larger than those of background processes if the collision energy is large enough (say $\sqrt{s}=30$ TeV) for some new physics models. 
+Near the threshold, the cross section of all background processes is huge compared to the signal process. 
+With the increase of collision energy, 
+the signal cross section can even be larger than those of background processes if the collision energy is large enough (say $\sqrt{s}=30$ TeV) for some new physics models. 
 Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover the signal events since the cross section of background processes is several orders larger than that of the signals processes.
 
 \begin{figure}
@@ -402,7 +411,9 @@ Considering the experimental uncertainties, it is challenging to distinguish the
 To further investigate the kinematic features of jets from signal processes, 
 we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
 and FastJet~\cite{Cacciari:2011ma} to reconstruct jets.  
-It is expected that jet algorithms developed for electron-positron colliders can also be applied well to muon colliders. Therefore, we use the generalised $k_t$ algorithm~\cite{Catani:1991hj}\xznote{Correct citation?} for $e^+e^-$ collisions. 
+It is expected that jet algorithms developed for electron-positron colliders can also be applied well to muon colliders. 
+Therefore, we use the generalised $k_t$ algorithm for $e^+e^-$ collisions,
+which is extended from a simple $k_t$ algorithm~\cite{Catani:1991hj}.
 This algorithm defines two distances:
 \begin{eqnarray}
   d_{ij} &=& \min(E^{2p}_i,E^{2p}_j)\frac{1-\cos\theta_{ij}}{1-\cos{R}}, \label{eq:genkt1}\\
@@ -411,13 +422,17 @@ This algorithm defines two distances:
 where $p$ and $R$ are input by user. If a $d_{ij}$ is smallest then particle $i$ and $j$ are recombined, while $d_{iB}$ is smallest then $i$ is called an "inclusive jet''.
 In this context, we choose $p=1$.
 
-It should be pointed out that the original $k_t$ algorithm~\cite{Catani:1991hj} only has a single distance:
+It should be pointed out that the denominator $(1-\cos{R})$ is replaced by $(3+\cos{R})$ while choosing $\pi<R<3\pi$ in FastJet.
+In this case, $d_{iB}$ is always larger than $d_{ij}$ so that only one inlcusive jet can be found.  
+If we also choose $p=1$, the generalised $k_t$ algorithm is identital to the original $k_t$ algorithm~\cite{Catani:1991hj}, 
+which only has a single distance:
 \begin{eqnarray}
   d_{ij} &=& \min(E^{2}_i,E^{2}_j)\left(1-\cos\theta_{ij}\right), \label{eq:eekt}
 \end{eqnarray}
-which is identical to Eq.~(\ref{eq:genkt1}) by choosing $\pi<R<3\pi$\xznote{Strange!} and $p=1$.
-In this case, one can extract ``exclusive jet'' only. 
-For the high energy muon collider, muon beams may radiate energetic particles which can have large angles to the beams. It is hard to include such kind of particles to beam jets. So this algorithm is not sufficient in our context.
+and one can extract ``exclusive jet'' only. 
+For the high energy muon collider, muon beams may radiate energetic particles which can have large angles to the beams. 
+Such kind of particles are included in the exclusive jets. 
+So this algorithm is not sufficient in our context.
 
 Below we will demonstrate a case study with the collision energy $\sqrt{s}=10$ TeV at the jet level analysis. We demand all signal and background events have hadronic decays and neglect those semi-leptonic and pure leptonic final states. 
 
@@ -486,18 +501,19 @@ To consider the $b$-tagging effects, we track all decayed products of $b$-hadron
 If the constituents of a jet have a b-hadron, we can label this jet is a true $b$-jet. 
 The same procedure can be applied to label $c$-jet. 
 
-Fig.~\ref{fig:bcjet} shows the number of true $b$-jets and $c$-jets.
+Fig.~\ref{fig:nbjets} and Fig.~\ref{fig:ncjets} show the number of true $b$-jets and $c$-jets for signals and backgrounds with quarks.
 Obviously, a $b$-jet and a $c$-jet are found in the $t\bar{c}(\bar{t}c)$ signal. 
 For backgrounds with two b quarks ($t\bar{t}$ and $b\bar{b}$), two $b$-jets can be found in most events.
 For the $c\bar{c}$ backgrounds, most events include two $c$-jets.
-$ZZ$, $W^+W^-$ or $W^{\pm}jj$ can decay to $b$ or $c$ quark, 
-so we also observe some $b$- or $c$-jets are found in these events.
 Most of the $q\bar{q}$ events do have not both $b$- and $c$-jet, 
 but a small fraction of such events can have $b$- or $c$-jets in the final state.  
 For example, in the parton shower, a quark has a certain probability to radiate a gluon, 
 and subsequently, this gluon may split to heavy quarks like $b\bar{b}$ and $c\bar{c}$. 
 Such a kind of process is easier to occur for an energetic light quark,  
 which may lead to an increase in the mistagging rate of light quarks. 
+For backgrounds with gauge bosons, as we plot in Fig.~\ref{fig:nbjets_wz} and Fig.~\ref{fig:ncjets_wz}, 
+$ZZ$, $W^+W^-$ or $W^{\pm}jj$ can decay to $b$ or $c$ quark, 
+so we also observe some $b$- or $c$-jets are found in these events.
 
 With this flavor tagging information, we can implement a $b$-tagging cut. In our analysis, the $b$-tagging rate is $\epsilon_{b}=0.7$, while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-jets and light jets, respectively.
 
@@ -513,7 +529,15 @@ With this flavor tagging information, we can implement a $b$-tagging cut. In our
   \thesubfigure
   \label{fig:ncjets}
   \includegraphics[width=0.4\textwidth]{ncjets.pdf}}
-  \caption{The number of (a) true $b$-jets and (b) true $c$-jets in signal and background events are displayed.}\label{fig:bcjet}
+  \subfigure{
+  \thesubfigure
+  \label{fig:nbjets_wz}
+  \includegraphics[width=0.4\textwidth]{nbjets_wz.pdf}}
+  \subfigure{
+  \thesubfigure
+  \label{fig:ncjets_wz}
+  \includegraphics[width=0.4\textwidth]{ncjets_wz.pdf}}
+  \caption{The number of (a) true $b$-jets and (b) true $c$-jets in signals and backgrounds with quarks are displayed. As a reference, the number of (c) true $b$-jet and (d) true $c$-jet in background with gauge boson are displayed.}\label{fig:bcjet}
 \end{figure}
 
 Below we introduce some simple cuts to separate signal and background events:
@@ -546,7 +570,7 @@ and the signal events can be observed with remarkable significance.
   \hline
   \end{tabular}
   \end{center}
-  \caption{The number of events before and after each cut are listed, where $\sigma$ is defined as $\sigma=S/\sqrt{S+B}$. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of the cuts are described in the text.\label{table:tc:cut}}
+  \caption{The number of events before and after each cut are listed, where $\sigma$ is defined as $\sigma=S/\sqrt{S+B}$. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:tc:cut}}
 \end{table}
 \end{center}
 
@@ -580,7 +604,7 @@ The remained backgrounds with $W$ boson can be further reduced by applying a b-t
   \hline
   \end{tabular}
   \end{center}
-  \caption{The number of events before and after each cut is listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of the cuts are described in the text.\label{table:bs:cut}}
+  \caption{The number of events before and after each cut is listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:bs:cut}}
 \end{table}
 \end{center}
 
