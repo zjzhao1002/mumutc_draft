@@ -404,9 +404,17 @@ Considering the experimental uncertainties, it is challenging to distinguish the
 
 \subsection{Jet Level Analysis}
 
-\textcolor{black}{It should be mentioned that for a muon collider, the collision environment is relatively clean and there is no serious pileup and underlying event which occurred at a hadron collider, but there exist beam-induced backgrounds which arise from the muon decay.  By using the jet grooming techniques, it is possible to suppress such beam-induced backgrounds \cite{Collamati:2021sbv}. Therefore, we will neglect the beam induced backgrounds in our study. }
+It should be mentioned that for a muon collider, 
+the collision environment is relatively clean and there is no serious pileup and underlying event which occurred at a hadron collider, 
+but there exist beam-induced backgrounds which arise from the muon decay. 
+By using the jet grooming techniques, 
+it is possible to suppress such beam-induced backgrounds \cite{Collamati:2021sbv}. 
+Therefore, we will neglect the beam induced backgrounds in our study.
 
-\textcolor{black}{Meanwhile, since it is more and more realistic to use the particle flow method to measure the jet energy, which can reduce the uncertainty of jet energy down to $5\%-20\%$ \cite{Nachman:2022emq}. Actually, one benefit of the particle flow method can also help us to distinguish a light jet, a W/Z boson jet, and a top jet: a W/Z/top jet can have more charged tracks in a detector when compared with a light jet.}
+Meanwhile, since it is more and more realistic to use the particle flow method to measure the jet energy, 
+which can reduce the uncertainty of jet energy down to $5\%-20\%$ \cite{Nachman:2022emq}. 
+Actually, one benefit of the particle flow method can also help us to distinguish a light jet, 
+a W/Z boson jet, and a top jet: a W/Z/top jet can have more charged tracks in a detector when compared with a light jet.
 
 To further investigate the kinematic features of jets from signal processes, 
 we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
@@ -436,10 +444,23 @@ So this algorithm is not sufficient in our context.
 
 Below we will demonstrate a case study with the collision energy $\sqrt{s}=10$ TeV at the jet level analysis. We demand all signal and background events have hadronic decays and neglect those semi-leptonic and pure leptonic final states. 
 
-\textcolor{black}{Since the dominant background processes are $WW (ZZ)$, $tt$, and $jj$ which can have more than two energetic jets in the final state, in order to avoid the combinatoric issues, it is better to have less number of jets in the final state. For example, when $R=0.05$ and $E_j>100$\xznote{Inconsistency!Later $E_j>500$ is adopted}, the number of jets for a signal event can be much more than $10$, which is difficult to analyze. Then appropriate jet parameters, like cone parameter and energy cut, are crucial for the jet numbers and the preselection of signal events.
- Due to the fact that both $W/Z$ bosons and top quarks are highly boosted in the final state (each of them carries an energy 5 TeV), it is crucial to set the value of jet parameter so as to capture the whole decay products of $W/Z$ bosons and top quarks. Therefore, in this study, we will focus on the boosted events in our analysis.}
+Since the dominant background processes are $WW (ZZ)$, $tt$, 
+and $jj$ which can have more than two energetic jets in the final state, 
+in order to avoid the combinatoric issues, it is better to have less number of jets in the final state. 
+For example, when $R=0.05$ and $E_j>100$\xznote{Inconsistency!Later $E_j>500$ is adopted}, 
+the number of jets for a signal event can be much more than $10$, which is difficult to analyze. 
+Then appropriate jet parameters, like cone parameter and energy cut, 
+are crucial for the jet numbers and the preselection of signal events. 
+Due to the fact that both $W/Z$ bosons and top quarks are highly boosted in the final state 
+(each of them carries an energy 5 TeV), 
+it is crucial to set the value of jet parameter so as to capture the whole decay products of $W/Z$ bosons and top quarks. 
+Therefore, in this study, we will focus on the boosted events in our analysis.
 
- \textcolor{black}{According to the rule of thumb, the typical cone parameter for a top jet with a large $P_t$ can be expressed as $R_t = \frac{2 m_t}{P_t}$.\xznote{Wrong formula! This is for the algorithm which uses $P_t$, while here we are using $E$!} It can be estimated that all products of a $P_t=3.5$ TeV top jet can collimate in a cone with value $R_t= 0.1$ or so. Considering that the future ECAL (HCAL) detector can have a granularity with $\Delta \eta \times \Delta \phi = 0.01 \times 0.009 (0.025 \times 0.025)$ for the FCC-hh detector \cite{FCC:2018vvp},\xznote{Wrong detector!} there is no doubt that a future detector of a muon collider is able to resolve the substructure of such a highly boosted top jet. }
+According to the rule of thumb, the typical cone parameter for a top jet with a large $P_t$ can be expressed as $R_t = \frac{2 m_t}{P_t}$. 
+\xznote{Wrong formula! This is for the algorithm which uses $P_t$, while here we are using $E$!} 
+It can be estimated that all products of a $P_t=3.5$ TeV top jet can collimate in a cone with value $R_t= 0.1$ or so. 
+Considering that the future ECAL (HCAL) detector can have a granularity with $\Delta \eta \times \Delta \phi = 0.01 \times 0.009 (0.025 \times 0.025)$ for the FCC-hh detector \cite{FCC:2018vvp}, 
+\xznote{Wrong detector!} there is no doubt that a future detector of a muon collider is able to resolve the substructure of such a highly boosted top jet. 
 
 The optimization of parameters $p$ and $R$ is a complicated task.
 As a first attempt, we choose $p=1$ so it works similarly to a $k_t$ algorithm for hadron collider~\cite{Catani:1993hr,Ellis:1993tq}. 
@@ -491,7 +512,11 @@ It is because these particles are highly boosted in such a high energy machine.
   \caption{The invariant mass of (a) the heavier jet and (b) the lighter jet in signal and backgrounds are displayed.}\label{fig:mj1mj2}
 \end{figure}
 
-\textcolor{black}{B-tagging and C-tagging techniques can help signal and background separation. As shown in \cite{ATLAS:2019bwq}, the larger the transverse momentum, the better the B tagging efficiency. Therefore we expect a higher B-tagging efficiency for a 10 TeV collision. Although B mesons and D mesons have similar proper times at $10^{-12}$ seconds, their masses are different. If C-tagging techniques \cite{ATLAS:2021cxe} can be applied in our analysis, we expect better results can be obtained. } 
+B-tagging and C-tagging techniques can help signal and background separation. 
+As shown in \cite{ATLAS:2019bwq}, the larger the transverse momentum, the better the B tagging efficiency. 
+Therefore we expect a higher B-tagging efficiency for a 10 TeV collision. 
+Although B mesons and D mesons have similar proper times at $10^{-12}$ seconds, their masses are different. 
+If C-tagging techniques \cite{ATLAS:2021cxe} can be applied in our analysis, we expect better results can be obtained. 
 
 Since we only consider hadronic decay, the top quark should decay to $b$ quark and $W$ boson, 
 and $W$ further decays to light quarks. 
