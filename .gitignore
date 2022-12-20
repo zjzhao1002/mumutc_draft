@@ -1,0 +1,26 @@
+# compile objects and program
+*.o
+.deps
+.libs
+*.lo
+*.la
+*.a
+# make dist
+/*.tar.gz
+# vim termporary file
+*.swp
+*~
+# Mac file
+.DS_Store
+# LaTeX temporary files
+*.aux
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf
+*.synctex.gz
+*.blg
+*.bbl
+*Notes.bib
+*.toc
