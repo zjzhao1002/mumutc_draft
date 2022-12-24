@@ -51,7 +51,7 @@
 
 \def\missE{\slashed E} % missing E
 
-\title{\boldmath Measuring B anomalies by $\mu^+\mu^-\to tc$ at future lepton colliders}
+\title{\boldmath Constraining rare B decays by $\mu^+\mu^-\to tc$ at future lepton colliders}
 
 %\author[a]{Wolfgang Kilian}
 \author[a]{Sichun Sun}
@@ -78,7 +78,14 @@ INFN, sezione di Roma Tre, I-00146 Rome, Italy}
 
 
 \abstract{
-Motivated by B anomalies, we study the matching procedure of operators $O_9, O_{10}$ in the low energy effective Hamiltonian and operators in the Standard Model effective theory (SMEFT). It is noticed that there are more related operators in the SMEFT whose coefficients can not be determined only from the low energy data from the B anomalies. We demonstrate how to determine these coefficients with some new physics models, like $Z^\prime$ model and leptoquark models, and then consider how to probe these operators of SMEFT at high energy by using the process $\mu^+\mu^-\to tc$ at future muon colliders, which can provide complementary information except for  $\mu^+ \mu^- \to b s$ on the underlying models which lead to B anomalies. We perform a Monte Carlo study (a hadron level analysis) to show how to separate the signal events from the SM background events and estimate the sensitivity to the Wilson coefficients for different models.
+Motivated by the recent rare B decays measurements, 
+we study the matching procedure of operators $O_9, O_{10}$ in the low energy effective Hamiltonian and operators in the Standard Model effective theory (SMEFT). 
+It is noticed that there are more related operators in the SMEFT whose coefficients can not be determined only from the low-energy data from B physics. 
+We demonstrate how to determine these coefficients with some new physics models, 
+like $Z^\prime$ model and leptoquark models, 
+and then consider how to probe these operators of SMEFT at high energy by using the process $\mu^+\mu^-\to tc$ at future muon colliders, 
+which can provide complementary information except for  $\mu^+ \mu^- \to b s$ on the underlying models which lead to rare B decay processes. 
+We perform a Monte Carlo study (a hadron level analysis) to show how to separate the signal events from the SM background events and estimate the sensitivity to the Wilson coefficients for different models.
 }
 
 \begin{document}
@@ -88,14 +95,27 @@ Motivated by B anomalies, we study the matching procedure of operators $O_9, O_{
 
 \section{Introduction}
 Searching for new physics is the prime target of both the high energy frontier and high precision frontier.
-In the rare decays of B mesons, there exist long-standing discrepancies between the Standard Model predictions and experimental measurements, with a hint of non-lepton flavor universality(LFU), especially in the muon-related final states. These B-anomalies are observed in a $B \rightarrow K \mu^+ \mu^-$,  $B_s \rightarrow \phi  \mu ^+ \mu^-, B_s \rightarrow  \mu ^+ \mu^-$ and angular distribution of  $B \rightarrow K^* \mu ^+ \mu^-$\cite{LHCb:2021awg,LHCb:2021vsc,LHCb:2017rmj,ATLAS:2018cur,CMS:2019bbr}. For the LFU violation, it has been observed by LHCb\cite{LHCb:2021trn,LHCb:2019hip,LHCb:2017avl,LHCb:2015svh,LHCb:2020lmf,LHCb:2020gog} in the ratio 
+In the rare decay of B mesons, 
+long-standing discrepancies were reported between the Standard Model predictions and experimental measurements, 
+with a hint of non-lepton flavor universality(LFU), 
+especially in the muon-related final states. 
+These hints are observed in a $B \rightarrow K \mu^+ \mu^-$, 
+$B_s \rightarrow \phi  \mu ^+ \mu^-$, $B_s \rightarrow  \mu ^+ \mu^-$ 
+and angular distribution of $B \rightarrow K^* \mu ^+ \mu^-$\cite{LHCb:2021awg,LHCb:2021vsc,LHCb:2017rmj,ATLAS:2018cur,CMS:2019bbr}. 
+For the LFU violation, the hints were reported by LHCb\cite{LHCb:2021trn,LHCb:2019hip,LHCb:2017avl,LHCb:2015svh,LHCb:2020lmf,LHCb:2020gog} in the ratio 
 
 \begin{eqnarray}
 R_K = \frac{BR(B \rightarrow K \mu^+ \mu^-)}{BR(B \rightarrow K e^+ e^-)}, R_{K^*} = \frac{BR(B \rightarrow K^* \mu^+ \mu^-)}{BR(B \rightarrow K^* e^+ e^-)}
 \end{eqnarray}
 
-Although large hadronic uncertainties can enter in some of these absolute branching fractions and angular observables for the Standard Model predictions, $R_K, R_{K^*}, B_s \rightarrow  \mu ^+ \mu^- $ are considered relatively theoretically clean. The deviation in those measurements might lead to indirect evidence for new physics \cite{Hiller:2014ula, Altmannshofer:2017fio, Altmannshofer:2014rta,Geng:2017svp,Ciuchini:2019usw,Datta:2019zca,Aebischer:2019mlg,Ciuchini:2020gvn,Jager:2017gal}. While that measurement provides derivation from SM prediction,
-the exact mechanics behind those anomalies are still unknown,
+Although large hadronic uncertainties can enter in some of these absolute branching fractions and angular observables for the Standard Model predictions, 
+$R_K, R_{K^*}, B_s \rightarrow  \mu ^+ \mu^- $ are considered relatively theoretically clean. 
+The deviation in those measurements might lead to indirect evidence for new physics
+~\cite{Hiller:2014ula, Altmannshofer:2017fio, Altmannshofer:2014rta,Geng:2017svp,Ciuchini:2019usw,Datta:2019zca,Aebischer:2019mlg,Ciuchini:2020gvn,Jager:2017gal}. 
+This picture has suddenly changed with the very recent experimental updates from CMS collaboration on BR($B_{(d,s)} \rightarrow \mu^+\mu^-$) with the full Run 2 data~\cite{CMS-PAS-BPH-21-006}, 
+and LHCb analysis of $R_K$ and $R_{K*}$ with the full Run 1 and 2 dataset~\cite{LHCb:2022qnv,LHCb:2022zom}. 
+The newly reported measurements are in agreement with the Standard Model values, however, the new physics effects can still come into play due to both theoretical and experimental uncertainties~\cite{Ciuchini:2022wbq}. 
+While that measurement provides hints into new physics, the exact mechanics(models) behind those hints are still unknown,
 and low-energy measurement cannot fully reveal the nature behind that.
 
 On the other hand, by scattering high-energy particles,
@@ -108,33 +128,67 @@ Such high energy reach strongly benefits searching new heavy particles, such as 
 as well as indirect measurement at high energies\cite{Buttazzo:2020uzc}.
 Moreover, vector boson fusion processes are found to be important at muon colliders\cite{Costantini:2020stv},
 and enable access to difficult parameters such as the Higgs quartic self-coupling\cite{Chiesa:2020awd}.
-More importantly, muon colliders have a special feature: the initial states are muons, directly related to those low-energy anomalies. The muon $g-2$ anomaly can be probed directly at muon colliders\cite{Buttazzo:2020ibd}.
+More importantly, muon colliders have a special feature: the initial states are muons, directly related to those low-energy anomalies. 
+The muon $g-2$ anomaly can be probed directly at muon colliders\cite{Buttazzo:2020ibd}.
 In the context of muon $g-2$ anomaly, studies have been performed on testing it under the SMEFT formalism\cite{Buttazzo:2020ibd}, and model-exhaustive analysis\cite{Buttazzo:2020ibd,Capdevilla:2020qel,Capdevilla:2021rwo,Capdevilla:2021kcf}.
 %The future collider proposals include the linear or circular case $e^+e^-$ colliders\cite{} and circular pp coliders \cite{}, and especially relevant here: high-energy muon colliders \cite{}.  Muon colliders can reach high energies with large mass suppression of synchroton radiation comparing to $e^+e^-$ colliders and higher precision with cleaner final states comparing to pp colliders. Although the short life time of muon causes some technical challenges, there are a series of recent progresses\cite{}.
 
- The multi-TeV reach and better precision advantages of muon colliders, make it a perfect place to probe muon-related B anomalies in low energy. There are already proposals studying $\mu^+\mu^-\to b\bar{s}$ or $\bar{b}s$ at multi TeV scale to discuss the impact of low energy B-anomalies impact \cite{Altmannshofer:2022xri,Huang:2021nkl}. At the current stage, B-anomalies can be nicely parameterized  by effective four-fermion operators at the B-physics scale ($\mu= 4.8$ GeV):
+The multi-TeV reach and better precision advantages of muon colliders, make it a perfect place to probe muon-related B physics in low energy. 
+There are already proposals studying $\mu^+\mu^-\to b\bar{s}$ or $\bar{b}s$ at multi TeV scale to discuss the impact of low energy rare B decays impact \cite{Altmannshofer:2022xri,Huang:2021nkl}. 
+At the current stage, some rare B decay processes can be nicely parameterized by effective four-fermion operators at the B-physics scale ($\mu= 4.8$ GeV):
  \begin{eqnarray}
    O_9 &=& (\bar{s}\gamma_\mu P_L b)(\bar{\ell}\gamma^{\mu}\ell),  \\
    O_{10} &=& (\bar{s}\gamma_\mu P_L b)(\bar{\ell}\gamma^{\mu}\gamma_5\ell),
 \end{eqnarray}
-For the new physics effects described by operators $O_9$ and $O_{10}$, when we go above the weak scale ($\mu=M_Z$ for instance), the Wilson coefficients of such two operators depend on the specific models (e.g. leptoquark, scalars,$Z'$,etc). 
+For the new physics effects described by operators $O_9$ and $O_{10}$, when we go above the weak scale ($\mu=M_Z$ for instance), 
+the Wilson coefficients of such two operators depend on the specific models (e.g. leptoquark, scalars,$Z'$,etc). 
 
-In this work, we adopt the same assumption that the new physics scale is around $\mu=35$ TeV and it is challenging to discover the new physics signature at the LHC. We also assume that these new physics above the weak scale ($\mu=M_Z$) can be described by the framework of the standard model effective field theory (SMEFT). Under appropriate assumptions, it is noteworthy that there is at least one more operator needed in order to match the SMEFT to low energy operators $O_9$ and $O_{10}$. These three operators in the SMEFT are given in Eqs. (2.12-2.14). Different new physics models can lead to different matching conditions across the weak scale.
+In this work, we adopt the same assumption that the new physics scale is around $\mu=35$ TeV and it is challenging to discover the new physics signature at the LHC. 
+We also assume that these new physics above the weak scale ($\mu=M_Z$) can be described by the framework of the standard model effective field theory (SMEFT). 
+Under appropriate assumptions, it is noteworthy that there is at least one more operator needed in order to match the SMEFT to low energy operators $O_9$ and $O_{10}$. 
+These three operators in the SMEFT are given in Eqs. (2.12-2.14). 
+Different new physics models can lead to different matching conditions across the weak scale.
 
-Different from the proposal presented in \cite{Altmannshofer:2022xri}, where the polarization of muon beams and charge tagging of jets in the final state is assumed, in this work, in order to reveal the nature of new physics which leads to the B anomalies, we propose to measure the process $\mu^+\mu^-\to tc$ (here $tc$ denotes both $t \bar{c}$ and $\bar{t} c$). This study can provide complementary information to the processes $\mu^+\mu^-\to b \bar{s}$ ($\bar{b} s$). The four fermion operators for $\mu^+\mu^-\to tc$ naturally arise from the operator matching conditions from the low energy effective field theory to the SMEFT, since left-handed top and charm quarks form electroweak SU(2) doublets respectively as the partners of the left-handed bottom and strange quarks in SMEFT operators. The process $\mu^+\mu^-\to tc$ can also help to distinguish different new physics models, which yield different operator matching conditions. We will consider one $Z^\prime$ model and three leptoquark models. 
+Different from the proposal presented in \cite{Altmannshofer:2022xri}, 
+where the polarization of muon beams and charge tagging of jets in the final state is assumed, 
+in this work, in order to reveal the nature of new physics related to the rare B decays, 
+we propose to measure the process $\mu^+\mu^-\to tc$ (here $tc$ denotes both $t \bar{c}$ and $\bar{t} c$). 
+This study can provide complementary information to the processes $\mu^+\mu^-\to b \bar{s}$ ($\bar{b} s$). 
+The four fermion operators for $\mu^+\mu^-\to tc$ naturally arise from the operator matching conditions from the low energy effective field theory to the SMEFT, 
+since left-handed top and charm quarks form electroweak SU(2) doublets respectively as the partners of the left-handed bottom and strange quarks in SMEFT operators. 
+The process $\mu^+\mu^-\to tc$ can also help to distinguish different new physics models, which yield different operator matching conditions. 
+We will consider one $Z^\prime$ model and three leptoquark models.
+ 
+The leptoquark particles are predicted in the grand unification models and they can either be scalar or vector bosons. 
+Usually, these particles are superheavy (e.g. $10^{13}$ GeV), as required by the experimental data of proton decays. 
+Very light leptoquarks (e.g. 1 TeV or a few 10 TeV) are consistent with experimental data if their couplings to the first generation of matter fields are weak. 
+Light leptoquarks are also predicted in the Pati-Salam model, where lepton numbers are treated as the fourth color quantum number. 
+These light leptoquarks can be accessible even at the LHC and future collider projects. 
+Recently, leptoquarks have attracted much attention in order to interpret the previously claimed B anomalies. 
+A comprehensive on the phenomenology of leptoquarks can be found in \cite{Dorsner:2016wpm}.
 
-The leptoquark particles are predicted in the grand unification models and they can either be scalar or vector bosons. Usually, these particles are superheavy (e.g. $10^{13}$ GeV), as required by the experimental data of proton decays. Very light leptoquarks (e.g. 1 TeV or a few 10 TeV) are consistent with experimental data if their couplings to the first generation of matter fields are weak. Light leptoquarks are also predicted in the Pati-Salam model, where lepton numbers are treated as the fourth color quantum number. These light leptoquarks can be accessible even at the LHC and future collider projects. Recently, leptoquarks have attracted much attention in order to interpret the B anomalies. A comprehensive on the phenomenology of leptoquarks can be found in \cite{Dorsner:2016wpm}.
+Our new findings in this work include 
+1) The dominant SM background events for the process $\mu^+\mu^-\to tc$ are different from the background of the process $\mu^+\mu^-\to bs$. 
+Due to the highly boosted top quark in the final states, jet substructure analysis is crucial to distinguish signal and background events. 
+2) In the case that there is no new resonance found in the TeV muon colliders, measurement of the process $\mu^+\mu^-\to tc$, 
+can provide crucial information on the potential nature of the new physics which leads to the low energy rare B decay processes. 
+3) It is noticed that the final state $W^\pm jj $ can have a very large cross section (e,g. 100fb with collision energy $\sqrt{s}=10$ TeV), 
+and such a final state is mainly from the weak final state radiation processes. 
+Suppressing the weak final state radiation might be important for signal findings.
 
-Our new findings in this work include 1)  The dominant SM background events for the process $\mu^+\mu^-\to tc$ are different from the background of the process $\mu^+\mu^-\to bs$. Due to the highly boosted top quark in the final states, jet substructure analysis is crucial to distinguish signal and background events. 2) In the case that there is no new resonance found in the TeV muon colliders, measurement of the process $\mu^+\mu^-\to tc$, can provide crucial information on the potential nature of the new physics which leads to the low energy B anomalies. 3) It is noticed that the final state $W^\pm jj $ can have a very large cross section (e,g. 100fb with collision energy $\sqrt{s}=10$ TeV), and such a final state is mainly from the weak final state radiation processes. Suppressing the weak final state radiation might be important for signal findings.
-
-This paper is organized as given below. In section II, we demonstrate the relations between the Wilsonian coefficients of the low-energy effective Hamiltonian and those of the SMEFT. In section III, we present the values of Wilsonian coefficients of the SMEFT derived from different new physics models. These new physics models can accommodate the explanation of B anomalies. In section IV, we perform a Monte Carlo simulation to explore the sensitivity of future muon colliders to these new physics scenarios. We end this work with a few discussions and conclusions. In Appendix, we present the renormalization group equations of Wilsonian coefficients in the SMEFT and effective Hamiltonian, respectively. 
-
+This paper is organized as given below. 
+In section~\ref{Sec:EFT}, we demonstrate the relations between the Wilsonian coefficients of the low-energy effective Hamiltonian and those of the SMEFT. 
+In section~\ref{Sec:NP}, we present the values of Wilson coefficients of the SMEFT derived from different new physics models. 
+These new physics models can accommodate the rare B decay processes. 
+In section~\ref{Sec:result}, we perform a Monte Carlo simulation to explore the sensitivity of future muon colliders to these new physics scenarios. 
+We end this work with a few discussions and conclusions. 
+In Appendix, we present the renormalization group equations of Wilsonian coefficients in the SMEFT and effective Hamiltonian, respectively. 
 
 %\section{Motivations for studying B-anomalies in $\mu^+\mu^-\to tc$}
 \section{Matching and running of different operator bases}
 \label{Sec:EFT}
 
- Interestingly, these anomalies can be simultaneously explained in a model-independent way with the effective four-fermion operators. 
+Interestingly, these rare B decay processes can be simultaneously explained in a model-independent way with the effective four-fermion operators. 
 In many B-physics studies,  new physics effects strongly prefer an effective Hamiltonian with $O_9 $ and $O_{10}$ with Wilson coefficients of dimension 6 interactions at the renormalization scale $\mu =4.8$ GeV ,
 \begin{eqnarray}
   \mathcal{H}_{eff} &=& \mathcal{H}^{SM}_{eff}-\mathcal{N}\sum_{\ell=e,\mu}\sum_{i=9,10}\left(c_iO^{bs\ell\ell}_i+c^\prime_i O^{\prime bs\ell\ell}_i\right) + h.c., 
@@ -151,8 +205,13 @@ The operators $O_9$ and $O_{10}$ are
 where $P_L=(1-\gamma_5)/2$ is the left-handed projection operator. 
 For $O^\prime_i$, $P_L$ is replaced by right-handed projection operator $P_R=(1+\gamma_5)/2$.
 
-For the purpose of this paper, to study B-anomalies related operator $O_9$ and $O_{10}$ defined in the low energy B physics scale in higher colliding energy scale, we need to treat the running and matching of the operators carefully. 
-Especially the subtleties that arise when the energy runs across the weak scale. Our study finds that in the energy scale above the weak scale, the impact of $O_9$ and $O_{10}$ operators needs to be reparametrized by three different operators, rather than two, in the so-called Warsaw basis, known as the Standard model effective theory (SMEFT). Here we introduce different bases and coefficient matching as below. 
+For the purpose of this paper, to study the related operator $O_9$ and $O_{10}$ defined in the low energy B physics scale in higher colliding energy scale, 
+we need to treat the running and matching of the operators carefully. 
+Especially the subtleties that arise when the energy runs across the weak scale. 
+Our study finds that in the energy scale above the weak scale, 
+the impact of $O_9$ and $O_{10}$ operators needs to be reparametrized by three different operators, 
+rather than two, in the so-called Warsaw basis, known as the Standard model effective theory (SMEFT). 
+Here we introduce different bases and coefficient matching as below. 
 
  At the scale below the weak scale, potential new physics effects are described by a low energy effective field theory (LEFT).  
 The LEFT Lagrangian with dimension 6 operators can be written as 
@@ -261,6 +320,7 @@ The related renormalization group equations for the SMEFT and LEFT can be found 
 \end{center}
 
 \section{The Matching Conditions of New Physics}
+\label{Sec:NP}
 
 At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\ref{Oqe}).
  In massless limit,\footnote{For simplicity, in this section we work under the massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence is included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
@@ -300,7 +360,7 @@ and later in Section \ref{Sec:result} we will show how to distinguish them by me
       with a massive gauge boson $Z^{\prime}$.
     Originally it was proposed for muon $g-2$ anomaly \cite{Baek:2001kca} and neutrino mixing \cite{Ma:2001md}.
     Later it is realized that the coupling to quarks can be described by high dimensional operators, which can be generated through new heavy quarks \cite{Fox:2011qd}.
-    Such interaction can induce flavor violation \cite{Altmannshofer:2014cfa}, to explain B anomaly.
+    Such interaction can induce flavor violation \cite{Altmannshofer:2014cfa}.
     Since the effective interaction between $bs\mu\mu$($tc\mu\mu$) is mediated by an $s$-channel $Z^{\prime}$, an electroweak singlet,
     clearly we have $C_{lq}^{(3)}=0,C_{LL}^{bs}=C_{LL}^{tc}=C_{lq}^{(1)}$.
     Consequently, we have $\sigma(tc)\sim\sigma(bs)$.
@@ -703,7 +763,7 @@ while $C^{bs}_{LL}$ can be constrained to $[-0.0226, +0.0226]$ ($[-0.0279, +0.02
 
 Similarly, we implement same cuts to analyse the case that only $C_{qe}$ is switched on. 
 Fig.~\ref{fig:cqe1d} shows the $2\sigma$ and $3\sigma$ bounds on $C_{qe}$. 
-There is no wonder that these bounds are similar to that we obtain for $C^{X}_{LL}$.
+There is no wonder that these bounds are close to that we obtain for $C^{X}_{LL}$.
 
 \begin{figure}[htbp]
   \setcounter{subfigure}{0}
