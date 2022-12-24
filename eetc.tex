@@ -262,7 +262,6 @@ The related renormalization group equations for the SMEFT and LEFT can be found 
 
 \section{The Matching Conditions of New Physics}
 
-
 At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\ref{Oqe}).
  In massless limit,\footnote{For simplicity, in this section we work under the massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence is included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
  \begin{align}
@@ -468,7 +467,8 @@ For the high energy muon collider, muon beams may radiate energetic particles wh
 Such kind of particles are included in the exclusive jets. 
 So this algorithm is not sufficient in our context.
 
-Below we will demonstrate a case study with the collision energy $\sqrt{s}=10$ TeV at the jet level analysis. 
+Below we will demonstrate a case study with the collision energy $\sqrt{s}=10$ TeV at the jet level analysis, 
+with $c_g=-c_{10}=-0.39$ input. 
 We demand all signal and background events have hadronic decays and neglect those semi-leptonic and pure leptonic final states. 
 
 Since the dominant background processes are $WW (ZZ)$, $tt$, 
@@ -498,7 +498,8 @@ In Fig.~\ref{subfig:ej_tc}, we display the energy distribution of the leading th
 These jets are sorted by energy.  Obviously, the first two jets have energy around $E_{cm}/2$, 
 which means that they probably originated from a hard process.
 We can also observe that the energy of the 3rd jet can reach several hundred GeV or TeV levels.
-In such a high energy collider, parton shower can radiate some high energy particles and can be detected as a hard jet. To reduce these radiations, we implement a cut $E(j)>500$ GeV to jets for each event. 
+In such a high energy collider, parton shower can radiate some high energy particles and can be detected as a hard jet. 
+To reduce these radiations, we implement a cut $E(j)>500$ GeV to jets for each event. 
 After this cut, we plot the number of jets in Fig.~\ref{subfig:njets}. 
 As we can see, the peak is $N_{jets}=2$ for two final state processes, and the peak for $W^{\pm}jj$ background is 3.  Therefore to demand the number of jets $N_j=2$ for each event can heavily suppress the background events of $\mu^+ \mu^0 \to W^{\pm}jj$.
 
@@ -681,7 +682,7 @@ After these cuts, it is observed that heavy flavor final states will be the domi
 \end{table}
 \end{center}
 
-Fig.~\ref{fig:cll1d} shows the $2\sigma$ and $3\sigma$ bounds on the $C^{X}_{LL}$. 
+Fig.~\ref{fig:cll1d} shows the $2\sigma$ and $3\sigma$ bounds on $C^{X}_{LL}$. 
 Based on our analysis, $C^{tc}_{LL}$ can be constrained to $[-0.0177, +0.0177]$ ($[-0.0220, +0.0220]$) at $2\sigma$ ($3\sigma$) limit at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$, 
 while $C^{bs}_{LL}$ can be constrained to $[-0.0226, +0.0226]$ ($[-0.0279, +0.0279]$) at $2\sigma$ ($3\sigma$) limit. 
 
@@ -698,6 +699,25 @@ while $C^{bs}_{LL}$ can be constrained to $[-0.0226, +0.0226]$ ($[-0.0279, +0.02
   \label{fig:cllbs1d}
   \includegraphics[width=0.4\textwidth]{cllbs1d.pdf}}
   \caption{The $2\sigma$ and $3\sigma$ bounds of (a) $C^{tc}_{LL}$ and (b) $C^{bs}_{LL}$ at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$.}\label{fig:cll1d}
+\end{figure}
+
+Similarly, we implement same cuts to analyse the case that only $C_{qe}$ is switched on. 
+Fig.~\ref{fig:cqe1d} shows the $2\sigma$ and $3\sigma$ bounds on $C_{qe}$. 
+There is no wonder that these bounds are similar to that we obtain for $C^{X}_{LL}$.
+
+\begin{figure}[htbp]
+  \setcounter{subfigure}{0}
+  \centering
+  % Requires \usepackage{graphicx}
+  \subfigure{
+  \thesubfigure
+  \label{fig:clltc1d}
+  \includegraphics[width=0.4\textwidth]{cqetc.pdf}}
+  \subfigure{
+  \thesubfigure
+  \label{fig:cllbs1d}
+  \includegraphics[width=0.4\textwidth]{cqebs.pdf}}
+  \caption{The $2\sigma$ and $3\sigma$ bounds of $C_{qe}$ obtained by measuring (a) $tc$ and (b) $bs$ final state at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$.}\label{fig:cqe1d}
 \end{figure}
 
 \section{Summary and Discussion}\label{Sec:conc}
