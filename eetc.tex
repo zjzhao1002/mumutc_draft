@@ -213,7 +213,7 @@ the impact of $O_9$ and $O_{10}$ operators needs to be reparametrized by three d
 rather than two, in the so-called Warsaw basis, known as the Standard model effective theory (SMEFT). 
 Here we introduce different bases and coefficient matching as below. 
 
- At the scale below the weak scale, potential new physics effects are described by a low energy effective field theory (LEFT).  
+At the scale below the weak scale, potential new physics effects are described by a low energy effective field theory (LEFT).  
 The LEFT Lagrangian with dimension 6 operators can be written as 
 \begin{eqnarray}
   \mathcal{L}_{LEFT} &=& \mathcal{L}_{QCD+QED}+ \frac{1}{v^2}\sum_{i}L_iQ_i,  \nonumber 
@@ -229,8 +229,6 @@ The most relevant operators are
 where $p,r,s,t$ are generation indices of quark or lepton. 
 Since the EW symmetry is broken, here $e$ and $d$ are the lepton field and down-type quark field. 
 $L$ and $R$ are the chiral indices of fermions. 
-
-
 
 One can derive the relations between $Q_i$ and $O_i$ easily:
 \begin{eqnarray}
@@ -270,6 +268,12 @@ In this paper, we only consider the operators with flavor indices $(p,r,s,t)=(2,
 \end{eqnarray}
 % \bigskip
 The related renormalization group equations for the SMEFT and LEFT can be found in Appendix \ref{smeftrge} and Appendix \ref{leftrge}, respectively.
+
+Table.~\ref{table:LVLLed} lists the runnings of three sample parameter points: 
+1) $c_{9}=-1.0, c_{10}=-0.1$, as an example of general new physics scenario, 
+2) $c_{9}=c_{10}=0.25$, as an example that $C_{qe}$ is the main contribution on at scale beyond $M_Z$,
+2) $c_{9}=-c_{10}=-0.39$, as an example that $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ are the main contributions at scale beyond $M_Z$.
+We can safely say that the operators mixing in RGE running has not strong effects to measure the SMEFT at high energy machine.
 
 %\begin{center}
 %\begin{table}
@@ -315,7 +319,7 @@ The related renormalization group equations for the SMEFT and LEFT can be found 
   \hline
   \end{tabular}
   \end{center}
-  \caption{The coefficients $L^{V,LL}_{ed}$, $L^{V,LR}_{de}$, $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C_{qe}$ at scale $m_B=5$ GeV, $m_Z=91.19$ GeV and $\Lambda=10$ TeV are listed, with difference input of $c_9$ and $c_{10}$. Here, we assume $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$. \label{table:LVLLed}}
+  \caption{The coefficients $L^{V,LL}_{ed}$, $L^{V,LR}_{de}$, $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C_{qe}$ at scale $m_B=5$ GeV, $m_Z=91.19$ GeV and $\Lambda=10$ TeV are listed, with difference input of $c_9$ and $c_{10}$. Here, we assume $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2, C^{(3)}_{lq}=0$. \label{table:LVLLed}}
 \end{table}
 \end{center}
 
@@ -429,21 +433,25 @@ see also \cite{Buttazzo:2017ixm}.
 \label{Sec:result}
 
 \subsection{Cross sections of signal and main background processes}
-To study the $\mu^+\mu^-\to t\bar{c}$ process at future muon collider, 
+To study the $\mu^+\mu^-\to tc$ process at future muon collider, 
 we generate a UFO model with relevant operators by Feynrules~\cite{Alloul:2013bka}, 
 and import it to \mgamc \cite{Alwall:2014hca}. 
 We calculate the cross sections of signals and backgrounds from $E_{cm}=1$ TeV to $30$ TeV.  
 The energy dependencies of the cross sections are shown in Fig.~\ref{ecm}. 
+
+For the $\mu^+\mu^-\to tc$ and $bs$ processes, the input from low energy scale is $c_{9}=-c_{10}=-0.39$.  
+The cross section of the main signal process $\mu^+ \mu^- \to tc$ derived from the 4-fermion interactions are proportional to collision $s^2$, 
+and it increases with the increase of the collision energy, as shown in Fig.~\ref{ecm}. 
+For Wilson coefficients $C^{1}_{lq}$ and $C^{3}_{lq}$, we consider their relations in Model I and II. 
+As we expect, their cross sections have relation $\sigma(tc)\sim sigma(bs)$ for Model I, and $\sigma(tc)\sim\frac{1}{4}\sigma(bs)$ for model II.
+%The largest signal is the case that only $c_{9}$ is switched on, and it can reach $\mathcal{O}(1)$ fb at the $30$ TeV. 
+
 The main background processes include $b\bar{b}$, $c\bar{c}$, $q\bar{q}$ ($q=u,d,s$), $W^+ W^-$, $ZZ$, $t \bar{t}$, and $Wjj$ ($j=u,d,s,c$). 
 These processes are from S-channel and decrease with the increase of the collision energy. 
 It is noteworthy that the cross sections of diboson processes $W^+W^-$ can be much larger than those of di-quarks final states. 
 The process $W^\pm jj$ is also included, which describes the weak final state radiation. 
 It is remarkable that the cross section of $W^\pm jj$ is much larger than those of other processes and is almost $10^2$ fb and is constant even when the collision energy increases. 
 Therefore, suppressing the background events of $\mu^+ \mu^- \to W^\pm jj$ will be crucial and necessary.
-
-The cross section of the main signal process $\mu^+ \mu^- \to t \bar{c} (\bar{t} c)$ derived from the 4-fermion interactions are proportional to collision $s^2$, 
-and it increases with the increase of the collision energy, as shown in Fig.~\ref{ecm}. 
-The largest signal is the case that only $c_{9}$ is switched on, and it can reach $\mathcal{O}(1)$ fb at the $30$ TeV. 
 
 Near the threshold, the cross section of all background processes is huge compared to the signal process. 
 With the increase of collision energy, 
@@ -475,14 +483,14 @@ Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover t
 As we have seen in Fig.~\ref{ecm}, the process $\mu^+\mu^-\to t\bar{c}$ can only be observable when $E_{cm}>10$ TeV.  
 In a such high energy, we can expect two energetic jets to be observed at the detector for either signal or background events. 
 
-In Fig.~\ref{ecm}, the best fits of $c_{9}$ and $c_{10}$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered. 
+In Fig.~\ref{ecm}, the best fit $c_{9}=-c_{10}=-0.39$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered. 
 Their values are evaluated to the EW scale by our RGEs Eq.~\ref{beta:VLLed} and Eq.~\ref{beta:VLRde}. 
 And then they are matched to SMEFT by Eq.~\ref{match:VLLed} and Eq.~\ref{match:VLRde}. 
 From Eq.~\ref{match:VLLed}, we also know that the constraint from B physics can be only applied to the sum of $C^{(1)}_{lq}+C^{(3)}_{lq}$~\footnote{The generation indices are always $(p,r,s,t)=(2,2,2,3)$ for $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ and $(p,r,s,t)=(2,3,2,2)$ for $C_{qe}$ in this paper.}.  
 So any new physics scenarios with $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ as free parameters cannot be constrained by the data from B physics experiments. 
-In Fig.~\ref{rge:EWtoUV}, we show the running of $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C_{qe}$ from EW scale to new physics scale at $\Lambda=10$ TeV, 
-in the case of $c_{9}=-0.73$ and $c_{10}=0$.
-We have considered two simple scenarios: 1) $C^{(1)}_{lq}=L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$ and $C^{(3)}_{lq} = 0$; 2) $C^{(1)}_{lq}=3 C^{(3)}_{lq}=\frac{3}{4} L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$\xznote{At which scale?}.
+In Fig.~\ref{rge:EWtoUV}, we show the running of $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C^{(1)}_{lq}-C^{(3)}_{lq}$ from EW scale to new physics scale at $\Lambda=10$ TeV, 
+in the case of $c_{9}=-c_{10}=-0.39$.
+We have considered two simple scenarios at EW scale ($M_Z$): 1) $C^{(1)}_{lq}=L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$ and $C^{(3)}_{lq} = 0$; 2) $C^{(1)}_{lq}=3 C^{(3)}_{lq}=\frac{3}{4} L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$.
 Considering the experimental uncertainties, it is challenging to distinguish these two cases from RGE running. 
 
 \subsection{Jet Level Analysis}
@@ -500,7 +508,7 @@ Actually, one benefit of the particle flow method can also help us to distinguis
 a W/Z boson jet, and a top jet: a W/Z/top jet can have more charged tracks in a detector when compared with a light jet.
 
 To further investigate the kinematic features of jets from signal processes, 
-we use PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
+we input events generated with $c_{9}=-c_{10}=-0.39$ to PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
 and FastJet~\cite{Cacciari:2011ma} to reconstruct jets.  
 It is expected that jet algorithms developed for electron-positron colliders can also be applied well to muon colliders. 
 Therefore, we use the generalised $k_t$ algorithm for $e^+e^-$ collisions,
@@ -628,7 +636,9 @@ For backgrounds with gauge bosons, as we plot in Fig.~\ref{fig:nbjets_wz} and Fi
 $ZZ$, $W^+W^-$ or $W^{\pm}jj$ can decay to $b$ or $c$ quark, 
 so we also observe some $b$- or $c$-jets are found in these events.
 
-With this flavor tagging information, we can implement a $b$-tagging cut. In our analysis, the $b$-tagging rate is $\epsilon_{b}=0.7$, while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-jets and light jets, respectively.
+With this flavor tagging information, we can implement a $b$-tagging cut. 
+In our analysis, the $b$-tagging rate is $\epsilon_{b}=0.7$, 
+while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-jets and light jets, respectively.
 
 \begin{figure}[htbp]
   \setcounter{subfigure}{0}
