@@ -333,7 +333,7 @@ $c_{10}$  &      $-0.10$     &     $0.25$       &       $+0.39$       \\
 At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\ref{Oqe}).
  In massless limit,\footnote{For simplicity, in this section we work under the massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence is included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
  \begin{align}
-     \frac{\ud\sigma(\mu^+\mu^-\to X)}{\ud\cos\theta}=\frac{3s}{256\pi}|C_{LL}^{X}|^2(1+\cos\theta)^2
+     \frac{\ud\sigma(\mu^+\mu^-\to X)}{\ud\cos\theta}=\frac{3s}{256\pi}\left[|C_{LL}^{X}|^2(1+\cos\theta)^2+|C_{qe}|^2(1-\cos\theta)^2\right]
  \end{align}
  where
  \begin{align}
@@ -342,7 +342,7 @@ At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\
 
 Integrating over $\cos\theta$, we can obtain the inclusive cross section as:
 \begin{align}
-    \sigma(\mu^+\mu^-\to X)=\frac{1}{32\pi}s|C_{LL}^{X}|^2
+    \sigma(\mu^+\mu^-\to X)=\frac{1}{32\pi}s(|C_{LL}^{X}|^2+|C_{qe}|^2)
 \end{align}
 
 In a general new physical model,
@@ -785,7 +785,7 @@ There is no wonder that these bounds are close to that we obtain for $C^{X}_{LL}
 
 
 \begin{figure}
-    \includegraphics[width=0.31\textwidth]{2dbound.pdf}
+    \includegraphics[width=0.31\textwidth]{2dbound-1.pdf}
     \includegraphics[width=0.31\textwidth]{2dbound.pdf}
     \includegraphics[width=0.31\textwidth]{2dbound.pdf}
     \caption{The 2-D $2\sigma$ bounds are shown.\xznote{Currently using 0.03 as reference value, need to be updated.}}\label{fig:cll2d}
