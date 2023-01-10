@@ -269,11 +269,10 @@ In this paper, we only consider the operators with flavor indices $(p,r,s,t)=(2,
 % \bigskip
 The related renormalization group equations for the SMEFT and LEFT can be found in Appendix \ref{smeftrge} and Appendix \ref{leftrge}, respectively.
 
-Table.~\ref{table:LVLLed} lists the runnings of three sample parameter points: 
-1) $c_{9}=-1.0, c_{10}=-0.1$, as an example of general new physics scenario, 
-2) $c_{9}=c_{10}=0.25$, as an example that $C_{qe}$ is the main contribution on at scale beyond $M_Z$,
-2) $c_{9}=-c_{10}=-0.39$, as an example that $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ are the main contributions at scale beyond $M_Z$.
-We can safely say that the operators mixing in RGE running has not strong effects to measure the SMEFT at high energy machine.
+In Table.~\ref{table:LVLLed}, we list the runnings of three benchmark points: 
+1) BP1, $c_{9}=-1.0, c_{10}=-0.1$, as an example of general new physics scenario, 
+2) BP2, $c_{9}=c_{10}=0.25$, as an example that $C_{qe}$ is the main contribution on at scale beyond $M_Z$,
+3) BP3, $c_{9}=-c_{10}=-0.39$, as an example that $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ are the main contributions at scale beyond $M_Z$. The BP3 is the best fit in Ref.~\cite{Altmannshofer:2021qrr}. It is observed that the operator mixings induced by the RGE running have no large effects to change the size of Wilson coefficients the SMEFT at high energy machine.
 
 %\begin{center}
 %\begin{table}
@@ -304,18 +303,23 @@ We can safely say that the operators mixing in RGE running has not strong effect
   \begin{center}
   \begin{tabular}{|c|c|c|c|}
   \hline
-  &      $c_9=-1.00$        &     $c_9=0.25$         &       $c_9=-0.39$         \\
-  &      $c_{10}=-0.10$     &     $c_9=c_{10}$       &       $c_9=-c_{10}$       \\
+  & BP1 & BP2 ($c_9=c_{10}$)& BP3($c_9=-c_{10}$) \\
+  \hline
+$c_9$  &      $-1.00$        &     $0.25$         &       $-0.39$         \\
+$c_{10}$  &      $-0.10$     &     $0.25$       &       $+0.39$       \\
   \hline  
   $L^{V,LL}_{ed}(m_B)$                    &   $-2.13\times 10^{-5}$   &  $0.00$                &  $-1.85\times 10^{-5}$    \\
-  $L^{V,LL}_{ed}(m_Z)$                    &   $-2.16\times 10^{-5}$   &  $2.83\times 10^{-8}$  &  $-1.86\times 10^{-5}$    \\
+   $L^{V,LR}_{de}(m_B)$                    &   $-2.60\times 10^{-5}$   &  $1.18\times 10^{-5}$  &  $0.00$                   \\ 
+\hline
+  $L^{V,LL}_{ed}(m_Z)$                    &   $-2.16\times 10^{-5}$   &  $2.83\times 10^{-8}$  &  $-1.86\times 10^{-5}$       \\
+  $L^{V,LR}_{de}(m_Z)$                    &   $-2.60\times 10^{-5}$   &  $1.18\times 10^{-5}$  &  $-4.41\times 10^{-8}$    
+\\
+  \hline
   $(C^{(1)}_{lq}+C^{(3)}_{lq})(m_Z)$      &   $-3.56\times 10^{-2}$   &  $4.67\times 10^{-5}$  &  $-3.10\times 10^{-2}$    \\
-  $(C^{(1)}_{lq}+C^{(3)}_{lq})(\Lambda)$  &   $-3.75\times 10^{-2}$   &  $1.03\times 10^{-4}$  &  $-3.20\times 10^{-2}$    \\                    
-  \hline  
-  $L^{V,LR}_{de}(m_B)$                    &   $-2.60\times 10^{-5}$   &  $1.18\times 10^{-5}$  &  $0.00$                   \\ 
-  $L^{V,LR}_{de}(m_Z)$                    &   $-2.60\times 10^{-5}$   &  $1.18\times 10^{-5}$  &  $-4.41\times 10^{-8}$    \\
   $C_{qe}(m_Z)$                           &   $-4.29\times 10^{-2}$   &  $1.95\times 10^{-2}$  &  $-7.28\times 10^{-5}$    \\
-  $C_{qe}(\Lambda)$                       &   $-4.42\times 10^{-2}$   &  $2.00\times 10^{-2}$  &  $-2.02\times 10^{-4}$    \\
+  \hline
+  $(C^{(1)}_{lq}+C^{(3)}_{lq})(\Lambda)$  &   $-3.75\times 10^{-2}$   &  $1.03\times 10^{-4}$  &  $-3.20\times 10^{-2}$    \\                    
+  $C_{qe}(\Lambda)$                       &   $-4.42\times 10^{-2}$   &  $2.00\times 10^{-2}$  &  $-2.02\times 10^{-4}$   \\
   \hline
   \end{tabular}
   \end{center}
@@ -439,11 +443,10 @@ and import it to \mgamc \cite{Alwall:2014hca}.
 We calculate the cross sections of signals and backgrounds from $E_{cm}=1$ TeV to $30$ TeV.  
 The energy dependencies of the cross sections are shown in Fig.~\ref{ecm}. 
 
-For the $\mu^+\mu^-\to tc$ and $bs$ processes, the input from low energy scale is $c_{9}=-c_{10}=-0.39$.  
-The cross section of the main signal process $\mu^+ \mu^- \to tc$ derived from the 4-fermion interactions are proportional to collision $s^2$, 
+For the $\mu^+\mu^-\to tc$ and $bs$ processes, we consider the BP3 as an example where $c_{9}=-c_{10}=-0.39$. The cross section of the main signal process $\mu^+ \mu^- \to tc$ derived from the 4-fermion interactions are proportional to collision $s^2$, 
 and it increases with the increase of the collision energy, as shown in Fig.~\ref{ecm}. 
 For Wilson coefficients $C^{1}_{lq}$ and $C^{3}_{lq}$, we consider their relations in Model I and II. 
-As we expect, their cross sections have relation $\sigma(tc)\sim sigma(bs)$ for Model I, and $\sigma(tc)\sim\frac{1}{4}\sigma(bs)$ for model II.
+As we expect, their cross sections have relation $\sigma(tc)\sim \sigma(bs)$ for Model I, and $\sigma(tc)\sim\frac{1}{4}\sigma(bs)$ for Model II. 
 %The largest signal is the case that only $c_{9}$ is switched on, and it can reach $\mathcal{O}(1)$ fb at the $30$ TeV. 
 
 The main background processes include $b\bar{b}$, $c\bar{c}$, $q\bar{q}$ ($q=u,d,s$), $W^+ W^-$, $ZZ$, $t \bar{t}$, and $Wjj$ ($j=u,d,s,c$). 
@@ -466,7 +469,7 @@ Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover t
   \subfigure{
   \thesubfigure
   \includegraphics[width=.4\linewidth]{e_sigma_clq1_eq_3clq3_log.pdf}}
-  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. For the signal, $X=t\bar{c}$, while $X$ is the final state of the background. The best fits $c_{9}=-c_{10}=-0.39$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered here. Their values are evaluated to the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, i.e. $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, i.e. $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
+  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. For the signal, $X=t\bar{c}$, while $X$ is the final state of the background. The BP3 with $c_{9}=-c_{10}=-0.39$ is shown here. Their values are evaluated to the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, i.e. $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, i.e. $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
 \end{figure}
 
 \begin{figure}
@@ -477,21 +480,21 @@ Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover t
   \subfigure{
   \thesubfigure
   \includegraphics[width=.4\linewidth]{output_minus.pdf}}
-  \caption{The running of (a) $C^{(1)}_{lq}+C^{(3)}_{lq}$ and (b) $C^{(1)}_{lq}-C^{(3)}_{lq}$ from EW scale to $\Lambda=10$ TeV is display.  Two scenarios: 1) $C^{(1)}_{lq}=L^{V,LL}_{ed}\Lambda^2/v^2$ and $C^{(3)}_{lq}=0$, and 2) $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$ have been considered here.\label{rge:EWtoUV}}
+  \caption{The runnings of (a) $C^{(1)}_{lq}+C^{(3)}_{lq}$ and (b) $C^{(1)}_{lq}-C^{(3)}_{lq}$ from EW scale to $\Lambda=10$ TeV are displayed.  Two NP scenarios are considered: 1) Model I, $C^{(1)}_{lq}=L^{V,LL}_{ed}\Lambda^2/v^2$ and $C^{(3)}_{lq}=0$, and 2) Model II, $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{rge:EWtoUV}}
 \end{figure}
 
-As we have seen in Fig.~\ref{ecm}, the process $\mu^+\mu^-\to t\bar{c}$ can only be observable when $E_{cm}>10$ TeV.  
-In a such high energy, we can expect two energetic jets to be observed at the detector for either signal or background events. 
+As we have seen in Fig.~\ref{ecm}, the process $\mu^+\mu^-\to t\bar{c}$ can only be observable when $E_{cm}>10$ TeV.  At a such high energy, we can expect two energetic jets to be observed at the detector for either signal or background events. 
 
-In Fig.~\ref{ecm}, the best fit $c_{9}=-c_{10}=-0.39$ in Ref.~\cite{Altmannshofer:2021qrr} have been considered. 
+In Fig.~\ref{ecm}, the BP3 with $c_{9}=-c_{10}=-0.39$ given in Table \ref{table:LVLLed} is considered.
 Their values are evaluated to the EW scale by our RGEs Eq.~\ref{beta:VLLed} and Eq.~\ref{beta:VLRde}. 
 And then they are matched to SMEFT by Eq.~\ref{match:VLLed} and Eq.~\ref{match:VLRde}. 
 From Eq.~\ref{match:VLLed}, we also know that the constraint from B physics can be only applied to the sum of $C^{(1)}_{lq}+C^{(3)}_{lq}$~\footnote{The generation indices are always $(p,r,s,t)=(2,2,2,3)$ for $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ and $(p,r,s,t)=(2,3,2,2)$ for $C_{qe}$ in this paper.}.  
 So any new physics scenarios with $C^{(1)}_{lq}$ and $C^{(3)}_{lq}$ as free parameters cannot be constrained by the data from B physics experiments. 
-In Fig.~\ref{rge:EWtoUV}, we show the running of $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C^{(1)}_{lq}-C^{(3)}_{lq}$ from EW scale to new physics scale at $\Lambda=10$ TeV, 
-in the case of $c_{9}=-c_{10}=-0.39$.
-We have considered two simple scenarios at EW scale ($M_Z$): 1) $C^{(1)}_{lq}=L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$ and $C^{(3)}_{lq} = 0$; 2) $C^{(1)}_{lq}=3 C^{(3)}_{lq}=\frac{3}{4} L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$.
-Considering the experimental uncertainties, it is challenging to distinguish these two cases from RGE running. 
+In Fig.~\ref{rge:EWtoUV}, we show the running of $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C^{(1)}_{lq}-C^{(3)}_{lq}$ from EW scale to new physics scale at $\Lambda=10$ TeV for the BP3 case with $c_{9}=-c_{10}=-0.39$.
+We have considered two simple scenarios at EW scale ($M_Z$): 1)  Model I with $C^{(1)}_{lq}=L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$ and $C^{(3)}_{lq} = 0$; 2) Model II with $C^{(1)}_{lq}=3 C^{(3)}_{lq}=\frac{3}{4} L^{V,LL}_{ed} \frac{\Lambda^2}{v^2}$.
+Considering the experimental uncertainties, it is challenging to distinguish these two cases from the effects of RGE running. 
+
+It it noteworthy that although these two NP scenarios, i.e. Model I and Model II, produce the same $c_9$ and $c_{10}$ at $\mu=M_B$, their high energy behaviors are different from each other. 
 
 \subsection{Jet Level Analysis}
 
@@ -508,7 +511,7 @@ Actually, one benefit of the particle flow method can also help us to distinguis
 a W/Z boson jet, and a top jet: a W/Z/top jet can have more charged tracks in a detector when compared with a light jet.
 
 To further investigate the kinematic features of jets from signal processes, 
-we input events generated with $c_{9}=-c_{10}=-0.39$ to PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
+we input events generated with BP3 and Model I to PYTHIA8~\cite{Bierlich:2022pfr} for parton shower and hadronization, 
 and FastJet~\cite{Cacciari:2011ma} to reconstruct jets.  
 It is expected that jet algorithms developed for electron-positron colliders can also be applied well to muon colliders. 
 Therefore, we use the generalised $k_t$ algorithm for $e^+e^-$ collisions,
@@ -536,26 +539,19 @@ Such kind of particles are included in the exclusive jets.
 So this algorithm is not sufficient in our context.
 
 Below we will demonstrate a case study with the collision energy $\sqrt{s}=10$ TeV at the jet level analysis, 
-with $c_g=-c_{10}=-0.39$ input. 
+with the BP3 and Model I as theoretical input. 
 We demand all signal and background events have hadronic decays and neglect those semi-leptonic and pure leptonic final states. 
 
 Since the dominant background processes are $WW (ZZ)$, $tt$, 
 and $jj$ which can have more than two energetic jets in the final state, 
 in order to avoid the combinatoric issues, it is better to have less number of jets in the final state. 
-For example, when $R=0.05$ and $E_j>100$\xznote{Inconsistency!Later $E_j>500$ is adopted}, 
+For example, when $R=0.05$ and $E_j>100$,
 the number of jets for a signal event can be much more than $10$, which is difficult to analyze. 
 Then appropriate jet parameters, like cone parameter and energy cut, 
 are crucial for the jet numbers and the preselection of signal events. 
 Due to the fact that both $W/Z$ bosons and top quarks are highly boosted in the final state 
 (each of them carries an energy 5 TeV), 
-it is crucial to set the value of jet parameter so as to capture the whole decay products of $W/Z$ bosons and top quarks. 
-Therefore, in this study, we will focus on the boosted events in our analysis.
-
-According to the rule of thumb, the typical cone parameter for a top jet with a large $P_t$ can be expressed as $R_t = \frac{2 m_t}{P_t}$. 
-\xznote{Wrong formula! This is for the algorithm which uses $P_t$, while here we are using $E$!} 
-It can be estimated that all products of a $P_t=3.5$ TeV top jet can collimate in a cone with value $R_t= 0.1$ or so. 
-Considering that the future ECAL (HCAL) detector can have a granularity with $\Delta \eta \times \Delta \phi = 0.01 \times 0.009 (0.025 \times 0.025)$ for the FCC-hh detector \cite{FCC:2018vvp}, 
-\xznote{Wrong detector!} there is no doubt that a future detector of a muon collider is able to resolve the substructure of such a highly boosted top jet. 
+it is crucial to set the value of jet parameter so as to capture the whole decay products of $W/Z$ bosons and top quarks. Therefore, in this study, we will focus on the boosted events in our analysis. Considering that the future ECAL (HCAL) sub-detectors can have a granularity good enough,  there is no doubt that a future detector of a muon collider is able to resolve the substructure of such a highly boosted top jet. In principle, a future detector of a muon collider should be very similar to the detectors of CEPC and ILC.
 
 The optimization of parameters $p$ and $R$ is a complicated task.
 As a first attempt, we choose $p=1$ so it works similarly to a $k_t$ algorithm for hadron collider~\cite{Catani:1993hr,Ellis:1993tq}. 
@@ -566,8 +562,7 @@ In Fig.~\ref{subfig:ej_tc}, we display the energy distribution of the leading th
 These jets are sorted by energy.  Obviously, the first two jets have energy around $E_{cm}/2$, 
 which means that they probably originated from a hard process.
 We can also observe that the energy of the 3rd jet can reach several hundred GeV or TeV levels.
-In such a high energy collider, parton shower can radiate some high energy particles and can be detected as a hard jet. 
-To reduce these radiations, we implement a cut $E(j)>500$ GeV to jets for each event. 
+In such a high energy collider, parton shower can radiate some high energy particles and can be detected as a hard jet. To reduce these radiations, we implement a cut $E(j)>500$ GeV to jets for each event. 
 After this cut, we plot the number of jets in Fig.~\ref{subfig:njets}. 
 As we can see, the peak is $N_{jets}=2$ for two final state processes, and the peak for $W^{\pm}jj$ background is 3.  Therefore to demand the number of jets $N_j=2$ for each event can heavily suppress the background events of $\mu^+ \mu^0 \to W^{\pm}jj$.
 
@@ -670,8 +665,7 @@ Below we introduce some simple cuts to separate signal and background events:
   \item Cut3: $M(LJ)<75$ GeV,
   \item Cut4: the heavy jet is b-tagged and the light jet is not tagged.
 \end{itemize}
-The results of the cut flows are listed in Table.~\ref{table:tc:cut}.\xznote{value of benchmark Wilson coefficients?} 
-As we can see, the cuts for the invariant masses of heavier and lighter jets are efficient to reduce backgrounds with heavy particles. 
+The results of the cut flows are listed in Table.~\ref{table:tc:cut}. As we can see, the cuts for the invariant masses of heavier and lighter jets are efficient to reduce backgrounds with heavy particles. 
 The $b$-tagging cut is efficient to reduce backgrounds with $W$ boson. 
 After these cuts, the huge backgrounds are reduced successfully, 
 and the signal events can be observed with remarkable significance. 
@@ -703,7 +697,7 @@ and the signal events can be observed with remarkable significance.
   \end{tabular}
   \end{center}
 %  \caption{The number of events before and after each cut are listed, where $\sigma$ is defined as $\sigma=S/\sqrt{S+B}$. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:tc:cut}}
-  \caption{The number of events before and after each cut are listed, where $\sigma$ is defined as $\sigma=S/\sqrt{S+B}$. We assume the luminosity is $10$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:tc:cut}}
+  \caption{The number of events before and after each cut are listed, where $\sigma$ is defined as $\sigma=S/\sqrt{S+B}$. For the signal, we use the BP3 and Model I as theoretical input. We assume the luminosity is $10$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:tc:cut}}
 \end{table}
 \end{center}
 
@@ -713,7 +707,7 @@ For a purpose of comparison and contrast, we also perform an analysis of the pro
   \item Cut2: $M(HJ)<75$ GeV,
   \item Cut3: One jet is b-tagged.
 \end{itemize} 
-The results of cut flows are listed in Table.~\ref{table:bs:cut}.\xznote{What is the benchmark value for the Wilson coefficients?}
+The results of cut flows are listed in Table.~\ref{table:bs:cut}.
 
 As we discussed above, there should be no massive jets in such signal events, 
 so we can veto the heavier jets by demanding the heavier jet should not have too much larger jet mass.
@@ -748,13 +742,12 @@ After these cuts, it is observed that heavy flavor final states will be the domi
   \end{tabular}
   \end{center}
 %  \caption{The number of events before and after each cut is listed. We assume the luminosity is $30$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:bs:cut}}
-  \caption{The number of events before and after each cut is listed. We assume the luminosity is $10$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:bs:cut}}
+  \caption{The number of events before and after each cut is listed. For the signal, we use the BP3 and Model I as theoretical input. We assume the luminosity is $10$ ab$^{-1}$ at 10 TeV muon collider. The details of these cuts are described in the text.\label{table:bs:cut}}
 \end{table}
 \end{center}
 
-Fig.~\ref{fig:cll1d} shows the $2\sigma$ and $3\sigma$ bounds on $C^{X}_{LL}$. 
-Based on our analysis, $C^{tc}_{LL}$ can be constrained to $[-0.0177, +0.0177]$ ($[-0.0220, +0.0220]$) at $2\sigma$ ($3\sigma$) limit at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$, 
-while $C^{bs}_{LL}$ can be constrained to $[-0.0226, +0.0226]$ ($[-0.0279, +0.0279]$) at $2\sigma$ ($3\sigma$) limit. 
+In Fig.~\ref{fig:cll1d}, we demonstrate the $2\sigma$ and $3\sigma$ bounds on $C^{X}_{LL}$ from the measurement of total cross sections. Based on our analysis, $C^{tc}_{LL}$ can be constrained to $[-1.8\times 10^{-2}, +1.8\times 10^{-2}]$ ($[-2.2\times 10^{-2}, +2.2\times10^{-2}]$) at $2\sigma$ ($3\sigma$) limit at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$, while 
+$C^{bs}_{LL}$ can be constrained to $[-2.3\times 10^{-2}, +2.3 \times 10^{-2}]$ ($[-2.8\times 10^{-2}, +2.8\times 10^{_2}]$) at $2\sigma$ ($3\sigma$) limit. 
 
 \begin{figure}[htbp]
   \setcounter{subfigure}{0}
@@ -768,12 +761,12 @@ while $C^{bs}_{LL}$ can be constrained to $[-0.0226, +0.0226]$ ($[-0.0279, +0.02
   \thesubfigure
   \label{fig:cllbs1d}
   \includegraphics[width=0.4\textwidth]{cllbs1d.pdf}}
-  \caption{The $2\sigma$ and $3\sigma$ bounds of (a) $C^{tc}_{LL}$ and (b) $C^{bs}_{LL}$ at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$.}\label{fig:cll1d}
+  \caption{The $2\sigma$ and $3\sigma$ bounds of (a) $C^{tc}_{LL}$ and (b) $C^{bs}_{LL}$ at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$ are shown.}\label{fig:cll1d}
 \end{figure}
 
-Similarly, we implement same cuts to analyse the case that only $C_{qe}$ is switched on. 
-Fig.~\ref{fig:cqe1d} shows the $2\sigma$ and $3\sigma$ bounds on $C_{qe}$. 
-There is no wonder that these bounds are close to that we obtain for $C^{X}_{LL}$.
+Similarly, we implement same cuts to analyze the case when only $C_{qe}$ is switched on. 
+In Fig.~\ref{fig:cqe1d}, we show the $2\sigma$ and $3\sigma$ bounds on $C_{qe}$. 
+There is no wonder that these bounds are close to that we obtain for $C^{X}_{LL}$ when only the information of total cross section is utilized.
 
 \begin{figure}[htbp]
   \setcounter{subfigure}{0}
@@ -787,11 +780,15 @@ There is no wonder that these bounds are close to that we obtain for $C^{X}_{LL}
   \thesubfigure
   \label{fig:cllbs1d}
   \includegraphics[width=0.4\textwidth]{cqebs.pdf}}
-  \caption{The $2\sigma$ and $3\sigma$ bounds of $C_{qe}$ obtained by measuring (a) $tc$ and (b) $bs$ final state at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$.}\label{fig:cqe1d}
+  \caption{The $2\sigma$ and $3\sigma$ bounds of $C_{qe}$ obtained by measuring (a) $tc$ and (b) $bs$ final state at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$ are shown.}\label{fig:cqe1d}
 \end{figure}
+
+
 \begin{figure}
-    \includegraphics[width=0.4\textwidth]{2dbound.pdf}
-    \caption{The $2\sigma$ bounds are shown.\xznote{Currently using 0.03 as reference value, need to be updated.}}\label{fig:cll2d}
+    \includegraphics[width=0.31\textwidth]{2dbound.pdf}
+    \includegraphics[width=0.31\textwidth]{2dbound.pdf}
+    \includegraphics[width=0.31\textwidth]{2dbound.pdf}
+    \caption{The 2-D $2\sigma$ bounds are shown.\xznote{Currently using 0.03 as reference value, need to be updated.}}\label{fig:cll2d}
 \end{figure}
 
 \section{Summary and Discussion}\label{Sec:conc}
