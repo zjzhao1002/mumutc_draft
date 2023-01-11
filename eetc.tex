@@ -5,7 +5,9 @@
 
 %\usepackage[T1]{fontenc} % if needed
 \usepackage{amsmath,amssymb,graphicx}
-\usepackage{subfigure}
+%\usepackage{subfigure}
+\usepackage{caption}
+\usepackage{subcaption}
 \usepackage{multirow}
 \usepackage{dcolumn}
 \usepackage{color,url}
@@ -463,23 +465,29 @@ Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover t
 
 \begin{figure}
   \centering
-  \subfigure{
-  \thesubfigure
-  \includegraphics[width=.4\linewidth]{e_sigma_clq1_only_log.pdf}}
-  \subfigure{
-  \thesubfigure
-  \includegraphics[width=.4\linewidth]{e_sigma_clq1_eq_3clq3_log.pdf}}
+  \captionsetup[sub]{font=large}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \includegraphics[width=\linewidth]{e_sigma_clq1_only_log.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \includegraphics[width=\linewidth]{e_sigma_clq1_eq_3clq3_log.pdf}
+     \caption{}
+  \end{subfigure}
   \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. For the signal, $X=t\bar{c}$, while $X$ is the final state of the background. The BP3 with $c_{9}=-c_{10}=-0.39$ is shown here. Their values are evaluated to the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, i.e. $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, i.e. $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
 \end{figure}
 
 \begin{figure}
   \centering
-  \subfigure{
-  \thesubfigure
-  \includegraphics[width=.4\linewidth]{output_plus.pdf}}
-  \subfigure{
-  \thesubfigure
-  \includegraphics[width=.4\linewidth]{output_minus.pdf}}
+  \captionsetup[sub]{font=large}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \includegraphics[width=\linewidth]{output_plus.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \includegraphics[width=\linewidth]{output_minus.pdf}
+     \caption{}
+  \end{subfigure}
   \caption{The runnings of (a) $C^{(1)}_{lq}+C^{(3)}_{lq}$ and (b) $C^{(1)}_{lq}-C^{(3)}_{lq}$ from EW scale to $\Lambda=10$ TeV are displayed.  Two NP scenarios are considered: 1) Model I, $C^{(1)}_{lq}=L^{V,LL}_{ed}\Lambda^2/v^2$ and $C^{(3)}_{lq}=0$, and 2) Model II, $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{rge:EWtoUV}}
 \end{figure}
 
@@ -570,14 +578,17 @@ As we can see, the peak is $N_{jets}=2$ for two final state processes, and the p
 %  \setcounter{subfigure}{0}
   \centering
   % Requires \usepackage{graphicx}
-  \subfigure{
-  \thesubfigure
-  \label{subfig:ej_tc}
-  \includegraphics[width=0.4\textwidth]{ej_tc.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{subfig:njets}
-  \includegraphics[width=0.4\textwidth]{njets.pdf}}
+  \captionsetup[sub]{font=large}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{subfig:ej_tc}
+     \includegraphics[width=\linewidth]{ej_tc.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{subfig:njets}
+     \includegraphics[width=\linewidth]{njets.pdf}
+     \caption{}
+  \end{subfigure}
   \caption{(a) The jet energy distributions of process $\mu^+\mu^-\to t\bar{c}$ are displayed, where jets are sorted by energy. (b) The number of jets after implementing cut $E(j)>500$ GeV.}\label{fig:base}
 \end{figure}
 
@@ -589,17 +600,20 @@ It is because these particles are highly boosted in such a high energy machine.
 %We can include all their decayed products by choosing a small jet cone like $R=0.10$.
 
 \begin{figure}[htbp]
-  \setcounter{subfigure}{0}
+  %\setcounter{subfigure}{0}
   \centering
   % Requires \usepackage{graphicx}
-  \subfigure{
-  \thesubfigure
-  \label{fig:mj1}
-  \includegraphics[width=0.4\textwidth]{mj1.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{fig:mj2}
-  \includegraphics[width=0.4\textwidth]{mj2.pdf}}
+  \captionsetup[sub]{font=large}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:mj1}
+     \includegraphics[width=\linewidth]{mj1.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:mj2}
+     \includegraphics[width=\linewidth]{mj2.pdf}
+     \caption{}
+  \end{subfigure}
   \caption{The invariant mass of (a) the heavier jet and (b) the lighter jet in signal and backgrounds are displayed.}\label{fig:mj1mj2}
 \end{figure}
 
@@ -636,25 +650,30 @@ In our analysis, the $b$-tagging rate is $\epsilon_{b}=0.7$,
 while the mistagging rate is $\epsilon_{c}=0.1$ and $\epsilon_{q}=0.01$ for $c$-jets and light jets, respectively.
 
 \begin{figure}[htbp]
-  \setcounter{subfigure}{0}
+  % \setcounter{subfigure}{0}
   \centering
   % Requires \usepackage{graphicx}
-  \subfigure{
-  \thesubfigure
-  \label{fig:nbjets}
-  \includegraphics[width=0.4\textwidth]{nbjets.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{fig:ncjets}
-  \includegraphics[width=0.4\textwidth]{ncjets.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{fig:nbjets_wz}
-  \includegraphics[width=0.4\textwidth]{nbjets_wz.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{fig:ncjets_wz}
-  \includegraphics[width=0.4\textwidth]{ncjets_wz.pdf}}
+  \captionsetup[sub]{font=large}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:nbjets}
+     \includegraphics[width=\linewidth]{nbjets.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:ncjets}
+     \includegraphics[width=\linewidth]{ncjets.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:nbjets_wz}
+     \includegraphics[width=\linewidth]{nbjets_wz.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:ncjets_wz}
+     \includegraphics[width=\linewidth]{ncjets_wz.pdf}
+     \caption{}
+  \end{subfigure}
   \caption{The number of (a) true $b$-jets and (b) true $c$-jets in signals and backgrounds with quarks are displayed. As a reference, the number of (c) true $b$-jet and (d) true $c$-jet in background with gauge boson are displayed.}\label{fig:bcjet}
 \end{figure}
 
@@ -750,17 +769,20 @@ In Fig.~\ref{fig:cll1d}, we demonstrate the $2\sigma$ and $3\sigma$ bounds on $C
 $C^{bs}_{LL}$ can be constrained to $[-2.3\times 10^{-2}, +2.3 \times 10^{-2}]$ ($[-2.8\times 10^{-2}, +2.8\times 10^{_2}]$) at $2\sigma$ ($3\sigma$) limit. 
 
 \begin{figure}[htbp]
-  \setcounter{subfigure}{0}
+  %\setcounter{subfigure}{0}
   \centering
   % Requires \usepackage{graphicx}
-  \subfigure{
-  \thesubfigure
-  \label{fig:clltc1d}
-  \includegraphics[width=0.4\textwidth]{clltc1d.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{fig:cllbs1d}
-  \includegraphics[width=0.4\textwidth]{cllbs1d.pdf}}
+  \captionsetup[sub]{font=large}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:clltc1d}
+     \includegraphics[width=\linewidth]{clltc1d.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:cllbs1d}
+     \includegraphics[width=\linewidth]{cllbs1d.pdf}
+     \caption{}
+  \end{subfigure}
   \caption{The $2\sigma$ and $3\sigma$ bounds of (a) $C^{tc}_{LL}$ and (b) $C^{bs}_{LL}$ at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$ are shown.}\label{fig:cll1d}
 \end{figure}
 
@@ -769,17 +791,20 @@ In Fig.~\ref{fig:cqe1d}, we show the $2\sigma$ and $3\sigma$ bounds on $C_{qe}$.
 There is no wonder that these bounds are close to that we obtain for $C^{X}_{LL}$ when only the information of total cross section is utilized.
 
 \begin{figure}[htbp]
-  \setcounter{subfigure}{0}
+  % \setcounter{subfigure}{0}
   \centering
   % Requires \usepackage{graphicx}
-  \subfigure{
-  \thesubfigure
-  \label{fig:clltc1d}
-  \includegraphics[width=0.4\textwidth]{cqetc.pdf}}
-  \subfigure{
-  \thesubfigure
-  \label{fig:cllbs1d}
-  \includegraphics[width=0.4\textwidth]{cqebs.pdf}}
+  \captionsetup[sub]{font=large}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:clltc1d}
+     \includegraphics[width=\linewidth]{cqetc.pdf}
+     \caption{}
+  \end{subfigure}
+  \begin{subfigure}[t]{0.45\textwidth}
+     \label{fig:cllbs1d}
+     \includegraphics[width=\linewidth]{cqebs.pdf}
+     \caption{}
+  \end{subfigure}
   \caption{The $2\sigma$ and $3\sigma$ bounds of $C_{qe}$ obtained by measuring (a) $tc$ and (b) $bs$ final state at 10 TeV muon collider with luminosity $\mathcal{L}=10$ ab$^{-1}$ are shown.}\label{fig:cqe1d}
 \end{figure}
 
