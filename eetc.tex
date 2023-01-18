@@ -337,7 +337,7 @@ $c_{10}$  &      $-0.10$     &     $0.25$       &       $+0.39$       \\
 \label{Sec:NP}
 
 At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\ref{Oqe}).
- In massless limit,\footnote{For simplicity, in this section we work under the massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence is included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
+ In massless limit,\footnote{For simplicity, in this section we work under the massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence is always included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
  \begin{align}
      \frac{\ud\sigma(\mu^+\mu^-\to X)}{\ud\cos\theta}=\frac{3s}{256\pi}\left[|C_{LL}^{X}|^2(1+\cos\theta)^2+|C_{qe}|^2(1-\cos\theta)^2\right]
  \end{align}
@@ -346,13 +346,14 @@ At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\
  C_{LL}^{bs}=C_{lq}^{(1)}+C_{lq}^{(3)},C_{LL}^{tc}=C_{lq}^{(1)}-C_{lq}^{(3)}
  \end{align}
 
-Integrating over $\cos\theta$, we can obtain the inclusive cross section as:
+We note that the left-handed operators($C_{LL}^{X}$) and right-handed operator has different $\theta$ dependence, hence we expect that with flavor tagging and charge identification, they can be distinguished with differential cross section.
+For simplicity, in this work we consider only inclusive cross section, which can be obtained by integrating over $\cos\theta$, given by:
 \begin{align}
     \sigma(\mu^+\mu^-\to X)=\frac{1}{32\pi}s(|C_{LL}^{X}|^2+|C_{qe}|^2)
 \end{align}
 
 In a general new physical model,
-both $C_{lq}^{(1)}$ and $C_{lq}^{(3)}$ can be both non-zero,
+both $C_{lq}^{(1)}$ and $C_{lq}^{(3)}$ can be non-zero,
 and thus both processes $\mu^+\mu^-\to tc$ and $\mu^+\mu^-\to bs$ receives new physical contribution,
 to be measured in future muon colliders.
 We note that for $\mu^+\mu^-\to bs$, the corresponding Wilson coefficients $C_{LL}^{bs}$ is directly in charge of $b\to s\mu^+\mu^-$ transition in $B$-physics,
@@ -391,8 +392,9 @@ and later in Section \ref{Sec:result} we will show how to distinguish them by me
             [C_{lq}^{(3)}]_{prst}=&\frac{\lambda_{sp}^{*}\lambda_{tr}}{4M^2}.
         \end{align}
         where $M$ is the mass of the leptoquark $S_3$.
-        Therefore, we have $C_{LL}^{bs}=2C_{LL}^{tc}$,
-        and $\sigma(tc)=\frac{1}{4}\sigma(bs)$
+        On the other hand, $C_{qe}$ is zero at tree-level, and it can only be generated through loop corrections, and hence we expect $C_{qe}\ll C_{lq}^{(1)},C_{lq}^{(3)}$.
+        Therefore, we have $C_{LL}^{bs}\sim2C_{LL}^{tc}$,
+        and $\sigma(tc)\sim\frac{1}{4}\sigma(bs)$
 
     \item[Model III] A scalar singlet leptoquark $S_1$ model.
         In this model, new physics is mediated by a heavy scalar leptoquark, which belongs to $SU(2)_{L}$ singlet.
