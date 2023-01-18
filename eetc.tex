@@ -339,7 +339,7 @@ $c_{10}$  &      $-0.10$     &     $0.25$       &       $+0.39$       \\
 At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\ref{Oqe}).
  In massless limit,\footnote{For simplicity, in this section we work under the massless limit. Nevertheless, for the numerical results discussed in later sections, full mass dependence is always included} the differential cross section for $\mu^+\mu^-\to tc$ and  $\mu^+\mu^-\to bs$ are:
  \begin{align}
-     \frac{\ud\sigma(\mu^+\mu^-\to X)}{\ud\cos\theta}=\frac{3s}{256\pi}\left[|C_{LL}^{X}|^2(1+\cos\theta)^2+|C_{qe}|^2(1-\cos\theta)^2\right]
+     \frac{\ud\sigma(\mu^+\mu^-\to X)}{\ud\cos\theta}=\frac{3s}{256\pi \Lambda^4}\left[|C_{LL}^{X}|^2(1+\cos\theta)^2+|C_{qe}|^2(1-\cos\theta)^2\right]
  \end{align}
  where
  \begin{align}
@@ -349,7 +349,7 @@ At muon colliders, the operators we input are actually Eq.(\ref{O1lq}) to Eq. (\
 We note that the left-handed operators($C_{LL}^{X}$) and right-handed operator has different $\theta$ dependence, hence we expect that with flavor tagging and charge identification, they can be distinguished with differential cross section.
 For simplicity, in this work we consider only inclusive cross section, which can be obtained by integrating over $\cos\theta$, given by:
 \begin{align}
-    \sigma(\mu^+\mu^-\to X)=\frac{1}{32\pi}s(|C_{LL}^{X}|^2+|C_{qe}|^2)
+    \sigma(\mu^+\mu^-\to X)=\frac{1}{32\pi\Lambda^4}s(|C_{LL}^{X}|^2+|C_{qe}|^2)
 \end{align}
 
 In a general new physical model,
@@ -388,8 +388,8 @@ and later in Section \ref{Sec:result} we will show how to distinguish them by me
         \end{align}
         In this model, both $C_{lq}^{(1)}$ and $C_{lq}^{(3)}$ can be generated at tree-level, which is given by \cite{Gherardi:2020det}
         \begin{align}
-            [C_{lq}^{(1)}]_{prst}=&3\frac{\lambda_{sp}^{*}\lambda_{tr}}{4M^2}\\
-            [C_{lq}^{(3)}]_{prst}=&\frac{\lambda_{sp}^{*}\lambda_{tr}}{4M^2}.
+            \frac{1}{\Lambda^2}[C_{lq}^{(1)}]_{prst}=&3\frac{\lambda_{sp}^{*}\lambda_{tr}}{4M^2}\\
+            \frac{1}{\Lambda^2}[C_{lq}^{(3)}]_{prst}=&\frac{\lambda_{sp}^{*}\lambda_{tr}}{4M^2}.
         \end{align}
         where $M$ is the mass of the leptoquark $S_3$.
         On the other hand, $C_{qe}$ is zero at tree-level, and it can only be generated through loop corrections, and hence we expect $C_{qe}\ll C_{lq}^{(1)},C_{lq}^{(3)}$.
@@ -406,8 +406,8 @@ and later in Section \ref{Sec:result} we will show how to distinguish them by me
         \end{align}
         At the tree level, the relevant Wilson coefficients are
         \begin{align}
-            [C_{lq}^{(1),\textrm{tree}}]_{prst}=\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{4M^2}\\
-            [C_{lq}^{(3),\textrm{tree}}]_{prst}=-\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{4M^2}
+            \frac{1}{\Lambda^2}[C_{lq}^{(1),\textrm{tree}}]_{prst}=\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{4M^2}\\
+            \frac{1}{\Lambda^2}[C_{lq}^{(3),\textrm{tree}}]_{prst}=-\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{4M^2}
         \end{align}
         Interestingly, we can see that at tree-level $C_{LL}^{bs}=0$.
         The leading contribution to $C_{LL}^{bs}$ starts from one-loop level \cite{Bauer:2015knc}.
@@ -435,8 +435,8 @@ see also \cite{Buttazzo:2017ixm}.
         \end{align}
         The relevant Wilson coefficients are
         \begin{align}
-            [C_{lq}^{(1),\textrm{tree}}]_{prst}=g_U^2\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{2M^2}\\
-            [C_{lq}^{(3),\textrm{tree}}]_{prst}=g_U^2\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{2M^2}
+            \frac{1}{\Lambda^2}[C_{lq}^{(1),\textrm{tree}}]_{prst}=g_U^2\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{2M^2}\\
+            \frac{1}{\Lambda^2}[C_{lq}^{(3),\textrm{tree}}]_{prst}=g_U^2\frac{\lambda_{sp}^{L*}\lambda_{tr}^{L}}{2M^2}
         \end{align}
         Clearly, in this case we have $C_{LL}^{tc}\sim0,C_{LL}^{bs}\gg C_{LL}^{tc}$.
 \end{enumerate}
