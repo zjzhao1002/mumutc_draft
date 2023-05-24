@@ -137,13 +137,17 @@ and model-exhaustive analysis\cite{Buttazzo:2020ibd,Capdevilla:2020qel,Capdevill
 %The future collider proposals include the linear or circular case $e^+e^-$ colliders\cite{} and circular pp coliders \cite{}, and especially relevant here: high-energy muon colliders \cite{}.  Muon colliders can reach high energies with large mass suppression of synchroton radiation comparing to $e^+e^-$ colliders and higher precision with cleaner final states comparing to pp colliders. Although the short life time of muon causes some technical challenges, there are a series of recent progresses\cite{}.
 
 The multi-TeV reach and better precision advantages of muon colliders, make it a perfect place to probe muon-related B physics in low energy. 
-There are already proposals studying $\mu^+\mu^-\to bs$ (here $bs$ denotes both $b\bar{s}$ and $\bar{b}s$) at multi TeV scale to discuss the impact of low energy rare B decays processes \cite{Altmannshofer:2022xri,Huang:2021nkl,Huang:2021biu}. 
-At the current stage, some rare B decay processes can be nicely parameterized by effective four-fermion operators at the B-physics scale ($\mu= 4.8$ GeV):
+There are already proposals studying $\mu^+\mu^-\to bs$ (here $bs$ denotes both $b\bar{s}$ and $\bar{b}s$) at multi-TeV scale to discuss the impact of low energy rare B decays processes \cite{Altmannshofer:2022xri,Huang:2021nkl,Huang:2021biu}. 
+At the current stage, some rare B decay processes can be nicely parameterized by effective four-fermion operators at the B physics scale ($\mu= 4.8$ GeV):
+\textcolor{red}{
  \begin{eqnarray}
    O_9 &=& (\bar{s}\gamma_\mu P_L b)(\bar{\ell}\gamma^{\mu}\ell),  \\
-   O_{10} &=& (\bar{s}\gamma_\mu P_L b)(\bar{\ell}\gamma^{\mu}\gamma_5\ell),
+   O_{10} &=& (\bar{s}\gamma_\mu P_L b)(\bar{\ell}\gamma^{\mu}\gamma_5\ell), \\
+   O^{\prime}_9 &=& (\bar{s}\gamma_\mu P_R b)(\bar{\ell}\gamma^{\mu}\ell),\\
+   O^{\prime}_{10} &=& (\bar{s}\gamma_\mu P_R b)(\bar{\ell}\gamma^{\mu}\gamma_5\ell),
 \end{eqnarray}
-For the new physics effects described by operators $O_9$ and $O_{10}$, when we go above the weak scale ($\mu=M_Z$ for instance), 
+}
+For the new physics effects described by \textcolor{red}{these} operators, when we go above the weak scale ($\mu=M_Z$ for instance), 
 the Wilson coefficients of such two operators depend on the specific models (e.g. leptoquark, scalars,$Z'$,etc). 
 
 In this work, we adopt the same assumption that the new physics scale is around $\mu=35$ TeV and it is challenging to discover the new physics signature at the LHC. 
@@ -160,6 +164,17 @@ Same final state has been studied for $e^+e^-$ collider in Ref.~\cite{Bar-Shalom
 And the $tc\ell\ell$ interaction has been studied through the $t\to c\ell\ell$ decay in~\cite{Bause:2020auq}. 
 We extend these works to muon collider, with a detailed Monte-Carlo simulation at hadron level.
 
+\textcolor{red}{
+To probe the $tc\ell\ell$ interaction at LHC or future hadron colliders,    
+a possible way is considering the decay process $t\to \ell^+\ell^-c$.
+From the latest version of Review of Particle Physics~\cite{ParticleDataGroup:2022pth}, 
+there is no direct search to this process. 
+Indirect constraints can come from the measurements of $t\to Zq(q=u,c)$ decay, 
+where $Z$ further decays to leptons. 
+Currently, the branching ratio of $t\to Zq$ is established at $\mathcal{O}(10^{-4})$~\cite{ATLAS:2015vhj,CMS:2017wcz,ATLAS:2018zsq}.
+Probing the $tc\ell\ell$ interaction is a huge challenge at hadron colliders. 
+}
+
 This study shows that the measurement of $tc$ final state can provide complementary information to the process $\mu^+\mu^-\to b s$.
 The four fermion operators for $\mu^+\mu^-\to tc$ naturally arise from the operator matching conditions from the low energy effective field theory to the SMEFT, 
 since left-handed top and charm quarks form electroweak SU(2) doublets respectively as the partners of the left-handed bottom and strange quarks in SMEFT operators. 
@@ -172,7 +187,7 @@ Very light leptoquarks (e.g. 1 TeV or a few 10 TeV) are consistent with experime
 Light leptoquarks are also predicted in the Pati-Salam model, where lepton numbers are treated as the fourth color quantum number. 
 These light leptoquarks can be accessible even at the LHC and future collider projects. 
 Recently, leptoquarks have attracted much attention in order to interpret the previously claimed B anomalies. 
-A comprehensive on the phenomenology of leptoquarks can be found in \cite{Dorsner:2016wpm}.
+A comprehensive \textcolor{red}{review} on the phenomenology of leptoquarks can be found in \cite{Dorsner:2016wpm}.
 
 Our new findings in this work include 
 1) The dominant SM background events for the process $\mu^+\mu^-\to tc$ are different from the background of the process $\mu^+\mu^-\to bs$. 
@@ -196,7 +211,9 @@ In Appendix, we present the renormalization group equations of Wilsonian coeffic
 \label{Sec:EFT}
 
 Interestingly, these rare B decay processes can be simultaneously explained in a model-independent way with the effective four-fermion operators. 
-In many B-physics studies,  new physics effects strongly prefer an effective Hamiltonian with $O_9 $ and $O_{10}$ with Wilson coefficients of dimension 6 interactions at the renormalization scale $\mu =4.8$ GeV ,
+In many B-physics studies, new physics effects strongly prefer an effective Hamiltonian 
+% with $O_9 $ and $O_{10}$ 
+with Wilson coefficients of dimension 6 interactions at the renormalization scale $\mu =4.8$ GeV ,
 \begin{eqnarray}
   \mathcal{H}_{eff} &=& \mathcal{H}^{SM}_{eff}-\mathcal{N}\sum_{\ell=e,\mu}\sum_{i=9,10}\left(c_iO^{bs\ell\ell}_i+c^\prime_i O^{\prime bs\ell\ell}_i\right) + h.c., 
 \end{eqnarray} 
@@ -229,24 +246,34 @@ where $L_i$ are the Wilson Coefficients of LEFT, and $v=246$ GeV is the vacuum e
 
 In this paper, we use the convention of Ref.~\cite{Jenkins:2017jig}. 
 The most relevant operators are 
+\textcolor{red}{
 \begin{eqnarray}
   Q^{V,LL}_{ed}(p,r,s,t) &=& (\bar{e}_{Lp}\gamma^\mu e_{Lr})(\bar{d}_{Ls}\gamma_\mu d_{Lt}),  \label{QVLLed} \\
-  Q^{V,LR}_{de}(p,r,s,t) &=& (\bar{d}_{Lp}\gamma^\mu d_{Lr})(\bar{e}_{Rs}\gamma_\mu e_{Rt}),  \label{QVLRde}
+  Q^{V,LR}_{de}(p,r,s,t) &=& (\bar{d}_{Lp}\gamma^\mu d_{Lr})(\bar{e}_{Rs}\gamma_\mu e_{Rt}),  \label{QVLRde} \\
+  Q^{V,LR}_{ed}(p,r,s,t) &=& (\bar{e}_{Lp}\gamma^\mu e_{Lr})(\bar{d}_{Rs}\gamma_\mu d_{Rt}),  \label{QVLRed} \\
+  Q^{V,RR}_{ed}(p,r,s,t) &=& (\bar{e}_{Rp}\gamma^\mu e_{Rr})(\bar{d}_{Rs}\gamma_\mu d_{Rt}),  \label{QVRRed}
 \end{eqnarray}
+}
 where $p,r,s,t$ are generation indices of quark or lepton. 
 Since the EW symmetry is broken, here $e$ and $d$ are the lepton field and down-type quark field. 
 $L$ and $R$ are the chiral indices of fermions. 
 
 One can derive the relations between $Q_i$ and $O_i$ easily:
+\textcolor{red}{
 \begin{eqnarray}
   Q^{V,LL}_{ed} &=& \frac{1}{2}\left(O_9-O_{10}\right),  \\
-  Q^{V,LR}_{de} &=& \frac{1}{2}\left(O_9+O_{10}\right).   
+  Q^{V,LR}_{de} &=& \frac{1}{2}\left(O_9+O_{10}\right),  \\
+  Q^{V,LR}_{ed} &=& \frac{1}{2}\left(O^{\prime}_9-O^{\prime}_{10}\right),  \\
+  Q^{V,RR}_{de} &=& \frac{1}{2}\left(O^{\prime}_9+O^{\prime}_{10}\right).   
 \end{eqnarray}
 So we have 
 \begin{eqnarray}
   L^{V,LL}_{ed} &=& \frac{\mathcal{N}v^2}{2}(c_9-c_{10}),  \\
-  L^{V,LR}_{de} &=& \frac{\mathcal{N}v^2}{2}(c_9+c_{10}). 
+  L^{V,LR}_{de} &=& \frac{\mathcal{N}v^2}{2}(c_9+c_{10}),  \\
+  L^{V,LR}_{ed} &=& \frac{\mathcal{N}v^2}{2}(c^{\prime}_9-c^{\prime}_{10}),  \\
+  L^{V,RR}_{de} &=& \frac{\mathcal{N}v^2}{2}(c^{\prime}_9+c^{\prime}_{10}). 
 \end{eqnarray}
+}
 The constraints of $c_9$ and $c_{10}$ can be found in Ref.~\cite{Altmannshofer:2021qrr}.
 
 Assuming the new physics appears at a scale above the weak scale $\Lambda$, 
@@ -258,23 +285,40 @@ where $C_i$ are called Wilson Coefficients.
 
 A complete set of non-redundant dimension 6 operators has been derived in Ref.~\cite{Grzadkowski:2010es}, so-called Warsaw basis. 
 The most relevant operators in this paper are
+\textcolor{red}{
 \begin{eqnarray}
    \mathcal{O}^{(1)}_{lq}(p,r,s,t) &=& (\bar{l}_p\gamma^\mu l_r)(\bar{q}_s\gamma_\mu q_{t}),  \label{O1lq} \\ 
    \mathcal{O}^{(3)}_{lq}(p,r,s,t) &=& (\bar{l}_p\gamma^\mu\tau^I l_r)(\bar{q}_s\gamma_\mu\tau^I q_{t}),  \label{O3lq} \\ 
-   \mathcal{O}_{qe}(p,r,s,t) &=& (\bar{q}_p\gamma^\mu q_r)(\bar{e}_s\gamma_\mu e_t), \label{Oqe}
+   \mathcal{O}_{qe}(p,r,s,t) &=& (\bar{q}_p\gamma^\mu q_r)(\bar{e}_s\gamma_\mu e_t), \label{Oqe} \\
+   \mathcal{O}_{ld}(p,r,s,t) &=& (\bar{l}_p\gamma^\mu l_r)(\bar{d}_s\gamma_\mu d_t), \label{Old} \\
+   \mathcal{O}_{ed}(p,r,s,t) &=& (\bar{e}_p\gamma^\mu e_r)(\bar{d}_s\gamma_\mu d_t), \label{Oed} 
 \end{eqnarray}
+}
 where $q$, $l$, $e$ are the left-handed quark doublet, left-handed lepton doublet, and right-handed lepton singlet, respectively. 
 $p,r,s,t$ are generation indices of quark or lepton.
 
 When the electroweak symmetry breaking occurs, the SM heavy particles (top, Higgs,  $W^\pm$,  $Z$) are integrated out, and the SMEFT should be matched to LEFT. 
 The full matching conditions at the tree level have been derived by Ref.~\cite{Jenkins:2017jig}.
 In this paper, we only consider the operators with flavor indices $(p,r,s,t)=(2,2,2,3)$ or $(p,r,s,t)=(2,3,2,2)$, so the matching conditions are simplified to 
+\textcolor{red}{
 \begin{eqnarray}
     L^{V,LL}_{ed}(2,2,2,3) &=& \frac{v^2}{\Lambda^2}\left[C^{(1)}_{lq}(2,2,2,3)+C^{(3)}_{lq}(2,2,2,3)\right],  \label{match:VLLed}\\
-    L^{V,LR}_{de}(2,3,2,2)&=& \frac{v^2}{\Lambda^2}C_{qe}(2,3,2,2). \label{match:VLRde}
+    L^{V,LR}_{de}(2,3,2,2)&=& \frac{v^2}{\Lambda^2}C_{qe}(2,3,2,2), \label{match:VLRde} \\
+    L^{V,LR}_{ed}(2,2,2,3)&=& \frac{v^2}{\Lambda^2}C_{ld}(2,2,2,3), \label{match:VLRed} \\
+    L^{V,RR}_{ed}(2,2,2,3)&=& \frac{v^2}{\Lambda^2}C_{ed}(2,2,2,3). \label{match:VRRed}
 \end{eqnarray}
+}
 % \bigskip
 The related renormalization group equations for the SMEFT and LEFT can be found in Appendix \ref{smeftrge} and Appendix \ref{leftrge}, respectively.
+\textcolor{red}{
+In this work, we do not distinguish the left-handed and right-handed contributions. 
+The constraints on $C^{(1)}_{lq}+C^{(3)}_{lq}$ and $C_{qe}$, 
+which are corresponding to $c_{9}$ and $c_{10}$, 
+can also be applied to $C_{ld}$ and $C_{ed}$, 
+which are corresponding to $c^{\prime}_{9}$ and $c^{\prime}_{10}$.
+From now on, we only consider three operators: 
+$\mathcal{O}^{(1)}_{lq}$, $\mathcal{O}^{(3)}_{lq}$ and $\mathcal{O}_{qe}$.
+}
 
 In Table.~\ref{table:LVLLed}, we list the runnings of three benchmark points: 
 1) BP1, $c_{9}=-1.0, c_{10}=-0.1$, as an example of general new physics scenario, 
@@ -455,7 +499,8 @@ We'd like to note that the above are examples of simplest new physics models, wh
 To study the $\mu^+\mu^-\to tc$ process at future muon collider, 
 we generate a UFO model with relevant operators by Feynrules~\cite{Alloul:2013bka}, 
 and import it to \mgamc \cite{Alwall:2014hca}. 
-We calculate the cross sections of signals and backgrounds from $E_{cm}=1$ TeV to $30$ TeV.  
+We calculate the cross sections of signals and backgrounds from $E_{cm}=1$ TeV to $30$ TeV, 
+\textcolor{red}{without cuts at generator level}.
 The energy dependencies of the cross sections are shown in Fig.~\ref{ecm}. 
 
 For the $\mu^+\mu^-\to tc$ and $bs$ processes, we consider the BP3 as an example where $c_{9}=-c_{10}=-0.39$. The cross section of the main signal process $\mu^+ \mu^- \to tc$ derived from the 4-fermion interactions are proportional to collision $s^2$, 
@@ -487,7 +532,7 @@ Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover t
      \includegraphics[width=\linewidth]{e_sigma_clq1_eq_3clq3_log.pdf}
      \caption{}
   \end{subfigure}
-  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. For the signal, $X=tc/bs$. In other cases, $X$ is the final state of the background. The BP3 with $c_{9}=-c_{10}=-0.39$ is shown here. Their values are evaluated below the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
+  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. \textcolor{red}{There is not generator cut.} For the signal, $X=tc/bs$. In other cases, $X$ is the final state of the background. The BP3 with $c_{9}=-c_{10}=-0.39$ is shown here. Their values are evaluated below the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
 \end{figure}
 
 \begin{figure}
@@ -543,7 +588,7 @@ This algorithm defines two distances:
   d_{ij} &=& \min(E^{2p}_i,E^{2p}_j)\frac{1-\cos\theta_{ij}}{1-\cos{R}}, \label{eq:genkt1}\\
   d_{iB} &=& E^{2p}_i, \label{eq:genkt2}
 \end{eqnarray}
-where $p$ and $R$ are input by user. 
+where $p$ and $R$ are \textcolor{red}{inputs from} user. 
 If a $d_{ij}$ is smallest then particle $i$ and $j$ are recombined, 
 while $d_{iB}$ is smallest then $i$ is called an ``inclusive jet''.
 In this context, we choose $p=1$.
@@ -567,7 +612,7 @@ We demand all signal and background events have hadronic decays and neglect thos
 Since the dominant background processes are $WW (ZZ)$, $tt$, 
 and $jj$ which can have more than two energetic jets in the final state, 
 in order to avoid the combinatoric issues, it is better to have less number of jets in the final state. 
-For example, when $R=0.05$ and $E_j>100$,
+For example, when $R=0.05$ and $E_j>100$ \textcolor{red}{GeV},
 the number of jets for a signal event can be much more than $10$, which is difficult to analyze. 
 Then appropriate jet parameters, like cone parameter and energy cut, 
 are crucial for the jet numbers and the preselection of signal events. 
@@ -586,7 +631,8 @@ which means that they probably originated from a hard process.
 We can also observe that the energy of the 3rd jet can reach several hundred GeV even TeV levels.
 In such a high-energy collider, parton shower can radiate some high-energy particles and can be detected as a hard jet. To reduce these radiations, we implement a cut $E(j)>500$ GeV to jets for each event. 
 After this cut, we plot the number of jets in Fig.~\ref{subfig:njets}. 
-As we can see, the peak is $N_{jets}=2$ for two final state processes, and the peak for $W^{\pm}jj$ background is 3.  Therefore to demand the number of jets $N_j=2$ for each event can heavily suppress the background events of $\mu^+ \mu^- \to W^{\pm}jj$.
+As we can see, the peak is $N_{jets}=2$ for two final state processes, and the peak for $W^{\pm}jj$ background is 3. 
+Therefore to demand the number of jets $N_j=2$ for each event can heavily suppress the background events of $\mu^+ \mu^- \to W^{\pm}jj$.
 
 \begin{figure}[htbp]
 %  \setcounter{subfigure}{0}
@@ -612,6 +658,13 @@ As we expect, HJ has a peak around the top mass and the distribution of LJ is fl
 For the backgrounds with heavy particles ($t$, $W$, and $Z$), we also observe peaks around their masses. 
 It is because these particles are highly boosted in such a high energy machine. 
 %We can include all their decayed products by choosing a small jet cone like $R=0.10$.
+\textcolor{red}{
+The reconstruction of massive jets at ATLAS can be found in Ref.~\cite{ATLAS:2020gwe}.
+It is shown that the $W$ and top jets mass resolution can reach $10\%$, 
+with suitable reconstruction scheme. 
+We can expect that this resolution can reach $1\sim 2\%$ at future muon collider, 
+so applying cuts on jet invariant mass is helpful to extract the $tc$ signal.
+}
 
 \begin{figure}[htbp]
   %\setcounter{subfigure}{0}
@@ -698,10 +751,22 @@ Below we introduce some simple cuts to separate signal and background events:
   \item Cut3: $M(LJ)<75$ GeV,
   \item Cut4: the heavy jet is b-tagged and the light jet is not tagged.
 \end{itemize}
-The results of the cut flows are listed in Table.~\ref{table:tc:cut}. As we can see, the cuts for the invariant masses of heavier and lighter jets are efficient to reduce backgrounds with heavy particles. 
+The results of the cut flows are listed in Table.~\ref{table:tc:cut}. 
+As we can see, the cuts for the invariant masses of heavier and lighter jets are efficient to reduce backgrounds with heavy particles.
 The $b$-tagging cut is efficient to reduce backgrounds with $W$ boson. 
 After these cuts, the huge backgrounds are reduced successfully, 
 and the signal events can be observed with remarkable significance. 
+
+\textcolor{red}{
+It is interesting that the $ZZ$ background is zero after Cut2, 
+but few $WW$ events are remained.
+It is because Pythia8 has different treaments to the $q\bar{q}$ and $q\bar{q}^\prime$ pair. 
+The number of $WW$ events after Cut2 is changed slightly if we choose different parameter set of Pythia8. 
+The tune of Pythia8 has some effects to our analysis, 
+but do not change our final conclusion.
+In this work, we use the default tune of Pythia8, which is called Monash 2013~\cite{Skands:2014pea}. 
+Tuning these parameters is a complicate task and beyond the scope of this work.
+}
 
 \begin{center}
 \begin{table}
@@ -886,15 +951,20 @@ The RGE of SMEFT Wilson coefficients can be written as
 \end{eqnarray}
 All 1-loop $\beta$ functions of operators in Warsaw basis have been derived in Ref.~\cite{Celis:2017hod}. 
 
-The $\beta$ functions of operators~\ref{O1lq}$\sim$\ref{Oqe} are
+The $\beta$ functions of operators~\ref{O1lq}$\sim$\ref{Oed} are
+\footnote{\textcolor{red}{We only consider the terms are non-zero when $(p,r,s,t)=(2,2,2,3)$ ($(2,3,2,2)$ for $C_{qe}$). This is the same for the LHEF case.}}
+\textcolor{red}{
 \begin{eqnarray}
    \left[\beta^{(1)}_{lq}\right]_{prst} &=& \frac{2}{3}{g^\prime}^2\left([C^{(1)}_{lq}]_{wwst}+[C_{qe}]_{stww}\right)\delta_{pr}-{g^\prime}^2[C^{(1)}_{lq}]_{prst}  \nonumber \\
    &&+9g^2[C^{(3)}_{lq}]_{prst}+\frac{1}{2}[\Gamma_u^\dagger\Gamma_u]_{vt}[C^{(1)}_{lq}]_{prsv}, \label{beta:lq1}  \\
    \left[\beta^{(3)}_{lq}\right]_{prst} &=& \frac{2}{3}g^2[C^{(3)}_{lq}]_{wwst}\delta_{pr}+3g^2[C^{(1)}_{lq}]_{prst}-(6g^2+{g^\prime}^2)[C^{(3)}_{lq}]_{prst}  \nonumber \\ 
    && +\frac{1}{2}[\Gamma_u^\dagger\Gamma_u]_{vt}[C^{(3)}_{lq}]_{prsv}, \label{beta:lq3} \\
    \left[\beta_{qe}\right]_{prst} &=& \frac{4}{3}{g^{\prime}}^2\left([C^{(1)}_{lq}]_{wwpr}+[C_{qe}]_{prww}\right)\delta_{st}+2{g^{\prime}}^2[C_{qe}]_{prst} \nonumber  \\
-   && +\frac{1}{2}[\Gamma_u^\dagger\Gamma_u]_{vr}[C^{(1)}_{lq}]_{pvst}, \label{beta:qe}
+   && +\frac{1}{2}[\Gamma_u^\dagger\Gamma_u]_{vr}[C^{(1)}_{lq}]_{pvst}, \label{beta:qe} \\
+   \left[\beta_{ld}\right]_{prst}  &=& \frac{2}{3}{g^\prime}^2[C_{ld}]_{wwst}\delta_{pr}+\frac{2}{3}{g^\prime}^2[C_{ed}]_{wwst}\delta_{pr}-2{g^\prime}^2[C_{ld}]_{prst} \\
+  \left[\beta_{ed}\right]_{prst} &=& -\frac{2}{3}{g^\prime}^2\left(2[-C_{ld}-C_{ed}]_{wwst}\right)\delta_{pr}+4{g^{\prime}}^2[C_{ed}]_{prst}
 \end{eqnarray}
+}
 where $g$ and $g^\prime$ are the gauge coupling of $SU(2)$ and $U(1)$, respectively. 
 $\Gamma_{u}$ is the $3\times 3$ Yukawa mass matrix of u-type quarks. 
 For simplicity, we only consider the top quark is massive, 
@@ -917,11 +987,15 @@ The differences between our results and these tools are below $1\%$.
 \section{LEFT Renormalization Group Equation}\label{leftrge}
 
 The definition of RGE of LEFT is the same as Eq.~\ref{beta:definition}, but $C_i$ are replaced by $L_i$.
-The $\beta$ functions of operator~\ref{QVLLed} and \ref{QVLRde} are
+The $\beta$ functions of operator~\ref{QVLLed}$\sim$\ref{QVRRed} are
+\textcolor{red}{
 \begin{eqnarray}
-  \left[\beta^{V,LL}_{ed}\right]_{prst} &=& \frac{4}{3}e^2q_eq_d\delta_{pr}\left([L^{V,LL}_{ed}]_{wwst}+[L^{V,LL}_{ed}]_{stww}\right)+12e^2q_eq_d[L^{V,LL}_{ed}]_{prst},  \label{beta:VLLed} \\
-  \left[\beta^{V,LR}_{de}\right]_{prst} &=& \frac{4}{3}e^2q^2_e\delta_{st}\left([L^{V,LL}_{ed}]_{wwpr}+[L^{V,LR}_{de}]_{prww}\right)-12e^2q_eq_d[L^{V,LR}_{de}]_{prst}, \label{beta:VLRde}
+  \left[\beta^{V,LL}_{ed}\right]_{prst} &=& \frac{4}{3}e^2q^2_e\delta_{pr}\left([L^{V,LL}_{ed}]_{wwst}+[L^{V,LR}_{de}]_{stww}\right)+12e^2q_eq_d[L^{V,LL}_{ed}]_{prst},  \label{beta:VLLed} \\
+  \left[\beta^{V,LR}_{de}\right]_{prst} &=& \frac{4}{3}e^2q^2_e\delta_{st}\left([L^{V,LL}_{ed}]_{wwpr}+[L^{V,LR}_{de}]_{prww}\right)-12e^2q_eq_d[L^{V,LR}_{de}]_{prst}, \label{beta:VLRde} \\
+  \left[\beta^{V,LR}_{ed}\right]_{prst} &=& \frac{4}{3}e^2q^2_e\delta_{pr}\left([L^{V,LR}_{ed}]_{wwst}+[L^{V,RR}_{ed}]_{wwst}\right)-12e^2q_eq_d[L^{V,LR}_{ed}]_{prst}, \label{beta:VLRed} \\
+  \left[\beta^{V,RR}_{ed}\right]_{prst} &=& \frac{4}{3}e^2q^2_e\delta_{pr}\left([L^{V,LR}_{ed}]_{wwst}+[L^{V,RR}_{ed}]_{wwst}\right)+12e^2q_eq_d[L^{V,RR}_{ed}]_{prst}, \label{beta:VRRed} 
 \end{eqnarray}
+}
 where $e$ is the coupling constant of QED. 
 $q_e=-1$ and $q_d=-1/3$ are the charges of lepton and d-type quark, respectively. 
 
