@@ -500,7 +500,7 @@ To study the $\mu^+\mu^-\to tc$ process at future muon collider,
 we generate a UFO model with relevant operators by Feynrules~\cite{Alloul:2013bka}, 
 and import it to \mgamc \cite{Alwall:2014hca}. 
 We calculate the cross sections of signals and backgrounds from $E_{cm}=1$ TeV to $30$ TeV, 
-\textcolor{red}{without cuts at generator level}.
+\textcolor{red}{with following generator cuts: jet transverse momentum $p_T(j)>20$ GeV, jet pseudorapidity $|\eta(j)|<5.0$, and angular distance between jets $\Delta R(j,j)>0.4$}.
 The energy dependencies of the cross sections are shown in Fig.~\ref{ecm}. 
 
 For the $\mu^+\mu^-\to tc$ and $bs$ processes, we consider the BP3 as an example where $c_{9}=-c_{10}=-0.39$. The cross section of the main signal process $\mu^+ \mu^- \to tc$ derived from the 4-fermion interactions are proportional to collision $s^2$, 
@@ -513,7 +513,13 @@ The main background processes include $b\bar{b}$, $c\bar{c}$, $q\bar{q}$ ($q=u,d
 These processes are from S-channel and decrease with the increase of the collision energy. 
 It is noteworthy that the cross sections of diboson processes $W^+W^-$ can be much larger than those of di-quarks final states. 
 The process $W^\pm jj$ is also included, which describes the weak final state radiation. 
-It is remarkable that the cross section of $W^\pm jj$ is much larger than those of other processes. $W^\pm jj$ cross section is almost $10^2$ fb and remains constant even when the collision energy increases. 
+\textcolor{red}{A real $W$ boson is radiated from di-quark process, which introduces a $\ln^2(s/M^2_{W})$ term to the cross section~\cite{Bell:2010gi}}.  
+$W^\pm jj$ cross section is \textcolor{red}{around $55$ fb} and remains constant even when the collision energy increases. 
+It is remarkable that the cross section of $W^\pm jj$ is much larger than those of other processes. 
+\textcolor{red}{It actually shows the impact of electroweak corrections. 
+A more clever way should be doing analysis with full next-to-leading order corrections, 
+but it is a huge challenge with public MC tools. 
+As a tree-level analysis, we have to treat it as a separated process.}
 Therefore, suppressing the background events of $\mu^+ \mu^- \to W^\pm jj$ will be crucial and necessary.
 
 Near the threshold, the cross section of all background processes is huge compared to the signal process. 
@@ -532,7 +538,7 @@ Nonetheless, when $\sqrt{s}=10$ TeV, it might be still challenging to discover t
      \includegraphics[width=\linewidth]{e_sigma_clq1_eq_3clq3_log.pdf}
      \caption{}
   \end{subfigure}
-  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed. \textcolor{red}{There is not generator cut.} For the signal, $X=tc/bs$. In other cases, $X$ is the final state of the background. The BP3 with $c_{9}=-c_{10}=-0.39$ is shown here. Their values are evaluated below the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
+  \caption{The energy dependencies of the cross sections of $\mu^+\mu^-\to X$ are displayed, \textcolor{red}{with generator cuts: $p_T(j)>20$ GeV, $|\eta(j)|<5.0$ and $\Delta R(j,j)>0.4$.} For the signal, $X=tc/bs$. In other cases, $X$ is the final state of the background. The BP3 with $c_{9}=-c_{10}=-0.39$ is shown here. Their values are evaluated below the cutoff $\Lambda=10$ TeV by our RGEs and matching conditions in the Appendix. Two models are considered: (a) Model I, $C^{(1)}_{lq}=L^{V,LL}_{ed}\times \Lambda^2/v^2$ and $C^{(3)}_{lq}=0$,  and (b) Model II, $C^{(1)}_{lq}=3C^{(3)}_{lq}=\frac{3}{4}L^{V,LL}_{ed}\times \Lambda^2/v^2$.\label{ecm}}
 \end{figure}
 
 \begin{figure}
@@ -760,12 +766,15 @@ and the signal events can be observed with remarkable significance.
 \textcolor{red}{
 It is interesting that the $ZZ$ background is zero after Cut2, 
 but few $WW$ events are remained.
-It is because Pythia8 has different treaments to the $q\bar{q}$ and $q\bar{q}^\prime$ pair. 
-The number of $WW$ events after Cut2 is changed slightly if we choose different parameter set of Pythia8. 
-The tune of Pythia8 has some effects to our analysis, 
-but do not change our final conclusion.
+It is because Pythia8 has different treatments to the $ZZ\to q_1\bar{q}_1q_2\bar{q}_2$ and $W^+W^-\to q_1\bar{q}_2q_3\bar{q}_4$. 
+For the $ZZ$ events, there is no confusion that $q_1\bar{q}_1$ and $q_2\bar{q}_2$ are combined to a color singlet, respectively. 
+For the $W^+W^-$ events, color reconnection can lead to the formation of alternative ``flipped'' singlets $q_1\bar{q}_4$ and $q_3\bar{q}_2$. 
+In this case, few $W^\pm$ propagators are forced off the mass shell~\cite{Sjostrand:1993hi}. 
 In this work, we use the default tune of Pythia8, which is called Monash 2013~\cite{Skands:2014pea}. 
-Tuning these parameters is a complicate task and beyond the scope of this work.
+The default model for color reconnection is so-called MPI-based model~\cite{Sjostrand:1987su}. 
+Pythia8 also provides models intended for $e^+e^-\to W^+W^-$~\cite{Sjostrand:1993hi,Sjostrand:1993rb}. 
+The choice of color reconnection model has some effects to our analysis, 
+but do not change our final conclusion. 
 }
 
 \begin{center}
