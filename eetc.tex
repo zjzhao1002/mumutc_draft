@@ -516,9 +516,16 @@ The process $W^\pm jj$ is also included, which describes the weak final state ra
 \textcolor{red}{A real $W$ boson is radiated from di-quark process, which introduces a $\ln^2(s/M^2_{W})$ term to the cross section~\cite{Bell:2010gi}}.  
 $W^\pm jj$ cross section is \textcolor{red}{around $55$ fb} and remains constant even when the collision energy increases. 
 It is remarkable that the cross section of $W^\pm jj$ is much larger than those of other processes. 
-\textcolor{red}{It actually shows the impact of electroweak corrections. 
+\textcolor{red}{It actually shows the impact of electroweak radiation. 
 A more clever way should be doing analysis with full next-to-leading order corrections, 
-but it is a huge challenge with public MC tools. 
+but it is a huge challenge. 
+On one hand, 
+due to the non-abelian nature of electroweak symmetry, the vitual and real corrections do not fully cancel~\cite{Ciafaloni:2000df,Ciafaloni:2000rp}.
+On the other hand, 
+the W/Z mass suggests an IR scale $\sim 100$ GeV, and it is physical. 
+Electroweak shower always ends at this scale and the electroweak ``partons'' do not ``hadronize''. 
+Pythia8 only provides limited features to the electroweak shower~\cite{Christiansen:2014kba,Christiansen:2015jpa}. 
+A summary of these challenges can be found in Ref.~\cite{Accettura:2023ked}.
 As a tree-level analysis, we have to treat it as a separated process.}
 Therefore, suppressing the background events of $\mu^+ \mu^- \to W^\pm jj$ will be crucial and necessary.
 
@@ -922,7 +929,7 @@ Both channels are complementary and combining them we can distinguish different 
 \section{Summary and Discussion}\label{Sec:conc}
 For the signal processes $\mu^+ \mu^- \to b s$ \cite{Altmannshofer:2022xri}, it has been revealed that b tagging is crucial to reject background events from $jj$ final states. The dominant background events are $j j$. In order to extract the information on the Wilson coefficients $C_{9}$ and $C_{10}$, it is found that the polarized muon beams and the measurement of forward-backward asymmetry of the final state are needed. 
 
-In this work, instead of assuming polarized muon beams and charge tagging of a final state, we propose to measure the signal processes $\mu^+ \mu^- \to t c$. Then it is found that the major task is to reject $t \bar{t}$ and $ W W$ events, which might be easier to pick out signal events. It is also found that the weak radiation $ j j W$ is large and might be a relevant background.
+In this work, instead of assuming polarized muon beams and charge tagging of a final state, we propose to measure the signal processes $\mu^+ \mu^- \to t c$. Then it is found that the major task is to reject $t \bar{t}$ and $ W W$ events, which might be easier to pick out signal events. It is also found that the weak radiation $W j j $ is large and might be a relevant background.
 
 It is also found that in order to resolve the signal events, 
 detectors with high granularity are needed since top quarks and W bosons in the hadronic final states are around 5 TeV and they are highly boosted objects. 
@@ -935,6 +942,28 @@ a refined analysis of the TeV region jet substructure~\cite{Butterworth:2008iy,K
 
 
 To distinguish new physics models, it is found that the measurement of  $\mu^+ \mu^- \to tc$ can pinpoint Model I and Model II. Model III can be discovered due to the resonance near a few TeV regions. Model IV could be favored if there is no signal of the process $\mu^+ \mu^- \to t c$ are measured.
+
+\textcolor{red}{
+Finally, we have some comments on the systematic uncertainties. 
+As a MC analysis, the statistical uncertainty from limited number of events is dominant. 
+But the following sources will also contribute to the systematic uncertainties: 
+\begin{itemize}
+  \item The first one is the theoretical uncertainty from higher order corrections. 
+In particular, the electroweak corrections will become important at a multi-TeV muon collider, 
+so we have to consider background like $Wjj$.
+The automation with full electroweak corrections is still challenged and under development. 
+Our tree-level results are preliminary.
+  \item The second one is the uncertainty from parton shower and hadronization. 
+As we have seen, the color reconnection effect lead to some interesting behaviour of $W^+W^-$ background. 
+The description of such kind of effects is strongly depending on the tuning of MC generators.
+  \item In our study, the initial state radiation (ISR) is switched off. 
+One can expect that the ISR of multi-TeV muon beam will be important, 
+and the radiation of massive particles (W, Z and Higgs) should be considered. 
+However, our MC tools are incomplete to give an exact description. 
+\end{itemize}
+They are also the challenges for the future muon collider. 
+We still have many works to do.
+}
 
 	\begin{acknowledgments}
                 Z.J. Zhao has been partially supported by a 
